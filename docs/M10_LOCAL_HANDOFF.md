@@ -4,6 +4,55 @@ Branch: `m10-port`
 
 Start here after cloning the fork on the Cisco server.
 
+The server is now inventoried in [M10_HARDWARE.md](M10_HARDWARE.md). Use the existing Ubuntu GPU guest (VM 104),
+not the Proxmox host. All eight GPUs are sm_50; earlier versions of this handoff incorrectly said sm_52.
+The [bring-up report](../bench/results/2026-10-05-cisco-m10/README.md) contains tested one-, two-, four- and
+eight-GPU configurations. Keep their explicit `--vram-reserve-mib 1536`: the default reserve loaded the model
+on one GPU but failed when the first request instantiated the CUDA graph.
+
+## Full-model operating configuration
+
+The [full-model report](../bench/results/2026-10-05-cisco-m10-large-models/README.md) records the 83.6 GB IQ3_S
+and 111.3 GB Unsloth Q4 tests. VM 104 now has 256 GiB configured RAM. The interactive configuration uses Q4,
+eight 8 GiB CUDA devices, a 4,096-token context and speculative window 2. One GPU is a measured alternative
+for faster generation from short questions, at the cost of slower prompt processing.
+
+Connect to the guest with `ssh bjwl@192.168.3.73`. From `/home/bjwl/Strata`, start the prepared model with:
+
+```bash
+/home/bjwl/strata-dev/venv/bin/python -u bench/m10/start_server.py \
+  --config /home/bjwl/strata-dev/bench-configs/unsloth-ud-q4_k_xl-8gpu-base.json \
+  --data /models/strata-work/data \
+  --dest /mnt/strata-ram/data \
+  --runtime /home/bjwl/strata-dev/service \
+  --drop-source-cache \
+  --api-key-file /home/bjwl/strata-dev/service/api-key
+```
+
+Check whether port 8080 already has the server before starting another instance. The launcher refuses an
+occupied port. Stop the existing server by its recorded PID in `/home/bjwl/strata-dev/service/server.pid`
+after checking that PID still belongs to `serve.server`. For the one-GPU alternative, use
+`unsloth-ud-q4_k_xl-1gpu-base.json`. Stop the old server and wait for its engine to exit before switching.
+
+The dedicated `/mnt/strata-ram` tmpfs survives logout. It is mounted from fstab after boot, but contains no files
+until staging runs again. A cold copy of the model from NAS takes many minutes. The launcher skips already
+staged unchanged files and releases redundant source cache before loading. Original model files stay on NAS.
+This is a manually launched server, not a boot service. Its logs are `service/server.log` and `service/engine.log`.
+For unattended shell use, redirect output to `service/server.log` and run the launcher with `nohup`.
+
+The server binds to `127.0.0.1:8080` and requires the private key from the file above. The workspace machine has
+the same key in `/home/bjwl/.config/strata-m10-cisco/api-key`. Never commit either key or the generated
+`service/server.json`. Forward the port from the workspace with:
+
+```bash
+ssh -N -L 127.0.0.1:8080:127.0.0.1:8080 \
+  -o ExitOnForwardFailure=yes bjwl@192.168.3.73
+```
+
+Open `http://127.0.0.1:8080` and enter that key under About > Settings.
+Select Thinking: Off to match the non-thinking benchmarks; the web app defaults to high thinking. The OpenAI-compatible API base is
+`http://127.0.0.1:8080/v1`. A forward must run on the machine whose browser or client uses this address.
+
 ## 1. Capture the machine
 
 Run:
@@ -21,7 +70,7 @@ nvcc --version || true
 
 Save the output before making further source changes.
 
-Expected hardware target is Tesla M10 / Maxwell compute capability 5.2, probably eight visible CUDA devices when two M10 boards are installed.
+The measured hardware target is eight Tesla M10 / Maxwell devices, compute capability 5.0.
 
 ## 2. Use CUDA 12.x
 
@@ -32,12 +81,15 @@ If several toolkits are installed, point CMake explicitly at the CUDA 12 nvcc.
 ## 3. First configure: compile only for one architecture
 
 ```bash
-cmake -S . -B build-m10 \
+/home/bjwl/strata-dev/venv/bin/cmake -S . -B /home/bjwl/strata-dev/build-m10 -G Ninja \
   -DSTRATA_ENABLE_CUDA=ON \
-  -DSTRATA_EXPERIMENTAL_SM52=ON \
-  -DCMAKE_CUDA_ARCHITECTURES=52 \
+  -DSTRATA_EXPERIMENTAL_SM50=ON \
+  -DCMAKE_CUDA_ARCHITECTURES=50 \
+  -DSTRATA_BUILD_TESTS=ON \
   -DCMAKE_BUILD_TYPE=Release \
-  -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc
+  -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.2/bin/nvcc \
+  -DSTRATA_GGML_DIR=/home/bjwl/strata-dev/deps/llama.cpp-3cf03257f219afbe7334045ff7c6a06ac68c627d \
+  -DIQ_FIXTURE_PYTHON=/home/bjwl/strata-dev/venv/bin/python
 ```
 
 Adjust the nvcc path to the installed CUDA 12.x toolkit.
@@ -47,7 +99,8 @@ The first objective is simply to get a complete configure/build error inventory.
 ## 4. Build with readable logs
 
 ```bash
-cmake --build build-m10 -j 1 2>&1 | tee m10-build.log
+set -o pipefail
+/home/bjwl/strata-dev/venv/bin/cmake --build /home/bjwl/strata-dev/build-m10 -j 1 2>&1 | tee m10-build.log
 ```
 
 Use `-j 1` for the first failure pass so diagnostics are not interleaved.  After fixing compile errors, normal parallel builds are fine.
@@ -67,23 +120,25 @@ Prefer one compatibility wrapper per missing feature over repeated per-kernel pa
 After the engine builds:
 
 ```bash
-ctest --test-dir build-m10 --output-on-failure
+/home/bjwl/strata-dev/venv/bin/ctest --test-dir /home/bjwl/strata-dev/build-m10 -N
 ```
 
-Then run the CUDA parity/kernel targets that exist in the configured tree.  Record the first failing test and fix correctness before performance.
+Check that tests are registered, then build and run the selected CUDA parity/kernel targets with `ctest -R`.
+Some tests require model fixtures or newer GPU instructions; an unfiltered run is not a Maxwell validation suite.
+Record every failure and skip, and fix correctness before performance.
 
 ## 6. Device smoke test
 
 Use one visible M10 GPU:
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 ./build-m10/strata-device
+CUDA_VISIBLE_DEVICES=0 /home/bjwl/strata-dev/build-m10/strata-device --selftest
 ```
 
 Confirm:
 
 - Tesla M10 name;
-- compute capability 5.2;
+- compute capability 5.0;
 - expected usable/free VRAM;
 - no `no kernel image` / illegal-instruction error.
 
@@ -143,6 +198,9 @@ Update `docs/M10_CODE_AUDIT.md` and `docs/M10_PORTING_PLAN.md` as facts replace 
 
 ## Likely first code issue
 
-The static audit found widespread synchronized warp intrinsics (`__shfl_*_sync`, `__syncwarp`).  If CUDA 12 nvcc does not accept their current use for sm_52, create a central pre-Volta compatibility wrapper and convert through that wrapper.  Do not scatter Maxwell conditionals across all kernels.
+The hardware probe compiled and ran synchronized warp shuffle/barrier operations on all eight GPUs.
+Do not replace these intrinsics merely because they have `_sync` in their names. Each kernel must still meet
+Maxwell's participation and convergence rules. The initial code review also found that the runtime architecture
+gate and BF16-to-FP32 GEMM fallback needed to recognize the new Maxwell flag.
 
 See `docs/M10_CODE_AUDIT.md` for the complete pre-hardware audit.

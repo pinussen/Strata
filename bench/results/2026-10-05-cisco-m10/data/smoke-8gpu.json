@@ -1,0 +1,128 @@
+[
+  {
+    "case": "arithmetic",
+    "elapsed_s": 3.640463178000118,
+    "http_status": 200,
+    "response": {
+      "id": "chatcmpl-67d309745497405d99b1cbdc",
+      "object": "chat.completion",
+      "created": 1791235848,
+      "model": "strata-m10-coder-iq1_m",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "4"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 26,
+        "completion_tokens": 2,
+        "total_tokens": 28,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 26,
+        "prompt_ms": 3142.4,
+        "prompt_per_token_ms": 120.862,
+        "prompt_per_second": 8.3,
+        "predicted_n": 2,
+        "predicted_ms": 493.8,
+        "predicted_per_token_ms": 246.9,
+        "predicted_per_second": 4.1,
+        "draft_n": 1,
+        "draft_n_accepted": 1
+      }
+    }
+  },
+  {
+    "case": "conversation",
+    "elapsed_s": 6.939609932000167,
+    "http_status": 200,
+    "response": {
+      "id": "chatcmpl-7282a0f78843421d9dcf67f2",
+      "object": "chat.completion",
+      "created": 1791235852,
+      "model": "strata-m10-coder-iq1_m",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "pinecone"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 53,
+        "completion_tokens": 3,
+        "total_tokens": 56,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 53,
+        "prompt_ms": 6161.4,
+        "prompt_per_token_ms": 116.253,
+        "prompt_per_second": 8.6,
+        "predicted_n": 3,
+        "predicted_ms": 773.4,
+        "predicted_per_token_ms": 257.8,
+        "predicted_per_second": 3.9,
+        "draft_n": 2,
+        "draft_n_accepted": 1
+      }
+    }
+  },
+  {
+    "case": "code",
+    "elapsed_s": 6.626797986999918,
+    "http_status": 200,
+    "response": {
+      "id": "chatcmpl-9a52632111494ec584f96b1f",
+      "object": "chat.completion",
+      "created": 1791235859,
+      "model": "strata-m10-coder-iq1_m",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "```python\ndef add(a, b):\n    return a + b\n```"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 18,
+        "total_tokens": 51,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 33,
+        "prompt_ms": 3865.4,
+        "prompt_per_token_ms": 117.133,
+        "prompt_per_second": 8.5,
+        "predicted_n": 18,
+        "predicted_ms": 2756.7,
+        "predicted_per_token_ms": 153.15,
+        "predicted_per_second": 6.5,
+        "draft_n": 9,
+        "draft_n_accepted": 9
+      }
+    }
+  }
+]

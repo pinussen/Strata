@@ -1,0 +1,86 @@
+[
+  {
+    "case": "multiple_prompt_chunks",
+    "elapsed_s": 11.230464404000031,
+    "http_status": 200,
+    "response": {
+      "id": "chatcmpl-6193d7e35d204643a04c8eaf",
+      "object": "chat.completion",
+      "created": 1791235892,
+      "model": "strata-m10-coder-iq1_m",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "birch"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 296,
+        "completion_tokens": 3,
+        "total_tokens": 299,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 296,
+        "prompt_ms": 10749.5,
+        "prompt_per_token_ms": 36.316,
+        "prompt_per_second": 27.5,
+        "predicted_n": 3,
+        "predicted_ms": 474.5,
+        "predicted_per_token_ms": 158.167,
+        "predicted_per_second": 6.3,
+        "draft_n": 1,
+        "draft_n_accepted": 1
+      }
+    }
+  },
+  {
+    "case": "conversation_reuse",
+    "elapsed_s": 3.9373754200000803,
+    "http_status": 200,
+    "response": {
+      "id": "chatcmpl-ef391971d28946868688947e",
+      "object": "chat.completion",
+      "created": 1791235903,
+      "model": "strata-m10-coder-iq1_m",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "birch"
+          },
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 325,
+        "completion_tokens": 3,
+        "total_tokens": 328,
+        "prompt_tokens_details": {
+          "cached_tokens": 298
+        }
+      },
+      "timings": {
+        "cache_n": 298,
+        "prompt_n": 27,
+        "prompt_ms": 3267.5,
+        "prompt_per_token_ms": 121.019,
+        "prompt_per_second": 8.3,
+        "predicted_n": 3,
+        "predicted_ms": 663.8,
+        "predicted_per_token_ms": 221.267,
+        "predicted_per_second": 4.5,
+        "draft_n": 3,
+        "draft_n_accepted": 3
+      }
+    }
+  }
+]

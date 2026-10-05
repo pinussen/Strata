@@ -1,0 +1,2 @@
+# Keep the measured engine and server diagnostics with these experiments.
+!*.log

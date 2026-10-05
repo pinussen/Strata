@@ -1,0 +1,9 @@
+index, name, memory.used [MiB], memory.free [MiB], utilization.gpu [%]
+0, Tesla M10, 3894 MiB, 4232 MiB, 0 %
+1, Tesla M10, 3771 MiB, 4355 MiB, 8 %
+2, Tesla M10, 3957 MiB, 4170 MiB, 5 %
+3, Tesla M10, 3976 MiB, 4151 MiB, 19 %
+4, Tesla M10, 4320 MiB, 3807 MiB, 0 %
+5, Tesla M10, 4087 MiB, 4039 MiB, 17 %
+6, Tesla M10, 4083 MiB, 4043 MiB, 13 %
+7, Tesla M10, 5846 MiB, 2281 MiB, 31 %

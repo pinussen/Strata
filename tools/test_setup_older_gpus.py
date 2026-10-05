@@ -28,14 +28,14 @@ def card(i, name, vram, arch, driver="580.97"):
 
 V100 = card(0, "Tesla V100-PCIE-32GB", 32.0, "70", "575.57")
 P40 = card(0, "Tesla P40", 24.0, "61", "535.104")
-M10 = card(0, "Tesla M10", 8.0, "52", "535.104")
+M10 = card(0, "Tesla M10", 8.0, "50", "535.104")
 
 
 class Choice(unittest.TestCase):
     def test_by_the_oldest_card(self):
         self.assertEqual(setup.cuda_choice(["120"]), (13, None))
         self.assertEqual(setup.cuda_choice([75, 86, 89]), (13, None))
-        for archs in ([70], [61], [60], [70, 86]):
+        for archs in ([50], [70], [61], [60], [70, 86]):
             tk, why = setup.cuda_choice(archs)
             self.assertEqual(tk, 12, archs)
             self.assertIn(f"sm_{min(archs)} is older than CUDA 13 supports", why)
@@ -57,7 +57,7 @@ class Choice(unittest.TestCase):
         self.assertEqual(setup.config_toolkit({"exe": "/s/engine-cuda12/strata.exe"}), 12)
         self.assertEqual(setup.config_toolkit({"exe": "x", "cuda": 12}), 12)
         self.assertEqual(setup.engine_defs([86], 12), ["-DSTRATA_EXPERIMENTAL_SM60=ON"])
-        self.assertEqual(setup.engine_defs([52], 12), ["-DSTRATA_EXPERIMENTAL_SM52=ON"])
+        self.assertEqual(setup.engine_defs([50], 12), ["-DSTRATA_EXPERIMENTAL_SM50=ON"])
         self.assertEqual(setup.engine_defs([86]), [])
 
 
@@ -65,7 +65,7 @@ class OptIn(unittest.TestCase):
     """Pascal / Volta cards are used only when chosen; a PC with a newer card keeps recommending the newer one."""
 
     def setUp(self):
-        self.env = mock.patch.dict(os.environ, {"STRATA_EXPERIMENTAL_SM60": ""})
+        self.env = mock.patch.dict(os.environ, {"STRATA_EXPERIMENTAL_SM60": "", "STRATA_EXPERIMENTAL_SM50": ""})
         self.env.start()
 
     def tearDown(self):
@@ -81,9 +81,9 @@ class OptIn(unittest.TestCase):
         self.assertEqual(setup.old_gpus_opt_in([rtx, v100], cuda="12"), "--cuda 12")
         self.assertIn("only kind", setup.old_gpus_opt_in([V100]))
         self.assertIsNone(setup.old_gpus_opt_in([V100], other=True))            # an AMD card it can use instead
-        self.assertIn("maxwell:", setup.old_gpus_opt_in([M10]))
-        with mock.patch.dict(os.environ, {"STRATA_EXPERIMENTAL_SM52": "1"}):
-            self.assertEqual(setup.old_gpus_opt_in([rtx, M10]), "maxwell:STRATA_EXPERIMENTAL_SM52=1")
+        self.assertIsNone(setup.old_gpus_opt_in([M10]))
+        with mock.patch.dict(os.environ, {"STRATA_EXPERIMENTAL_SM50": "1"}):
+            self.assertEqual(setup.old_gpus_opt_in([rtx, M10]), "maxwell:STRATA_EXPERIMENTAL_SM50=1")
         with mock.patch.dict(os.environ, {"STRATA_EXPERIMENTAL_SM60": "1"}):
             self.assertEqual(setup.old_gpus_opt_in([rtx, v100]), "STRATA_EXPERIMENTAL_SM60=1")
 
@@ -92,6 +92,18 @@ class OptIn(unittest.TestCase):
         self.assertEqual(setup.named_gpus(1, None), [1])
         self.assertEqual(setup.named_gpus(None, "all"), [])
         self.assertEqual(setup.named_gpus(None, "x"), [])
+
+    def test_maxwell_requires_an_explicit_choice(self):
+        self.assertIsNone(setup.old_gpus_opt_in([M10]))
+        self.assertIsNone(setup.old_gpus_opt_in([M10], cuda="12"))
+        self.assertTrue(setup.old_gpus_opt_in([M10], named=[0]).startswith("maxwell:"))
+        with mock.patch.dict(os.environ, {"STRATA_EXPERIMENTAL_SM60": "1"}):
+            self.assertIsNone(setup.old_gpus_opt_in([M10]))
+        with mock.patch.object(setup, "OLD_GPUS", None):
+            self.assertIsNotNone(setup.gpu_problem(M10))
+            with mock.patch.dict(os.environ, {"STRATA_EXPERIMENTAL_SM50": "1"}):
+                self.assertIsNone(setup.gpu_problem(M10))
+                self.assertIsNotNone(setup.gpu_problem(card(0, "Kepler", 12, "35")))
 
     def test_the_gate_follows_the_opt_in(self):
         with mock.patch.object(setup, "OLD_GPUS", None):

@@ -1,0 +1,8 @@
+usage: server.py [-h] [--engine {mock,strata}] [--config CONFIG] [--host HOST]
+                 [--script SCRIPT] [--port PORT] [--gpu GPU]
+                 [--tokenizer TOKENIZER] [--open] [--fit-max-tokens]
+                 [--api-key API_KEY] [--mcp-config MCP_CONFIG] [--lazy]
+                 [--api-monitor] [--idle-unload SECONDS]
+                 [--min-free-vram-mib MIN_FREE_VRAM_MIB]
+                 [--before-load BEFORE_LOAD]
+server.py: error: the model's tokenizer is missing (/dev/shm/strata-data/packs/unsloth-ud-q4_k_xl/tokenizer/vocab.json); run setup again

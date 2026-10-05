@@ -128,7 +128,7 @@ elseif(STRATA_ENABLE_CUDA)
   # DLL's import library).  MSVC with a CUDA 12.x toolkit - the experimental Pascal/Volta build - then fails with
   # LNK1169 (every cudart symbol defined twice); GNU ld lets it pass.  That build links the shared runtime alone.  The
   # ready-made engine (CUDA 13, no STRATA_EXPERIMENTAL_SM60) is unchanged; -DCMAKE_CUDA_RUNTIME_LIBRARY overrides.
-  if(MSVC AND (STRATA_EXPERIMENTAL_SM60 OR STRATA_EXPERIMENTAL_SM52) AND NOT DEFINED CMAKE_CUDA_RUNTIME_LIBRARY)
+  if(MSVC AND (STRATA_EXPERIMENTAL_SM60 OR STRATA_EXPERIMENTAL_SM50) AND NOT DEFINED CMAKE_CUDA_RUNTIME_LIBRARY)
     set(CMAKE_CUDA_RUNTIME_LIBRARY Shared)
   endif()
   enable_language(CUDA)
@@ -136,9 +136,9 @@ elseif(STRATA_ENABLE_CUDA)
   # be brought in explicitly for the host-side tests that call cudaMalloc themselves.
   find_package(CUDAToolkit REQUIRED)
   option(STRATA_EXPERIMENTAL_SM60 "community build for GPUs below compute capability 7.5: Pascal sm_60, Volta sm_70 (#236)" OFF)
-  option(STRATA_EXPERIMENTAL_SM52 "EXPERIMENTAL fork: build for Maxwell sm_52 (Tesla M10); requires CUDA 12.x" OFF)
-  if(STRATA_EXPERIMENTAL_SM52 AND NOT CMAKE_CUDA_COMPILER_VERSION VERSION_LESS 13.0)
-    message(FATAL_ERROR "STRATA_EXPERIMENTAL_SM52 needs CUDA 12.x: CUDA 13 removed offline compilation and library support for Maxwell")
+  option(STRATA_EXPERIMENTAL_SM50 "EXPERIMENTAL fork: build for Maxwell sm_50 (Tesla M10); requires CUDA 12.x" OFF)
+  if(STRATA_EXPERIMENTAL_SM50 AND NOT CMAKE_CUDA_COMPILER_VERSION VERSION_LESS 13.0)
+    message(FATAL_ERROR "STRATA_EXPERIMENTAL_SM50 needs CUDA 12.x: CUDA 13 removed offline compilation and library support for Maxwell")
   endif()
   if(NOT DEFINED CMAKE_CUDA_ARCHITECTURES)
     set(CMAKE_CUDA_ARCHITECTURES 120 CACHE STRING "CUDA architectures" FORCE)
@@ -157,19 +157,19 @@ elseif(STRATA_ENABLE_CUDA)
     # bit-exact for the first and merely a shorter pause for the second (sm_70 has both).  Community-tested,
     # not in the ready-made engine; RTX 20/30/40/50 cards must use the release engine instead.  It needs a CUDA
     # 12.x toolkit: CUDA 13 dropped sm_60 and sm_70 (nvcc fails CMake's compiler test with "compute_70").
-    if(_base LESS 75 AND NOT STRATA_EXPERIMENTAL_SM60 AND NOT STRATA_EXPERIMENTAL_SM52)
+    if(_base LESS 75 AND NOT STRATA_EXPERIMENTAL_SM60 AND NOT STRATA_EXPERIMENTAL_SM50)
       message(FATAL_ERROR
         "Strata needs an NVIDIA GPU of compute capability 7.5 or newer (RTX 20 / 30 / 40 / 50 series), but "
         "CMAKE_CUDA_ARCHITECTURES is '${CMAKE_CUDA_ARCHITECTURES}'.  (Pascal/Volta: "
-        "-DSTRATA_EXPERIMENTAL_SM60=ON; Maxwell sm_52 in this fork: -DSTRATA_EXPERIMENTAL_SM52=ON.)")
+        "-DSTRATA_EXPERIMENTAL_SM60=ON; Maxwell sm_50 in this fork: -DSTRATA_EXPERIMENTAL_SM50=ON.)")
     endif()
-    if(_base LESS 60 AND NOT STRATA_EXPERIMENTAL_SM52)
+    if(_base LESS 60 AND NOT STRATA_EXPERIMENTAL_SM50)
       message(FATAL_ERROR "CMAKE_CUDA_ARCHITECTURES '${CMAKE_CUDA_ARCHITECTURES}': the Pascal/Volta experimental "
-                          "build needs sm_60 or newer; Maxwell sm_52 requires -DSTRATA_EXPERIMENTAL_SM52=ON")
+                          "build needs sm_60 or newer; Maxwell sm_50 requires -DSTRATA_EXPERIMENTAL_SM50=ON")
     endif()
-    if(_base LESS 52)
+    if(_base LESS 50)
       message(FATAL_ERROR "CMAKE_CUDA_ARCHITECTURES '${CMAKE_CUDA_ARCHITECTURES}': this fork supports no CUDA "
-                          "architecture older than Maxwell sm_52")
+                          "architecture older than Maxwell sm_50")
     endif()
     # #220 / #224: RTX 50 engines built with CUDA 12.8 crashed in the prompt path on Linux (13.0 and newer did not)
     if(_base GREATER_EQUAL 120 AND CMAKE_CUDA_COMPILER_VERSION VERSION_LESS 13.0)
@@ -182,10 +182,10 @@ elseif(STRATA_ENABLE_CUDA)
     # build only, so the ready-made engine (sm_75+) keeps exactly the code it had
     add_compile_definitions(STRATA_EXPERIMENTAL_SM60=1)
   endif()
-  if(STRATA_EXPERIMENTAL_SM52)
+  if(STRATA_EXPERIMENTAL_SM50)
     # Maxwell is kept separate from the upstream Pascal/Volta switch so its compatibility work can be audited and
     # removed independently.  Existing pre-sm_75 fallbacks key off __CUDA_ARCH__ and are reused where valid.
-    add_compile_definitions(STRATA_EXPERIMENTAL_SM52=1)
+    add_compile_definitions(STRATA_EXPERIMENTAL_SM50=1)
   endif()
   message(STATUS "Strata: CUDA enabled, arch ${CMAKE_CUDA_ARCHITECTURES}")
   set(_strata_gpu_runtime_target CUDA::cudart)
@@ -262,11 +262,11 @@ if(STRATA_ENABLE_CUDA OR STRATA_ENABLE_HIP)
   add_library(strata_core STATIC src/core/device.cu src/core/pinned.cu src/platform/memory.cpp src/core/graph.cpp src/core/weights.cpp
                                src/core/layout.cpp)
   target_include_directories(strata_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-  if(STRATA_ENABLE_CUDA AND (STRATA_EXPERIMENTAL_SM60 OR STRATA_EXPERIMENTAL_SM52))
+  if(STRATA_ENABLE_CUDA AND (STRATA_EXPERIMENTAL_SM60 OR STRATA_EXPERIMENTAL_SM50))
     # the runtime device check and low-architecture paths see the same opt-in as the CUDA translation units
     target_compile_definitions(strata_core PRIVATE
       $<$<BOOL:${STRATA_EXPERIMENTAL_SM60}>:STRATA_EXPERIMENTAL_SM60=1>
-      $<$<BOOL:${STRATA_EXPERIMENTAL_SM52}>:STRATA_EXPERIMENTAL_SM52=1>)
+      $<$<BOOL:${STRATA_EXPERIMENTAL_SM50}>:STRATA_EXPERIMENTAL_SM50=1>)
   endif()
   # The selected runtime is PUBLIC because graph.cpp is a HOST translation unit that calls cudaGraphLaunch and
   # cudaEventQuery: the .cu sources get cudart through the CUDA language rules, a .cpp does not, and the

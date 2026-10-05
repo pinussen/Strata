@@ -1,0 +1,152 @@
+Testing physical GPU 0
+device 0: Tesla M10
+  compute capability  5.0   (sm_50)
+  multiprocessors     5
+  VRAM total / free   7.937 GiB (8522235904 B) / 7.907 GiB (8489992192 B)
+  driver / runtime    12020 / 12020
+
+memory plan  --max-context 20480
+  KV + indexer keys   0.267387 GB
+  recurrent state     0.000000 GB  (GDN recurrence + conv history, NOT evictable)
+  expert cache        5.675613 GB  (4105 slots of 1,382,400 B)
+  VRAM pool           5.943000 GB
+  expert arena (DRAM) 0.000000 GB
+  card free           7.907 GiB (8489992192 B)
+  plan + KV vs free   FITS
+
+selftest: arena 0.062 GiB (67108864 B), used 0.002 GiB (2097152 B) after two 1 MiB allocations
+selftest: over-allocation refused as required
+strata-device selftest OK
+Testing physical GPU 1
+device 0: Tesla M10
+  compute capability  5.0   (sm_50)
+  multiprocessors     5
+  VRAM total / free   7.937 GiB (8522235904 B) / 7.907 GiB (8489992192 B)
+  driver / runtime    12020 / 12020
+
+memory plan  --max-context 20480
+  KV + indexer keys   0.267387 GB
+  recurrent state     0.000000 GB  (GDN recurrence + conv history, NOT evictable)
+  expert cache        5.675613 GB  (4105 slots of 1,382,400 B)
+  VRAM pool           5.943000 GB
+  expert arena (DRAM) 0.000000 GB
+  card free           7.907 GiB (8489992192 B)
+  plan + KV vs free   FITS
+
+selftest: arena 0.062 GiB (67108864 B), used 0.002 GiB (2097152 B) after two 1 MiB allocations
+selftest: over-allocation refused as required
+strata-device selftest OK
+Testing physical GPU 2
+device 0: Tesla M10
+  compute capability  5.0   (sm_50)
+  multiprocessors     5
+  VRAM total / free   7.937 GiB (8522235904 B) / 7.907 GiB (8489992192 B)
+  driver / runtime    12020 / 12020
+
+memory plan  --max-context 20480
+  KV + indexer keys   0.267387 GB
+  recurrent state     0.000000 GB  (GDN recurrence + conv history, NOT evictable)
+  expert cache        5.675613 GB  (4105 slots of 1,382,400 B)
+  VRAM pool           5.943000 GB
+  expert arena (DRAM) 0.000000 GB
+  card free           7.907 GiB (8489992192 B)
+  plan + KV vs free   FITS
+
+selftest: arena 0.062 GiB (67108864 B), used 0.002 GiB (2097152 B) after two 1 MiB allocations
+selftest: over-allocation refused as required
+strata-device selftest OK
+Testing physical GPU 3
+device 0: Tesla M10
+  compute capability  5.0   (sm_50)
+  multiprocessors     5
+  VRAM total / free   7.937 GiB (8522235904 B) / 7.907 GiB (8489992192 B)
+  driver / runtime    12020 / 12020
+
+memory plan  --max-context 20480
+  KV + indexer keys   0.267387 GB
+  recurrent state     0.000000 GB  (GDN recurrence + conv history, NOT evictable)
+  expert cache        5.675613 GB  (4105 slots of 1,382,400 B)
+  VRAM pool           5.943000 GB
+  expert arena (DRAM) 0.000000 GB
+  card free           7.907 GiB (8489992192 B)
+  plan + KV vs free   FITS
+
+selftest: arena 0.062 GiB (67108864 B), used 0.002 GiB (2097152 B) after two 1 MiB allocations
+selftest: over-allocation refused as required
+strata-device selftest OK
+Testing physical GPU 4
+device 0: Tesla M10
+  compute capability  5.0   (sm_50)
+  multiprocessors     5
+  VRAM total / free   7.937 GiB (8522235904 B) / 7.907 GiB (8489992192 B)
+  driver / runtime    12020 / 12020
+
+memory plan  --max-context 20480
+  KV + indexer keys   0.267387 GB
+  recurrent state     0.000000 GB  (GDN recurrence + conv history, NOT evictable)
+  expert cache        5.675613 GB  (4105 slots of 1,382,400 B)
+  VRAM pool           5.943000 GB
+  expert arena (DRAM) 0.000000 GB
+  card free           7.907 GiB (8489992192 B)
+  plan + KV vs free   FITS
+
+selftest: arena 0.062 GiB (67108864 B), used 0.002 GiB (2097152 B) after two 1 MiB allocations
+selftest: over-allocation refused as required
+strata-device selftest OK
+Testing physical GPU 5
+device 0: Tesla M10
+  compute capability  5.0   (sm_50)
+  multiprocessors     5
+  VRAM total / free   7.937 GiB (8522235904 B) / 7.907 GiB (8489992192 B)
+  driver / runtime    12020 / 12020
+
+memory plan  --max-context 20480
+  KV + indexer keys   0.267387 GB
+  recurrent state     0.000000 GB  (GDN recurrence + conv history, NOT evictable)
+  expert cache        5.675613 GB  (4105 slots of 1,382,400 B)
+  VRAM pool           5.943000 GB
+  expert arena (DRAM) 0.000000 GB
+  card free           7.907 GiB (8489992192 B)
+  plan + KV vs free   FITS
+
+selftest: arena 0.062 GiB (67108864 B), used 0.002 GiB (2097152 B) after two 1 MiB allocations
+selftest: over-allocation refused as required
+strata-device selftest OK
+Testing physical GPU 6
+device 0: Tesla M10
+  compute capability  5.0   (sm_50)
+  multiprocessors     5
+  VRAM total / free   7.937 GiB (8522235904 B) / 7.907 GiB (8489992192 B)
+  driver / runtime    12020 / 12020
+
+memory plan  --max-context 20480
+  KV + indexer keys   0.267387 GB
+  recurrent state     0.000000 GB  (GDN recurrence + conv history, NOT evictable)
+  expert cache        5.675613 GB  (4105 slots of 1,382,400 B)
+  VRAM pool           5.943000 GB
+  expert arena (DRAM) 0.000000 GB
+  card free           7.907 GiB (8489992192 B)
+  plan + KV vs free   FITS
+
+selftest: arena 0.062 GiB (67108864 B), used 0.002 GiB (2097152 B) after two 1 MiB allocations
+selftest: over-allocation refused as required
+strata-device selftest OK
+Testing physical GPU 7
+device 0: Tesla M10
+  compute capability  5.0   (sm_50)
+  multiprocessors     5
+  VRAM total / free   7.937 GiB (8522235904 B) / 7.907 GiB (8489992192 B)
+  driver / runtime    12020 / 12020
+
+memory plan  --max-context 20480
+  KV + indexer keys   0.267387 GB
+  recurrent state     0.000000 GB  (GDN recurrence + conv history, NOT evictable)
+  expert cache        5.675613 GB  (4105 slots of 1,382,400 B)
+  VRAM pool           5.943000 GB
+  expert arena (DRAM) 0.000000 GB
+  card free           7.907 GiB (8489992192 B)
+  plan + KV vs free   FITS
+
+selftest: arena 0.062 GiB (67108864 B), used 0.002 GiB (2097152 B) after two 1 MiB allocations
+selftest: over-allocation refused as required
+strata-device selftest OK

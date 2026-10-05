@@ -1,0 +1,49 @@
+{
+  "exe": "/home/bjwl/strata-dev/build-m10/strata",
+  "cwd": "/home/bjwl/Strata",
+  "tokenizer": "/models/strata-work/data/packs/unsloth-ud-q4_k_xl/tokenizer",
+  "model_name": "strata-m10-unsloth-ud-q4_k_xl",
+  "host": "127.0.0.1",
+  "port": 8080,
+  "open_browser": false,
+  "args": [
+    "--ple-io",
+    "ram",
+    "--expert-cache",
+    "auto",
+    "--prefill",
+    "128",
+    "--spec",
+    "2",
+    "--spec-min-p",
+    "0.5",
+    "--mtp",
+    "/models/strata-work/data/mtp/rt",
+    "--max-context",
+    "4096",
+    "--kv",
+    "int8",
+    "--pool-workers",
+    "16",
+    "--vram-reserve-mib",
+    "1536",
+    "--pack",
+    "/models/strata-work/data/packs/unsloth-ud-q4_k_xl",
+    "--native",
+    "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "--expert-profile",
+    "data/expert-profile.bin"
+  ],
+  "env": {
+    "STRATA_PF_FUSED": "0",
+    "STRATA_STAGE_TRIM": "1",
+    "STRATA_SPLIT_TIMING": "1"
+  },
+  "gpu": [
+    0,
+    1
+  ],
+  "log": "/models/strata-work/logs/engine-2gpu.log",
+  "layer_split": "24",
+  "draft_vocab": "en"
+}

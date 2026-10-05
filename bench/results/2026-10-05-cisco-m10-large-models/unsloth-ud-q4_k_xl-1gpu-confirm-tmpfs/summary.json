@@ -1,0 +1,95 @@
+{
+  "run": "unsloth-ud-q4_k_xl-1gpu-confirm-tmpfs",
+  "state": "complete",
+  "startup_s": 46.119202757000494,
+  "gpu_indices": [
+    0
+  ],
+  "cases": {
+    "warmup": {
+      "requests": 1,
+      "decode_tps_median": 7.8,
+      "decode_tps_min": 7.8,
+      "decode_tps_max": 7.8,
+      "prompt_tps_median": 9.7,
+      "first_token_s_median": 4.275574422000318,
+      "completion_tokens": [
+        21
+      ],
+      "finish_reasons": [
+        "stop"
+      ],
+      "max_temperature_c": 37.0,
+      "max_vram_used_mib": 7433.0,
+      "active_gpu_power_w_mean": 48.81333333333333,
+      "all_gpu_power_w_mean": 107.06666666666666,
+      "vm_cpu_percent_mean": 49.233333333333334
+    },
+    "code": {
+      "requests": 2,
+      "decode_tps_median": 7.85,
+      "decode_tps_min": 7.8,
+      "decode_tps_max": 7.9,
+      "prompt_tps_median": 10.35,
+      "first_token_s_median": 6.3476509950000946,
+      "completion_tokens": [
+        192,
+        192
+      ],
+      "finish_reasons": [
+        "length",
+        "length"
+      ],
+      "max_temperature_c": 48.0,
+      "max_vram_used_mib": 7627.0,
+      "active_gpu_power_w_mean": 50.756,
+      "all_gpu_power_w_mean": 109.02,
+      "vm_cpu_percent_mean": 67.55666666666667
+    },
+    "prose": {
+      "requests": 2,
+      "decode_tps_median": 7.35,
+      "decode_tps_min": 7.3,
+      "decode_tps_max": 7.4,
+      "prompt_tps_median": 10.05,
+      "first_token_s_median": 6.503907620000064,
+      "completion_tokens": [
+        192,
+        192
+      ],
+      "finish_reasons": [
+        "length",
+        "length"
+      ],
+      "max_temperature_c": 49.0,
+      "max_vram_used_mib": 7627.0,
+      "active_gpu_power_w_mean": 49.98774193548387,
+      "all_gpu_power_w_mean": 108.26161290322581,
+      "vm_cpu_percent_mean": 67.2741935483871
+    },
+    "swedish": {
+      "requests": 2,
+      "decode_tps_median": 6.85,
+      "decode_tps_min": 6.7,
+      "decode_tps_max": 7.0,
+      "prompt_tps_median": 6.4,
+      "first_token_s_median": 13.222836654500497,
+      "completion_tokens": [
+        192,
+        192
+      ],
+      "finish_reasons": [
+        "length",
+        "length"
+      ],
+      "max_temperature_c": 49.0,
+      "max_vram_used_mib": 7627.0,
+      "active_gpu_power_w_mean": 48.44615384615385,
+      "all_gpu_power_w_mean": 106.7325641025641,
+      "vm_cpu_percent_mean": 48.743589743589745
+    }
+  },
+  "telemetry_samples": 127,
+  "min_available_ram_gib": 68.24260330200195,
+  "max_swap_used_bytes": 1785856
+}

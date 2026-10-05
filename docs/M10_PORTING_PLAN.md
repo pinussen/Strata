@@ -1,8 +1,22 @@
-# Tesla M10 / Maxwell sm_52 porting plan
+# Tesla M10 / Maxwell sm_50 porting plan
 
-This document tracks the work needed to make Strata run experimentally on NVIDIA Tesla M10 cards (Maxwell, compute capability 5.2), with the initial target being a Cisco server containing multiple M10 boards.
+Hardware correction (2026-10-05): all eight passed-through Tesla M10 GPUs on the Cisco UCS C240 M5SX report
+compute capability 5.0 through NVML and the CUDA runtime. The original plan incorrectly assumed 5.2.
+Use `STRATA_EXPERIMENTAL_SM50` and `CMAKE_CUDA_ARCHITECTURES=50`; the old SM52 instructions do not target these GPUs.
 
-The goal is **not** to make Strata a generic old-GPU runtime. The first target is to keep the current Qwen3.8-Flash-Next model architecture and make the existing CUDA engine work on sm_52 with as little divergence from upstream as possible.
+Bring-up status: the engine builds; 27 selected CTest cases pass; three short model requests give the same correct
+text on one, two, four and eight GPUs with explicit layer splits. The default VRAM reserve failed on the first
+one-GPU request; the tested configurations use `--vram-reserve-mib 1536`. See the
+[measured results and configurations](../bench/results/2026-10-05-cisco-m10/README.md).
+
+Full-model follow-up: both 83.6 GB IQ3_S and 111.3 GB Unsloth Q4 run successfully. The latter was tested on
+one, two, four and eight 8 GiB devices with 256 GiB guest RAM. See the
+[full-model measurements](../bench/results/2026-10-05-cisco-m10-large-models/README.md) for decode/prefill
+tradeoffs, storage fixes and remaining limits.
+
+This document tracks the work needed to make Strata run experimentally on NVIDIA Tesla M10 cards (Maxwell, compute capability 5.0), with the initial target being a Cisco server containing multiple M10 boards.
+
+The goal is **not** to make Strata a generic old-GPU runtime. The first target is to keep the current Qwen3.8-Flash-Next model architecture and make the existing CUDA engine work on sm_50 with as little divergence from upstream as possible.
 
 ## Hardware assumptions
 
@@ -11,7 +25,7 @@ A Tesla M10 board contains four independent Maxwell GPUs, each with 8 GiB VRAM. 
 Important consequences:
 
 - every device is below Strata's current experimental CUDA floor of sm_60;
-- CUDA 13 cannot be used for Maxwell, so the port must use a CUDA version that still supports sm_52;
+- CUDA 13 cannot be used for Maxwell, so the port must use a CUDA version that still supports sm_50;
 - 8 GiB per device is tight, so dense weights, KV/session state, prompt buffers and expert cache must be budgeted carefully;
 - multi-GPU layer splitting is preferable to tensor parallelism because Strata already transfers activations only between stages rather than synchronizing every layer.
 
@@ -19,7 +33,7 @@ Important consequences:
 
 The work should be done in stages. Do not optimize everything at once.
 
-1. Strata configures and compiles for sm_52.
+1. Strata configures and compiles for sm_50.
 2. CUDA kernel parity/self-tests run correctly on one M10 GPU.
 3. A small real-model smoke test reaches inference on one M10 GPU without illegal-instruction or unsupported-operation failures.
 4. A two-GPU explicit layer split works.
@@ -49,9 +63,9 @@ Commit the result as a small hardware note under `docs/` or `bench/results/`.
 
 Reason: this port will depend heavily on PCIe topology, CPU fallback speed and the exact CUDA/toolchain limits.
 
-## Phase 1 - Establish the CUDA/toolchain floor for sm_52
+## Phase 1 - Establish the CUDA/toolchain floor for sm_50
 
-Current state:
+Starting point before this port:
 
 - normal Strata CUDA builds require sm_75+;
 - `STRATA_EXPERIMENTAL_SM60` lowers that floor to sm_60;
@@ -60,23 +74,23 @@ Current state:
 
 Tasks:
 
-1. Determine the newest CUDA toolkit that still compiles sm_52.
+1. Determine the newest CUDA toolkit that still compiles sm_50.
 2. Add a **separate opt-in Maxwell flag**, for example:
-   `STRATA_EXPERIMENTAL_SM52=ON`.
+   `STRATA_EXPERIMENTAL_SM50=ON`.
 3. Keep `STRATA_EXPERIMENTAL_SM60` behavior unchanged.
-4. Lower the CMake architecture floor to 52 only when the new flag is enabled.
+4. Lower the CMake architecture floor to 50 only when the new flag is enabled.
 5. Ensure no ready-made modern CUDA build changes behavior.
 6. Add configure-time tests covering:
-   - sm_52 without the flag -> rejected;
-   - sm_52 with the flag -> accepted;
+   - sm_50 without the flag -> rejected;
+   - sm_50 with the flag -> accepted;
    - sm_60/sm_70 experimental path -> unchanged;
    - sm_75+ normal path -> unchanged.
 
 Do **not** merge Maxwell into the existing SM60 flag initially. Keeping the paths separate makes regressions easier to isolate.
 
-## Phase 2 - Compile-audit every CUDA kernel for sm_52
+## Phase 2 - Compile-audit every CUDA kernel for sm_50
 
-Build all CUDA translation units for sm_52 and collect failures rather than fixing them ad hoc.
+Build all CUDA translation units for sm_50 and collect failures rather than fixing them ad hoc.
 
 Audit especially:
 
@@ -93,7 +107,7 @@ Audit especially:
 Classify each failure into:
 
 A. instruction/intrinsic unavailable on Maxwell;
-B. CUDA library API unsupported for sm_52;
+B. CUDA library API unsupported for sm_50;
 C. tensor-core/BF16 path that needs an existing FP32/FP16 fallback;
 D. launch/resource assumptions that exceed Maxwell limits;
 E. compile-time architecture guard only.
@@ -108,12 +122,12 @@ The existing `dp4a.hpp` is the model to follow.
 
 Likely work:
 
-1. Reuse the software `dp4a` path already present for sm_52.
+1. Reuse the software `dp4a` path already present for sm_50.
 2. Reuse the spin-loop fallback already present for pre-Volta.
 3. Identify any warp primitives whose old CUDA form requires an explicit compatibility wrapper.
 4. Route BF16 operations through FP32/FP16 conversion paths where Maxwell lacks native BF16 support.
-5. Ensure tensor-core code is completely compiled out for sm_52.
-6. Check atomics, shuffle operations and shared-memory assumptions against sm_52.
+5. Ensure tensor-core code is completely compiled out for sm_50.
+6. Check atomics, shuffle operations and shared-memory assumptions against sm_50.
 7. Keep numerical behavior measurable and document any path that is not bit-identical.
 
 All compatibility code should be opt-in through the Maxwell build and should not affect modern GPU binaries.
@@ -135,7 +149,7 @@ Priority tests should cover:
 
 For every failing test:
 
-1. reproduce on sm_52;
+1. reproduce on sm_50;
 2. compare against the CPU/reference implementation;
 3. fix correctness first;
 4. record whether the result is bit-exact or tolerance-based.
@@ -168,7 +182,7 @@ Do not start by writing a new CPU backend unless runtime testing proves it is ne
 
 Each M10 GPU has only 8 GiB, so memory budgeting is a first-class problem.
 
-Measure on sm_52:
+Measure on sm_50:
 
 - stage-local dense weights;
 - output head/draft layer on the last stage;
@@ -251,7 +265,7 @@ Once the engine works by hand, integrate it into setup.
 
 Required changes:
 
-1. identify Maxwell sm_52 as experimental rather than simply unsupported;
+1. identify Maxwell sm_50 as experimental rather than simply unsupported;
 2. require explicit opt-in;
 3. choose the Maxwell-capable CUDA engine/toolkit;
 4. preserve modern CUDA 13 behavior for sm_75+ systems;
@@ -312,9 +326,9 @@ Every optimization needs an A/B benchmark and a parity check.
 Use this order for commits so regressions stay easy to bisect:
 
 1. documentation only;
-2. `STRATA_EXPERIMENTAL_SM52` CMake/configure support;
+2. `STRATA_EXPERIMENTAL_SM50` CMake/configure support;
 3. compile-only Maxwell compatibility fixes;
-4. sm_52 kernel parity fixes;
+4. sm_50 kernel parity fixes;
 5. one-GPU runtime bring-up;
 6. CPU fallback decision;
 7. 8 GiB memory tuning;
@@ -329,7 +343,7 @@ Avoid mixing correctness changes, setup changes and performance tuning in the sa
 
 These cannot be answered reliably from source inspection alone:
 
-- exact CUDA toolkit version that is practical for the installed driver and sm_52;
+- exact CUDA toolkit version that is practical for the installed driver and sm_50;
 - exact Cisco CPU and how usable the current CPU fallback is;
 - actual free VRAM after CUDA context allocation on an M10;
 - whether the current prompt buffers fit comfortably in 8 GiB;

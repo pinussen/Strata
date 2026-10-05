@@ -1,0 +1,54 @@
+{
+  "checked_utc": "2026-10-05T23:52:35.993575+00:00",
+  "checks": {
+    "web": {
+      "status": 200,
+      "expected_status": 200
+    },
+    "models_unauthenticated": {
+      "status": 401,
+      "expected_status": 401
+    },
+    "models_authenticated": {
+      "status": 200,
+      "expected_status": 200,
+      "body": {
+        "object": "list",
+        "data": [
+          {
+            "id": "strata-m10-unsloth-ud-q4_k_xl",
+            "object": "model",
+            "status": {
+              "value": "loaded"
+            },
+            "meta": {
+              "n_ctx": 4096
+            },
+            "architecture": {
+              "input_modalities": [
+                "text"
+              ],
+              "output_modalities": [
+                "text"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "health": {
+      "status": 200,
+      "expected_status": 200,
+      "body": {
+        "status": "ok",
+        "max_context": 4096,
+        "model": "strata-m10-unsloth-ud-q4_k_xl",
+        "images": false,
+        "api_key": true,
+        "loaded": true,
+        "service": "strata"
+      }
+    }
+  },
+  "state": "passed"
+}

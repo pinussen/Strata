@@ -1,13 +1,13 @@
 // src/prefill/gemm_bf16_parity.cu - Gemm::bf16 against cuBLAS's own BF16 product (GPU, synthetic, no model).
 //
 // Below sm_80 (no BF16 tensor cores) Gemm::bf16 converts the weight and the activations to FP16 and runs the FP16
-// tensor-core GEMM (Volta by default, Turing with STRATA_BF16_TC=1) or widens them to fp32 (Pascal); everywhere else
-// it is the cuBLAS BF16 call itself.  (On Pascal the cuBLAS BF16 reference itself may be refused: the test then fails
-// at the reference, which says so.)  This
-// checks the result against cublasGemmEx on the same BF16 inputs, within fp32-accumulation rounding, over the prompt
+// tensor-core GEMM (Volta by default, Turing with STRATA_BF16_TC=1) or widens them to fp32 (Maxwell/Pascal); everywhere else
+// it is the cuBLAS BF16 call itself. On Maxwell/Pascal, widen the reference inputs on the HOST and use SGEMM:
+// cuBLAS does not support the BF16 reference on those devices. This independently checks the GPU conversion.
+// Both references check the same BF16 inputs, within fp32-accumulation rounding, over the prompt
 // path's shapes: the hyper-connection down / up projections, the router and indexer rows, the PLE value matrix, a T
 // large enough to slice the activations, beta = 1 accumulation (the bf16x2 low parts) and an output row stride wider
-// than N.  --bench adds the time of each against the cuBLAS BF16 product.
+// than N.  --bench adds the time of each against the selected cuBLAS reference.
 #include "strata/prefill/gemm.hpp"
 
 #include <cublas_v2.h>
@@ -32,6 +32,13 @@ uint16_t to_bf16(float f) {   // round to nearest even
     return (uint16_t) (u >> 16);
 }
 
+float from_bf16(uint16_t v) {
+    const uint32_t bits = uint32_t(v) << 16;
+    float f;
+    std::memcpy(&f, &bits, sizeof(f));
+    return f;
+}
+
 bool ok_or(cudaError_t e, const char* what) {
     if (e != cudaSuccess) std::printf("FAIL: %s: %s\n", what, cudaGetErrorString(e));
     return e == cudaSuccess;
@@ -51,6 +58,8 @@ int main(int argc, char** argv) {
     cudaDeviceGetAttribute(&maj, cudaDevAttrComputeCapabilityMajor, dev);
     cudaDeviceGetAttribute(&min, cudaDevAttrComputeCapabilityMinor, dev);
     std::printf("gemm_bf16_parity: compute capability %d.%d\n", maj, min);
+    const bool fp32_reference = maj < 7;
+    std::printf("reference: %s\n", fp32_reference ? "host-widened BF16 + cuBLAS SGEMM" : "cuBLAS BF16");
 
     cudaStream_t st = nullptr;
     if (!ok_or(cudaStreamCreate(&st), "stream")) return 1;
@@ -95,18 +104,33 @@ int main(int argc, char** argv) {
         cudaMemset(dy, 0, ybytes);
         cudaMemset(dr, 0, ybytes);
 
+        float *dx32 = nullptr, *dxlo32 = nullptr, *dw32 = nullptr;
+        if (fp32_reference) {
+            auto upload = [&](const std::vector<uint16_t>& in, float*& out) {
+                std::vector<float> expanded(in.size());
+                std::transform(in.begin(), in.end(), expanded.begin(), from_bf16);
+                const size_t bytes = expanded.size() * sizeof(float);
+                return ok_or(cudaMalloc((void**) &out, bytes), "FP32 reference allocation") &&
+                       ok_or(cudaMemcpy(out, expanded.data(), bytes, cudaMemcpyHostToDevice), "FP32 reference upload");
+            };
+            if (!upload(x, dx32) || !upload(xlo, dxlo32) || !upload(w, dw32)) return 1;
+        }
+
         // the product under test: X . W^T, then the low part added with beta = 1
         gemm.bf16(dx, dw, dy, s.T, s.N, s.K, ldy);
         gemm.bf16(dxlo, dw, dy, s.T, s.N, s.K, ldy, 1.0f);
         // the reference: cuBLAS on the BF16 inputs, the same two calls
         const float one = 1.0f, zero = 0.0f;
         auto ref = [&](const uint16_t* X, float beta) {
+            if (fp32_reference)
+                return cublasSgemm(h, CUBLAS_OP_T, CUBLAS_OP_N, (int) s.N, (int) s.T, (int) s.K, &one,
+                                  dw32, (int) s.K, X == dx ? dx32 : dxlo32, (int) s.K, &beta, dr, (int) ldy);
             return cublasGemmEx(h, CUBLAS_OP_T, CUBLAS_OP_N, (int) s.N, (int) s.T, (int) s.K, &one, dw, CUDA_R_16BF,
                                 (int) s.K, X, CUDA_R_16BF, (int) s.K, &beta, dr, CUDA_R_32F, (int) ldy,
                                 CUBLAS_COMPUTE_32F, CUBLAS_GEMM_DEFAULT);
         };
         if (ref(dx, zero) != CUBLAS_STATUS_SUCCESS || ref(dxlo, one) != CUBLAS_STATUS_SUCCESS) {
-            std::printf("FAIL: reference cublasGemmEx\n");
+            std::printf("FAIL: cuBLAS reference\n");
             return 1;
         }
         if (!ok_or(cudaStreamSynchronize(st), "sync")) return 1;
@@ -143,10 +167,11 @@ int main(int argc, char** argv) {
             };
             const double us_gemm = time([&] { gemm.bf16(dx, dw, dy, s.T, s.N, s.K, ldy); });
             const double us_ref = time([&] { ref(dx, zero); });
-            std::printf("      bench: Gemm::bf16 %9.1f us   cuBLAS BF16 %9.1f us   (%.2fx)\n", us_gemm, us_ref,
+            std::printf("      bench: Gemm::bf16 %9.1f us   cuBLAS reference %9.1f us   (%.2fx)\n", us_gemm, us_ref,
                         us_ref / us_gemm);
         }
         cudaFree(dx); cudaFree(dxlo); cudaFree(dw); cudaFree(dy); cudaFree(dr);
+        cudaFree(dx32); cudaFree(dxlo32); cudaFree(dw32);
     }
     cublasDestroy(h);
     cudaStreamDestroy(st);

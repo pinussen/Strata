@@ -1,0 +1,55 @@
+{
+  "captured_utc": "2026-10-05T22:47:20.683402+00:00",
+  "memlock_rlimit_bytes": [
+    33781985280,
+    33781985280
+  ],
+  "memory": {
+    "command": [
+      "free",
+      "-b"
+    ],
+    "exit_code": 0,
+    "stdout": "               total        used        free      shared  buff/cache   available\nMem:     270255906816 54069661696  2014777344 85819359232 214171467776 128006623232\nSwap:     5523894272   745955328  4777938944\n",
+    "stderr": ""
+  },
+  "cpu": {
+    "command": [
+      "lscpu"
+    ],
+    "exit_code": 0,
+    "stdout": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  24\nOn-line CPU(s) list:                     0-23\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz\nCPU family:                              6\nModel:                                   85\nThread(s) per core:                      1\nCore(s) per socket:                      24\nSocket(s):                               1\nStepping:                                7\nBogoMIPS:                                5999.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves arat umip pku ospke avx512_vnni md_clear flush_l1d arch_capabilities\nVirtualization:                          VT-x\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               768 KiB (24 instances)\nL1i cache:                               768 KiB (24 instances)\nL2 cache:                                96 MiB (24 instances)\nL3 cache:                                16 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-23\nVulnerability Gather data sampling:      Unknown: Dependent on hypervisor status\nVulnerability Indirect target selection: Mitigation; Aligned branch/return thunks\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT Host state unknown\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Mitigation; Enhanced IBRS\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl and seccomp\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Mitigation; TSX disabled\nVulnerability Vmscape:                   Not affected\n",
+    "stderr": ""
+  },
+  "gpus": {
+    "command": [
+      "nvidia-smi",
+      "--query-gpu=index,name,uuid,memory.total,driver_version,compute_cap",
+      "--format=csv"
+    ],
+    "exit_code": 0,
+    "stdout": "index, name, uuid, memory.total [MiB], driver_version, compute_cap\n0, Tesla M10, GPU-f6c91eab-d4cb-2536-6a6b-882deb22e64f, 8192 MiB, 535.309.01, 5.0\n1, Tesla M10, GPU-a3c6b496-47f5-1458-792d-f686f7056511, 8192 MiB, 535.309.01, 5.0\n2, Tesla M10, GPU-99060775-d872-9b2d-1e8e-3dff98ee9290, 8192 MiB, 535.309.01, 5.0\n3, Tesla M10, GPU-ae414c83-be98-620e-3180-4911672d43ed, 8192 MiB, 535.309.01, 5.0\n4, Tesla M10, GPU-bcf38162-6960-0b45-1770-3c7ef2a918fc, 8192 MiB, 535.309.01, 5.0\n5, Tesla M10, GPU-1675f247-68d7-58a4-97e3-72a51a8cdf7f, 8192 MiB, 535.309.01, 5.0\n6, Tesla M10, GPU-d16b3e76-9131-f78f-437a-e333d884092d, 8192 MiB, 535.309.01, 5.0\n7, Tesla M10, GPU-61d0fd5f-b706-7af9-6e6b-47b5005c7ba3, 8192 MiB, 535.309.01, 5.0\n",
+    "stderr": ""
+  },
+  "mount": {
+    "command": [
+      "findmnt",
+      "/dev/shm"
+    ],
+    "exit_code": 0,
+    "stdout": "TARGET   SOURCE FSTYPE OPTIONS\n/dev/shm tmpfs  tmpfs  rw,nosuid,nodev,inode64\n",
+    "stderr": ""
+  },
+  "filesystem": {
+    "command": [
+      "df",
+      "-B1",
+      "/models",
+      "/dev/shm",
+      "/"
+    ],
+    "exit_code": 0,
+    "stdout": "Filesystem                           1B-blocks         Used    Available Use% Mounted on\n192.168.2.6:/tank/ai-models       536870912000 335935438848 200935473152  63% /models\ntmpfs                             135127953408  85989728256  49138225152  64% /dev/shm\n/dev/mapper/ubuntu--vg-ubuntu--lv  82244976640  72397672448   6223192064  93% /\n",
+    "stderr": ""
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-10-05T23:48:13.693295+00:00",
+  "server_pid": 15861,
+  "source_config": "/home/bjwl/strata-dev/bench-configs/unsloth-ud-q4_k_xl-8gpu-base.json",
+  "drop_source_cache": true,
+  "ready_s": 64.11357164999936,
+  "health": {
+    "status": "ok",
+    "max_context": 4096,
+    "model": "strata-m10-unsloth-ud-q4_k_xl",
+    "images": false,
+    "api_key": true,
+    "loaded": true,
+    "service": "strata"
+  }
+}

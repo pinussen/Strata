@@ -1,0 +1,53 @@
+{
+  "exe": "/home/bjwl/strata-dev/build-m10/strata",
+  "cwd": "/home/bjwl/Strata",
+  "tokenizer": "/dev/shm/strata-data/packs/qwen-iq3_s/tokenizer",
+  "model_name": "strata-m10-qwen-iq3_s",
+  "host": "127.0.0.1",
+  "port": 8096,
+  "open_browser": false,
+  "args": [
+    "--ple-io",
+    "ram",
+    "--expert-cache",
+    "auto",
+    "--prefill",
+    "128",
+    "--spec",
+    "2",
+    "--spec-min-p",
+    "0.5",
+    "--mtp",
+    "/dev/shm/strata-data/mtp/rt",
+    "--max-context",
+    "4096",
+    "--kv",
+    "int8",
+    "--pool-workers",
+    "16",
+    "--vram-reserve-mib",
+    "1536",
+    "--pack",
+    "/dev/shm/strata-data/packs/qwen-iq3_s",
+    "--native",
+    "/dev/shm/strata-data/models/qwen-iq3_s/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+    "--expert-profile",
+    "data/expert-profile.bin",
+    "--ple-gguf",
+    "/dev/shm/strata-data/models/qwen-iq3_s/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf"
+  ],
+  "env": {
+    "STRATA_PF_FUSED": "0",
+    "STRATA_STAGE_TRIM": "1",
+    "STRATA_SPLIT_TIMING": "1"
+  },
+  "gpu": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "log": "/home/bjwl/strata-dev/bench/qwen-iq3_s-4gpu-base-ram/engine.log",
+  "layer_split": "12,24,36",
+  "draft_vocab": "en"
+}

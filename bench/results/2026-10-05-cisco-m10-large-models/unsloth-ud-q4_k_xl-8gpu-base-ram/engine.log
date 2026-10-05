@@ -1,0 +1,222 @@
+strata generate: layer split across 8 GPUs: CUDA0, then CUDA1,2,3,4,5,6,7 (split 6,12,18,24,30,36,42)
+strata generate: PCIe probe: 6.2 GB/s host->device (best of 6.2 6.2 6.2 6.2) -> pcie_frac 0.17 (default 0.55)
+strata generate: this CPU has no AVX-512: the expert kernels run on AVX-2 (multi-token for the i-quant gate/up rows)
+strata generate: native pack: /dev/shm/strata-data/packs/unsloth-ud-q4_k_xl experts (largest blob 3.99 MB), token embedding Q8_0 in mapped host memory (644 MiB)
+strata generate: layer split: CUDA0 loads the dense weights of layers 0-5 only
+strata generate: 197 MiB of weights loaded from /dev/shm/strata-data/packs/unsloth-ud-q4_k_xl (975 canonical tensors skipped: served natively)
+strata generate: 38 native projection matrices, 399.10 MiB of weights
+strata generate: PLE table locked in RAM (--ple-io ram) in 3.8 s
+strata generate: layer split: CUDA1 loads the dense weights of layers 6-11 only
+strata generate: layer split: CUDA1 PCIe probe 6.2 GB/s (best of 6.2 6.2 6.2 6.2) -> pcie_frac 0.17
+strata generate: layer split: CUDA1 holds its weights; 7.31 GiB free (its session follows the split search)
+strata generate: layer split: CUDA2 loads the dense weights of layers 12-17 only
+strata generate: layer split: CUDA2 PCIe probe 6.2 GB/s (best of 6.2 6.2 6.2 6.2) -> pcie_frac 0.17
+strata generate: layer split: CUDA2 holds its weights; 7.30 GiB free (its session follows the split search)
+strata generate: layer split: CUDA3 loads the dense weights of layers 18-23 only
+strata generate: layer split: CUDA3 PCIe probe 6.2 GB/s (best of 6.2 6.2 6.2 6.2) -> pcie_frac 0.17
+strata generate: layer split: CUDA3 holds its weights; 7.31 GiB free (its session follows the split search)
+strata generate: layer split: CUDA4 loads the dense weights of layers 24-29 only
+strata generate: layer split: CUDA4 PCIe probe 6.2 GB/s (best of 6.2 6.2 6.2 6.2) -> pcie_frac 0.17
+strata generate: layer split: CUDA4 holds its weights; 7.30 GiB free (its session follows the split search)
+strata generate: layer split: CUDA5 loads the dense weights of layers 30-35 only
+strata generate: layer split: CUDA5 PCIe probe 6.2 GB/s (best of 6.2 6.2 6.2 6.2) -> pcie_frac 0.17
+strata generate: layer split: CUDA5 holds its weights; 7.31 GiB free (its session follows the split search)
+strata generate: layer split: CUDA6 loads the dense weights of layers 36-41 only
+strata generate: layer split: CUDA6 PCIe probe 6.2 GB/s (best of 6.2 6.2 6.2 6.2) -> pcie_frac 0.17
+strata generate: layer split: CUDA6 holds its weights; 7.30 GiB free (its session follows the split search)
+strata generate: layer split: CUDA7 loads the dense weights of layers 42-47 only
+strata generate: layer split: CUDA7 PCIe probe 6.2 GB/s (best of 6.2 6.2 6.2 6.2) -> pcie_frac 0.17
+strata generate: layer split: CUDA7 holds its weights; 7.31 GiB free (its session follows the split search)
+strata generate: profile data/expert-profile.bin: 24576 ranked pairs, built for 24576 slots
+strata generate: PLE on, table 320001536 rows of /dev/shm/strata-data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf
+strata generate: layer split: CUDA1 holds its weights, session [6, 12); 7.28 GiB free
+strata generate: layer split: CUDA2 holds its weights, session [12, 18); 7.27 GiB free
+strata generate: layer split: CUDA3 holds its weights, session [18, 24); 7.28 GiB free
+strata generate: layer split: CUDA4 holds its weights, session [24, 30); 7.27 GiB free
+strata generate: layer split: CUDA5 holds its weights, session [30, 36); 7.28 GiB free
+strata generate: layer split: CUDA6 holds its weights, session [36, 42); 7.27 GiB free
+strata generate: layer split: CUDA7 holds its weights, session [42, 48) and the head; 6.65 GiB free
+strata mtp: draft layer loaded, 794 MiB of VRAM (experts 675, dense 111), files read in 0.47 s (1660 MiB/s)
+strata generate: GPU 0: Tesla M10, compute capability 5.0
+strata generate: expert arena read through the file cache (buffered (not Windows))
+strata generate: expert arena: cudaHostRegister PORTABLE ok; MAP_HUGETLB unavailable (needed 36727 2 MiB pages, vm.nr_hugepages=0); transparent huge pages requested (MADV_HUGEPAGE)
+strata generate: loaded 71.73 GiB at 7.55 GiB/s
+strata generate: expert cache auto: 7.13 GiB free, 1536 MiB reserved (+0 MiB for the draft head) -> 1514 slots
+strata generate: expert cache 1823 slots, 5.63 GiB of VRAM; policy is
+strata generate: the GPU computes the experts in the cache; it rounds differently from the CPU,
+                 so a reply can differ slightly from a run without the cache (same quality:
+                 bench/results/2026-09-27-cache-parity).
+                 PROFILE, ranked by routing frequency, no eviction.
+strata generate: pre-filled 1823 of 1823 slots from the profile; slot 0 verified
+strata generate: layer split, CUDA1: 7.14 GiB free of 7.94, room for experts 5.54 GiB
+strata generate: layer split: CUDA1 runs layers 6-11, expert cache 1938 slots (5.54 GiB), 1938 of its 3072 profiled pairs; slot 0 verified
+strata generate: layer split, CUDA2: 7.13 GiB free of 7.94, room for experts 5.54 GiB
+strata generate: layer split: CUDA2 runs layers 12-17, expert cache 1936 slots (5.54 GiB), 1936 of its 3072 profiled pairs; slot 0 verified
+strata generate: layer split, CUDA3: 7.14 GiB free of 7.94, room for experts 5.54 GiB
+strata generate: layer split: CUDA3 runs layers 18-23, expert cache 1938 slots (5.54 GiB), 1938 of its 3072 profiled pairs; slot 0 verified
+strata generate: layer split, CUDA4: 7.13 GiB free of 7.94, room for experts 5.54 GiB
+strata generate: layer split: CUDA4 runs layers 24-29, expert cache 1936 slots (5.54 GiB), 1936 of its 3072 profiled pairs; slot 0 verified
+strata generate: layer split, CUDA5: 7.14 GiB free of 7.94, room for experts 5.54 GiB
+strata generate: layer split: CUDA5 runs layers 30-35, expert cache 1879 slots (5.54 GiB), 1879 of its 3072 profiled pairs; slot 0 verified
+strata generate: layer split, CUDA6: 7.13 GiB free of 7.94, room for experts 5.54 GiB
+strata generate: layer split: CUDA6 runs layers 36-41, expert cache 1936 slots (5.54 GiB), 1936 of its 3072 profiled pairs; slot 0 verified
+strata generate: layer split, CUDA7: 5.73 GiB free of 7.94, room for experts 4.14 GiB
+strata generate: layer split: CUDA7 runs layers 42-47, expert cache 1369 slots (4.14 GiB), 1369 of its 3072 profiled pairs; slot 0 verified
+strata generate: layer split: CUDA0 runs layers 0-5
+strata generate: R4 hit path ON - resident experts are computed on the GPU
+strata generate: 16 expert-pool workers + the host thread
+strata generate: session is up (engine 0.1.39)
+strata generate: token graph hit path: 14755 resident experts, decided on the device
+strata serve: no stage can lend the prompt path its 128-token buffers, so each stage allocates its own:
+strata serve:   CUDA0 has 1823 slots, and a 128-token chunk needs the last 67 of them
+strata serve:   CUDA1 has 1938 slots, and a 128-token chunk needs the last 73 of them
+strata serve:   CUDA2 has 1936 slots, and a 128-token chunk needs the last 73 of them
+strata serve:   CUDA3 has 1938 slots, and a 128-token chunk needs the last 73 of them
+strata serve:   CUDA4 has 1936 slots, and a 128-token chunk needs the last 73 of them
+strata serve:   CUDA5 has 1879 slots, and a 128-token chunk needs the last 71 of them
+strata serve:   CUDA6 has 1936 slots, and a 128-token chunk needs the last 73 of them
+strata serve:   CUDA7 has 1369 slots, and a 128-token chunk needs the last 70 of them
+strata serve: the prompt path allocates its own buffers (too few cache slots to borrow)
+strata hc: CUDA1: the hyper-connection read runs as staged (the norm per token and stream, the down projection's activations staged ahead by cp.async); checked bit for bit against the plain read on this card (STRATA_HC_SPLIT=1 or 0 for the earlier ones)
+strata verify: window up to 4 tokens, 83.2 MiB of device buffers
+strata hc: CUDA2: the hyper-connection read runs as staged (the norm per token and stream, the down projection's activations staged ahead by cp.async); checked bit for bit against the plain read on this card (STRATA_HC_SPLIT=1 or 0 for the earlier ones)
+strata verify: window up to 4 tokens, 83.2 MiB of device buffers
+strata hc: CUDA3: the hyper-connection read runs as staged (the norm per token and stream, the down projection's activations staged ahead by cp.async); checked bit for bit against the plain read on this card (STRATA_HC_SPLIT=1 or 0 for the earlier ones)
+strata verify: window up to 4 tokens, 83.2 MiB of device buffers
+strata hc: CUDA4: the hyper-connection read runs as staged (the norm per token and stream, the down projection's activations staged ahead by cp.async); checked bit for bit against the plain read on this card (STRATA_HC_SPLIT=1 or 0 for the earlier ones)
+strata verify: window up to 4 tokens, 83.2 MiB of device buffers
+strata hc: CUDA5: the hyper-connection read runs as staged (the norm per token and stream, the down projection's activations staged ahead by cp.async); checked bit for bit against the plain read on this card (STRATA_HC_SPLIT=1 or 0 for the earlier ones)
+strata verify: window up to 4 tokens, 83.2 MiB of device buffers
+strata hc: CUDA6: the hyper-connection read runs as staged (the norm per token and stream, the down projection's activations staged ahead by cp.async); checked bit for bit against the plain read on this card (STRATA_HC_SPLIT=1 or 0 for the earlier ones)
+strata verify: window up to 4 tokens, 83.2 MiB of device buffers
+strata hc: CUDA7: the hyper-connection read runs as staged (the norm per token and stream, the down projection's activations staged ahead by cp.async); checked bit for bit against the plain read on this card (STRATA_HC_SPLIT=1 or 0 for the earlier ones)
+strata verify: window up to 4 tokens, 83.2 MiB of device buffers
+strata serve: layer split: layers 0-5 (CUDA0), 6-11 (CUDA1), 12-17 (CUDA2), 18-23 (CUDA3), 24-29 (CUDA4), 30-35 (CUDA5), 36-41 (CUDA6), 42-47 (CUDA7), one hand-off per window
+strata hc: CUDA0: the hyper-connection read runs as staged (the norm per token and stream, the down projection's activations staged ahead by cp.async); checked bit for bit against the plain read on this card (STRATA_HC_SPLIT=1 or 0 for the earlier ones)
+strata verify: window up to 4 tokens, 83.2 MiB of device buffers
+strata mtp: draft head over 40525 tokens (105.1 MiB)
+strata serve: 1168 MiB of VRAM free with everything loaded
+strata verify: captured the 4-token window (upload no error, sync no error)
+strata verify: captured the 4-token window (upload no error, sync no error)
+strata verify: captured the 4-token window (upload no error, sync no error)
+strata verify: captured the 4-token window (upload no error, sync no error)
+strata verify: captured the 4-token window (upload no error, sync no error)
+strata verify: captured the 4-token window (upload no error, sync no error)
+strata verify: captured the 4-token window (upload no error, sync no error)
+strata verify: captured the 4-token window (upload no error, sync no error)
+strata verify: captured the 1-token window (upload no error, sync no error)
+strata verify: captured the 1-token window (upload no error, sync no error)
+strata verify: captured the 1-token window (upload no error, sync no error)
+strata verify: captured the 1-token window (upload no error, sync no error)
+strata verify: captured the 1-token window (upload no error, sync no error)
+strata verify: captured the 1-token window (upload no error, sync no error)
+strata verify: captured the 1-token window (upload no error, sync no error)
+strata verify: captured the 1-token window (upload no error, sync no error)
+strata verify: captured the 2-token window (upload no error, sync no error)
+strata verify: captured the 2-token window (upload no error, sync no error)
+strata verify: captured the 2-token window (upload no error, sync no error)
+strata verify: captured the 2-token window (upload no error, sync no error)
+strata verify: captured the 2-token window (upload no error, sync no error)
+strata verify: captured the 2-token window (upload no error, sync no error)
+strata verify: captured the 2-token window (upload no error, sync no error)
+strata verify: captured the 2-token window (upload no error, sync no error)
+strata serve: prompt 40 tokens = 0 reused + 40 read in 5071 ms (7.9 tok/s), 21 generated in 3041 ms (6.9 tok/s), drafts accepted 10 of 10, 1 checkpoints
+strata serve: decode expert cache hit rate: 74.0% (7311 hits / 9874 lookups); 206 more read by the GPU over PCIe or from another GPU (2.0% of all 10080 routed)
+strata serve: stage 0: 22 windows; per window: wait for the GPU 39.755 ms, pool + plan 1.511 ms, host staging 0.066 ms, commit 0.596 ms
+strata serve: stage 1: 22 windows; per window: wait for the GPU 35.651 ms, pool + plan 1.599 ms, host staging 0.001 ms, commit 0.482 ms
+strata serve: stage 2: 22 windows; per window: wait for the GPU 36.047 ms, pool + plan 1.423 ms, host staging 0.001 ms, commit 0.579 ms
+strata serve: stage 3: 22 windows; per window: wait for the GPU 35.910 ms, pool + plan 1.793 ms, host staging 0.001 ms, commit 0.484 ms
+strata serve: stage 4: 22 windows; per window: wait for the GPU 34.805 ms, pool + plan 2.240 ms, host staging 0.001 ms, commit 0.577 ms
+strata serve: stage 5: 22 windows; per window: wait for the GPU 35.916 ms, pool + plan 1.632 ms, host staging 0.001 ms, commit 0.483 ms
+strata serve: stage 6: 22 windows; per window: wait for the GPU 36.343 ms, pool + plan 1.120 ms, host staging 0.000 ms, commit 0.578 ms
+strata serve: stage 7: 22 windows; per window: wait for the GPU 35.976 ms, pool + plan 1.626 ms, host staging 0.000 ms, commit 0.482 ms
+strata verify: captured the 3-token window (upload no error, sync no error)
+strata verify: captured the 3-token window (upload no error, sync no error)
+strata verify: captured the 3-token window (upload no error, sync no error)
+strata verify: captured the 3-token window (upload no error, sync no error)
+strata verify: captured the 3-token window (upload no error, sync no error)
+strata verify: captured the 3-token window (upload no error, sync no error)
+strata verify: captured the 3-token window (upload no error, sync no error)
+strata verify: captured the 3-token window (upload no error, sync no error)
+strata serve: prompt 64 tokens = 0 reused + 64 read in 8000 ms (8.0 tok/s), 192 generated in 29682 ms (6.5 tok/s), drafts accepted 91 of 98, 1 checkpoints
+strata serve: decode expert cache hit rate: 89.7% (85320 hits / 95131 lookups); 389 more read by the GPU over PCIe or from another GPU (0.4% of all 95520 routed)
+strata serve: stage 0: 140 windows; per window: wait for the GPU 34.554 ms, pool + plan 1.469 ms, host staging 0.049 ms, commit 0.588 ms
+strata serve: stage 1: 140 windows; per window: wait for the GPU 31.938 ms, pool + plan 1.160 ms, host staging 0.001 ms, commit 0.475 ms
+strata serve: stage 2: 140 windows; per window: wait for the GPU 31.975 ms, pool + plan 1.203 ms, host staging 0.001 ms, commit 0.571 ms
+strata serve: stage 3: 140 windows; per window: wait for the GPU 32.064 ms, pool + plan 1.166 ms, host staging 0.000 ms, commit 0.477 ms
+strata serve: stage 4: 140 windows; per window: wait for the GPU 31.776 ms, pool + plan 1.189 ms, host staging 0.000 ms, commit 0.569 ms
+strata serve: stage 5: 140 windows; per window: wait for the GPU 32.335 ms, pool + plan 1.026 ms, host staging 0.000 ms, commit 0.476 ms
+strata serve: stage 6: 140 windows; per window: wait for the GPU 32.450 ms, pool + plan 0.748 ms, host staging 0.000 ms, commit 0.570 ms
+strata serve: stage 7: 140 windows; per window: wait for the GPU 32.146 ms, pool + plan 1.165 ms, host staging 0.000 ms, commit 0.474 ms
+strata serve: suffix drafts: 2 windows, 5 of 5 drafts accepted
+strata serve: prompt 64 tokens = 0 reused + 64 read in 7784 ms (8.2 tok/s), 192 generated in 32411 ms (5.9 tok/s), drafts accepted 78 of 98, 1 checkpoints
+strata serve: decode expert cache hit rate: 92.6% (94548 hits / 102115 lookups); 125 more read by the GPU over PCIe or from another GPU (0.1% of all 102240 routed)
+strata serve: stage 0: 272 windows; per window: wait for the GPU 33.448 ms, pool + plan 1.301 ms, host staging 0.047 ms, commit 0.585 ms
+strata serve: stage 1: 272 windows; per window: wait for the GPU 30.967 ms, pool + plan 1.052 ms, host staging 0.001 ms, commit 0.473 ms
+strata serve: stage 2: 272 windows; per window: wait for the GPU 30.536 ms, pool + plan 1.656 ms, host staging 0.001 ms, commit 0.569 ms
+strata serve: stage 3: 272 windows; per window: wait for the GPU 30.969 ms, pool + plan 1.263 ms, host staging 0.000 ms, commit 0.474 ms
+strata serve: stage 4: 272 windows; per window: wait for the GPU 30.840 ms, pool + plan 1.039 ms, host staging 0.000 ms, commit 0.566 ms
+strata serve: stage 5: 272 windows; per window: wait for the GPU 31.120 ms, pool + plan 1.011 ms, host staging 0.000 ms, commit 0.473 ms
+strata serve: stage 6: 272 windows; per window: wait for the GPU 31.393 ms, pool + plan 0.688 ms, host staging 0.000 ms, commit 0.567 ms
+strata serve: stage 7: 272 windows; per window: wait for the GPU 31.146 ms, pool + plan 1.033 ms, host staging 0.000 ms, commit 0.474 ms
+strata serve: prompt 83 tokens = 0 reused + 83 read in 12103 ms (6.9 tok/s), 192 generated in 34305 ms (5.6 tok/s), drafts accepted 66 of 93, 1 checkpoints
+strata serve: decode expert cache hit rate: 96.5% (101428 hits / 105099 lookups); 21 more read by the GPU over PCIe or from another GPU (0.0% of all 105120 routed)
+strata serve: stage 0: 400 windows; per window: wait for the GPU 32.052 ms, pool + plan 1.108 ms, host staging 0.043 ms, commit 0.582 ms
+strata serve: stage 1: 400 windows; per window: wait for the GPU 29.811 ms, pool + plan 0.877 ms, host staging 0.001 ms, commit 0.470 ms
+strata serve: stage 2: 400 windows; per window: wait for the GPU 29.460 ms, pool + plan 1.369 ms, host staging 0.000 ms, commit 0.566 ms
+strata serve: stage 3: 400 windows; per window: wait for the GPU 29.563 ms, pool + plan 1.304 ms, host staging 0.000 ms, commit 0.474 ms
+strata serve: stage 4: 400 windows; per window: wait for the GPU 29.528 ms, pool + plan 1.043 ms, host staging 0.000 ms, commit 0.563 ms
+strata serve: stage 5: 400 windows; per window: wait for the GPU 29.958 ms, pool + plan 0.798 ms, host staging 0.000 ms, commit 0.471 ms
+strata serve: stage 6: 400 windows; per window: wait for the GPU 30.097 ms, pool + plan 0.572 ms, host staging 0.000 ms, commit 0.564 ms
+strata serve: stage 7: 400 windows; per window: wait for the GPU 29.765 ms, pool + plan 0.909 ms, host staging 0.000 ms, commit 0.471 ms
+strata serve: prompt 64 tokens = 0 reused + 64 read in 8104 ms (7.9 tok/s), 192 generated in 30026 ms (6.4 tok/s), drafts accepted 91 of 99, 1 checkpoints
+strata serve: decode expert cache hit rate: 94.6% (90689 hits / 95861 lookups); 139 more read by the GPU over PCIe or from another GPU (0.1% of all 96000 routed)
+strata serve: stage 0: 518 windows; per window: wait for the GPU 32.550 ms, pool + plan 1.148 ms, host staging 0.039 ms, commit 0.583 ms
+strata serve: stage 1: 518 windows; per window: wait for the GPU 30.397 ms, pool + plan 0.824 ms, host staging 0.001 ms, commit 0.471 ms
+strata serve: stage 2: 518 windows; per window: wait for the GPU 30.018 ms, pool + plan 1.346 ms, host staging 0.000 ms, commit 0.567 ms
+strata serve: stage 3: 518 windows; per window: wait for the GPU 29.967 ms, pool + plan 1.468 ms, host staging 0.000 ms, commit 0.474 ms
+strata serve: stage 4: 518 windows; per window: wait for the GPU 30.025 ms, pool + plan 1.084 ms, host staging 0.000 ms, commit 0.564 ms
+strata serve: stage 5: 518 windows; per window: wait for the GPU 30.559 ms, pool + plan 0.716 ms, host staging 0.000 ms, commit 0.471 ms
+strata serve: stage 6: 518 windows; per window: wait for the GPU 30.594 ms, pool + plan 0.647 ms, host staging 0.000 ms, commit 0.565 ms
+strata serve: stage 7: 518 windows; per window: wait for the GPU 29.624 ms, pool + plan 1.610 ms, host staging 0.000 ms, commit 0.471 ms
+strata serve: suffix drafts: 2 windows, 5 of 6 drafts accepted
+strata serve: prompt 64 tokens = 0 reused + 64 read in 8079 ms (7.9 tok/s), 192 generated in 33202 ms (5.8 tok/s), drafts accepted 77 of 100, 1 checkpoints
+strata serve: decode expert cache hit rate: 97.7% (101334 hits / 103678 lookups); 2 more read by the GPU over PCIe or from another GPU (0.0% of all 103680 routed)
+strata serve: stage 0: 651 windows; per window: wait for the GPU 32.737 ms, pool + plan 1.055 ms, host staging 0.037 ms, commit 0.583 ms
+strata serve: stage 1: 651 windows; per window: wait for the GPU 30.616 ms, pool + plan 0.720 ms, host staging 0.001 ms, commit 0.470 ms
+strata serve: stage 2: 651 windows; per window: wait for the GPU 30.275 ms, pool + plan 1.159 ms, host staging 0.000 ms, commit 0.566 ms
+strata serve: stage 3: 651 windows; per window: wait for the GPU 30.226 ms, pool + plan 1.320 ms, host staging 0.000 ms, commit 0.473 ms
+strata serve: stage 4: 651 windows; per window: wait for the GPU 30.207 ms, pool + plan 1.021 ms, host staging 0.000 ms, commit 0.564 ms
+strata serve: stage 5: 651 windows; per window: wait for the GPU 30.692 ms, pool + plan 0.659 ms, host staging 0.000 ms, commit 0.471 ms
+strata serve: stage 6: 651 windows; per window: wait for the GPU 30.706 ms, pool + plan 0.607 ms, host staging 0.000 ms, commit 0.565 ms
+strata serve: stage 7: 651 windows; per window: wait for the GPU 29.644 ms, pool + plan 1.733 ms, host staging 0.000 ms, commit 0.471 ms
+strata serve: prompt 83 tokens = 0 reused + 83 read in 12078 ms (6.9 tok/s), 192 generated in 36288 ms (5.3 tok/s), drafts accepted 59 of 96, 1 checkpoints
+strata serve: decode expert cache hit rate: 98.0% (108139 hits / 110394 lookups); 6 more read by the GPU over PCIe or from another GPU (0.0% of all 110400 routed)
+strata serve: stage 0: 787 windows; per window: wait for the GPU 32.065 ms, pool + plan 1.073 ms, host staging 0.035 ms, commit 0.581 ms
+strata serve: stage 1: 787 windows; per window: wait for the GPU 30.026 ms, pool + plan 0.701 ms, host staging 0.001 ms, commit 0.469 ms
+strata serve: stage 2: 787 windows; per window: wait for the GPU 29.796 ms, pool + plan 0.999 ms, host staging 0.000 ms, commit 0.565 ms
+strata serve: stage 3: 787 windows; per window: wait for the GPU 29.759 ms, pool + plan 1.145 ms, host staging 0.000 ms, commit 0.471 ms
+strata serve: stage 4: 787 windows; per window: wait for the GPU 29.710 ms, pool + plan 0.922 ms, host staging 0.000 ms, commit 0.563 ms
+strata serve: stage 5: 787 windows; per window: wait for the GPU 30.134 ms, pool + plan 0.594 ms, host staging 0.000 ms, commit 0.470 ms
+strata serve: stage 6: 787 windows; per window: wait for the GPU 30.121 ms, pool + plan 0.537 ms, host staging 0.000 ms, commit 0.564 ms
+strata serve: stage 7: 787 windows; per window: wait for the GPU 29.084 ms, pool + plan 1.632 ms, host staging 0.000 ms, commit 0.469 ms
+strata serve: prompt 582 tokens = 0 reused + 582 read in 21785 ms (26.7 tok/s), 3 generated in 464 ms (6.5 tok/s), drafts accepted 1 of 1, 1 checkpoints
+strata serve: decode expert cache hit rate: 79.5% (1129 hits / 1421 lookups); 19 more read by the GPU over PCIe or from another GPU (1.3% of all 1440 routed)
+strata serve: stage 0: 791 windows; per window: wait for the GPU 32.062 ms, pool + plan 1.097 ms, host staging 0.035 ms, commit 0.581 ms
+strata serve: stage 1: 791 windows; per window: wait for the GPU 30.017 ms, pool + plan 0.723 ms, host staging 0.001 ms, commit 0.469 ms
+strata serve: stage 2: 791 windows; per window: wait for the GPU 29.801 ms, pool + plan 1.007 ms, host staging 0.000 ms, commit 0.565 ms
+strata serve: stage 3: 791 windows; per window: wait for the GPU 29.760 ms, pool + plan 1.157 ms, host staging 0.000 ms, commit 0.472 ms
+strata serve: stage 4: 791 windows; per window: wait for the GPU 29.708 ms, pool + plan 0.937 ms, host staging 0.000 ms, commit 0.563 ms
+strata serve: stage 5: 791 windows; per window: wait for the GPU 30.132 ms, pool + plan 0.612 ms, host staging 0.000 ms, commit 0.470 ms
+strata serve: stage 6: 791 windows; per window: wait for the GPU 30.111 ms, pool + plan 0.552 ms, host staging 0.000 ms, commit 0.564 ms
+strata serve: stage 7: 791 windows; per window: wait for the GPU 29.066 ms, pool + plan 1.651 ms, host staging 0.000 ms, commit 0.469 ms
+strata serve: prompt 1639 tokens = 0 reused + 1639 read in 37980 ms (43.2 tok/s), 3 generated in 458 ms (6.6 tok/s), drafts accepted 1 of 1, 1 checkpoints
+strata serve: decode expert cache hit rate: 80.5% (1145 hits / 1423 lookups); 17 more read by the GPU over PCIe or from another GPU (1.2% of all 1440 routed)
+strata serve: stage 0: 795 windows; per window: wait for the GPU 32.076 ms, pool + plan 1.097 ms, host staging 0.035 ms, commit 0.582 ms
+strata serve: stage 1: 795 windows; per window: wait for the GPU 30.021 ms, pool + plan 0.740 ms, host staging 0.001 ms, commit 0.469 ms
+strata serve: stage 2: 795 windows; per window: wait for the GPU 29.809 ms, pool + plan 1.012 ms, host staging 0.000 ms, commit 0.565 ms
+strata serve: stage 3: 795 windows; per window: wait for the GPU 29.760 ms, pool + plan 1.159 ms, host staging 0.000 ms, commit 0.472 ms
+strata serve: stage 4: 795 windows; per window: wait for the GPU 29.701 ms, pool + plan 0.945 ms, host staging 0.000 ms, commit 0.563 ms
+strata serve: stage 5: 795 windows; per window: wait for the GPU 30.127 ms, pool + plan 0.620 ms, host staging 0.000 ms, commit 0.470 ms
+strata serve: stage 6: 795 windows; per window: wait for the GPU 30.111 ms, pool + plan 0.557 ms, host staging 0.000 ms, commit 0.564 ms
+strata serve: stage 7: 795 windows; per window: wait for the GPU 29.067 ms, pool + plan 1.652 ms, host staging 0.000 ms, commit 0.469 ms

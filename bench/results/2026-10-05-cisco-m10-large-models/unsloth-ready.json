@@ -1,0 +1,11 @@
+{
+  "family": "unsloth",
+  "model": "UD-Q4_K_XL",
+  "shards": [
+    "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+    "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf"
+  ],
+  "prepared_at": "2026-10-05T22:48:14.426045+00:00"
+}

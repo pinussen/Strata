@@ -1,0 +1,49 @@
+{
+  "exe": "/home/bjwl/strata-dev/build-m10/strata",
+  "cwd": "/home/bjwl/Strata",
+  "tokenizer": "/models/strata-work/data/packs/coder-iq1_m/tokenizer",
+  "model_name": "strata-m10-coder-iq1_m",
+  "host": "127.0.0.1",
+  "port": 8080,
+  "open_browser": false,
+  "args": [
+    "--pack",
+    "/models/strata-work/data/packs/coder-iq1_m",
+    "--native",
+    "/models/strata-work/data/models/coder-iq1_m/Qwen3.8-Flash-Next-GSQ-RCO-IQ1_M-00001-of-00002.gguf",
+    "--ple-gguf",
+    "/models/strata-work/data/models/coder-iq1_m/Qwen3.8-Flash-Next-GSQ-RCO-IQ1_M-00002-of-00002.gguf",
+    "--ple-io",
+    "ram",
+    "--expert-profile",
+    "data/expert-profile-coder.bin",
+    "--expert-cache",
+    "auto",
+    "--prefill",
+    "128",
+    "--spec",
+    "2",
+    "--spec-min-p",
+    "0.5",
+    "--mtp",
+    "/models/strata-work/data/mtp/rt",
+    "--max-context",
+    "4096",
+    "--kv",
+    "int8",
+    "--pool-workers",
+    "16",
+    "--vram-reserve-mib",
+    "1536"
+  ],
+  "env": {
+    "STRATA_PF_FUSED": "0",
+    "STRATA_STAGE_TRIM": "1"
+  },
+  "gpu": [
+    0,
+    1
+  ],
+  "log": "/models/strata-work/logs/engine-2gpu.log",
+  "layer_split": "24"
+}

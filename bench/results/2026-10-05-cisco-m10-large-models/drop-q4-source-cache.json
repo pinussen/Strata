@@ -1,0 +1,22 @@
+[
+  {
+    "source": "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+    "advice": "POSIX_FADV_DONTNEED",
+    "time": 1791241058.9910355
+  },
+  {
+    "source": "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+    "advice": "POSIX_FADV_DONTNEED",
+    "time": 1791241059.7300966
+  },
+  {
+    "source": "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+    "advice": "POSIX_FADV_DONTNEED",
+    "time": 1791241062.706689
+  },
+  {
+    "source": "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+    "advice": "POSIX_FADV_DONTNEED",
+    "time": 1791241065.6767209
+  }
+]

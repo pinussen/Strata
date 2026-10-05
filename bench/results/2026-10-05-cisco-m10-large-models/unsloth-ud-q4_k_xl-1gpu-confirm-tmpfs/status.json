@@ -1,0 +1,145 @@
+{
+  "state": "complete",
+  "results": [
+    {
+      "case": "warmup",
+      "repeat": -1,
+      "first_token_s": 4.275574422000318,
+      "wall_s": 6.813271385000007,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 40,
+        "prompt_ms": 4112.0,
+        "prompt_per_token_ms": 102.8,
+        "prompt_per_second": 9.7,
+        "predicted_n": 21,
+        "predicted_ms": 2686.5,
+        "predicted_per_token_ms": 127.929,
+        "predicted_per_second": 7.8,
+        "draft_n": 10,
+        "draft_n_accepted": 10
+      }
+    },
+    {
+      "case": "code",
+      "repeat": 0,
+      "first_token_s": 6.494536344999688,
+      "wall_s": 30.87096792199918,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 64,
+        "prompt_ms": 6338.8,
+        "prompt_per_token_ms": 99.044,
+        "prompt_per_second": 10.1,
+        "predicted_n": 192,
+        "predicted_ms": 24520.6,
+        "predicted_per_token_ms": 127.711,
+        "predicted_per_second": 7.8,
+        "draft_n": 97,
+        "draft_n_accepted": 92
+      }
+    },
+    {
+      "case": "prose",
+      "repeat": 0,
+      "first_token_s": 6.346729585000503,
+      "wall_s": 32.03873612799998,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 64,
+        "prompt_ms": 6191.4,
+        "prompt_per_token_ms": 96.741,
+        "prompt_per_second": 10.3,
+        "predicted_n": 192,
+        "predicted_ms": 25836.4,
+        "predicted_per_token_ms": 134.565,
+        "predicted_per_second": 7.4,
+        "draft_n": 96,
+        "draft_n_accepted": 82
+      }
+    },
+    {
+      "case": "swedish",
+      "repeat": 0,
+      "first_token_s": 13.21587428300063,
+      "wall_s": 41.534269445000064,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 83,
+        "prompt_ms": 13063.0,
+        "prompt_per_token_ms": 157.386,
+        "prompt_per_second": 6.4,
+        "predicted_n": 192,
+        "predicted_ms": 28458.8,
+        "predicted_per_token_ms": 148.223,
+        "predicted_per_second": 6.7,
+        "draft_n": 96,
+        "draft_n_accepted": 64
+      }
+    },
+    {
+      "case": "code",
+      "repeat": 1,
+      "first_token_s": 6.2007656450005015,
+      "wall_s": 30.428444558000592,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 64,
+        "prompt_ms": 6033.6,
+        "prompt_per_token_ms": 94.275,
+        "prompt_per_second": 10.6,
+        "predicted_n": 192,
+        "predicted_ms": 24374.9,
+        "predicted_per_token_ms": 126.953,
+        "predicted_per_second": 7.9,
+        "draft_n": 97,
+        "draft_n_accepted": 89
+      }
+    },
+    {
+      "case": "prose",
+      "repeat": 1,
+      "first_token_s": 6.661085654999624,
+      "wall_s": 32.99226762299986,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 64,
+        "prompt_ms": 6506.9,
+        "prompt_per_token_ms": 101.67,
+        "prompt_per_second": 9.8,
+        "predicted_n": 192,
+        "predicted_ms": 26471.8,
+        "predicted_per_token_ms": 137.874,
+        "predicted_per_second": 7.3,
+        "draft_n": 97,
+        "draft_n_accepted": 76
+      }
+    },
+    {
+      "case": "swedish",
+      "repeat": 1,
+      "first_token_s": 13.229799026000364,
+      "wall_s": 40.57809581100082,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 83,
+        "prompt_ms": 13046.8,
+        "prompt_per_token_ms": 157.19,
+        "prompt_per_second": 6.4,
+        "predicted_n": 192,
+        "predicted_ms": 27489.7,
+        "predicted_per_token_ms": 143.176,
+        "predicted_per_second": 7.0,
+        "draft_n": 94,
+        "draft_n_accepted": 65
+      }
+    }
+  ],
+  "startup_s": 46.119202757000494,
+  "current": null,
+  "medians": {
+    "code": 7.85,
+    "prose": 7.35,
+    "swedish": 6.85
+  }
+}

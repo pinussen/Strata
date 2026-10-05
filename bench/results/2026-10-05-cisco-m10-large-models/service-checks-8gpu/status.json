@@ -1,0 +1,90 @@
+{
+  "state": "complete",
+  "checks": [
+    {
+      "case": "arithmetic",
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 42,
+        "prompt_ms": 5421.7,
+        "prompt_per_token_ms": 129.088,
+        "prompt_per_second": 7.7,
+        "predicted_n": 4,
+        "predicted_ms": 771.0,
+        "predicted_per_token_ms": 192.75,
+        "predicted_per_second": 5.2,
+        "draft_n": 2,
+        "draft_n_accepted": 2
+      },
+      "first_token_s": 5.63566005299981
+    },
+    {
+      "case": "swedish_complete",
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 60,
+        "prompt_ms": 7121.6,
+        "prompt_per_token_ms": 118.693,
+        "prompt_per_second": 8.4,
+        "predicted_n": 116,
+        "predicted_ms": 20675.9,
+        "predicted_per_token_ms": 178.241,
+        "predicted_per_second": 5.6,
+        "draft_n": 50,
+        "draft_n_accepted": 36
+      },
+      "first_token_s": 7.315325800999744
+    },
+    {
+      "case": "python_complete",
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 65,
+        "prompt_ms": 8191.5,
+        "prompt_per_token_ms": 126.023,
+        "prompt_per_second": 7.9,
+        "predicted_n": 129,
+        "predicted_ms": 19211.5,
+        "predicted_per_token_ms": 148.926,
+        "predicted_per_second": 6.7,
+        "draft_n": 66,
+        "draft_n_accepted": 63
+      },
+      "first_token_s": 8.38907844700043
+    },
+    {
+      "case": "near_4k_context",
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 3896,
+        "prompt_ms": 77065.3,
+        "prompt_per_token_ms": 19.781,
+        "prompt_per_second": 50.6,
+        "predicted_n": 3,
+        "predicted_ms": 482.8,
+        "predicted_per_token_ms": 160.933,
+        "predicted_per_second": 6.2,
+        "draft_n": 1,
+        "draft_n_accepted": 1
+      },
+      "first_token_s": 77.334204193
+    },
+    {
+      "case": "context_reuse",
+      "timings": {
+        "cache_n": 3898,
+        "prompt_n": 23,
+        "prompt_ms": 3444.3,
+        "prompt_per_token_ms": 149.752,
+        "prompt_per_second": 6.7,
+        "predicted_n": 3,
+        "predicted_ms": 735.2,
+        "predicted_per_token_ms": 245.067,
+        "predicted_per_second": 4.1,
+        "draft_n": 3,
+        "draft_n_accepted": 3
+      },
+      "first_token_s": 3.6680244299996048
+    }
+  ]
+}

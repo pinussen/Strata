@@ -1,0 +1,10 @@
+Internal ctest changing into directory: /home/bjwl/strata-dev/build-m10
+Test project /home/bjwl/strata-dev/build-m10
+    Start 12: iq_parity_fixtures
+1/2 Test #12: iq_parity_fixtures ...............   Passed    0.54 sec
+    Start 13: iq_parity
+2/2 Test #13: iq_parity ........................   Passed    0.21 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.75 sec

@@ -1,0 +1,54 @@
+Copying /models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf (0.01 GiB)
+Copied in 0.2 s
+Copying /models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf (46.44 GiB)
+Copied in 427.8 s
+Copying /models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf (45.99 GiB)
+Copied in 434.8 s
+Copying /models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf (11.26 GiB)
+Copied in 103.2 s
+Copying /models/strata-work/data/mtp/rt/dense.bin (0.11 GiB)
+Copied in 0.2 s
+Copying /models/strata-work/data/mtp/rt/dense.txt (0.00 GiB)
+Copied in 0.0 s
+Copying /models/strata-work/data/mtp/rt/draft_vocab.bin (0.00 GiB)
+Copied in 0.0 s
+Copying /models/strata-work/data/mtp/rt/experts.bin (0.66 GiB)
+Copied in 0.4 s
+Copying /models/strata-work/data/packs/unsloth-ud-q4_k_xl/compat-bf16.json (0.00 GiB)
+Copied in 0.0 s
+Copying /models/strata-work/data/packs/unsloth-ud-q4_k_xl/conversions.json (0.00 GiB)
+Copied in 0.0 s
+Copying /models/strata-work/data/packs/unsloth-ud-q4_k_xl/dense.bin (1.38 GiB)
+Copied in 1.9 s
+Copying /models/strata-work/data/packs/unsloth-ud-q4_k_xl/index.txt (0.00 GiB)
+Copied in 0.0 s
+Copying /models/strata-work/data/packs/unsloth-ud-q4_k_xl/m10-ready.json (0.00 GiB)
+Copied in 0.0 s
+Copying /models/strata-work/data/packs/unsloth-ud-q4_k_xl/native_experts.txt (0.00 GiB)
+Copied in 0.0 s
+Copying /models/strata-work/data/packs/unsloth-ud-q4_k_xl/tokenizer/chat_template.jinja (0.00 GiB)
+Copied in 0.0 s
+Copying /models/strata-work/data/packs/unsloth-ud-q4_k_xl/tokenizer/merges.txt (0.00 GiB)
+Copied in 0.0 s
+Copying /models/strata-work/data/packs/unsloth-ud-q4_k_xl/tokenizer/token_type.json (0.00 GiB)
+Copied in 0.0 s
+Copying /models/strata-work/data/packs/unsloth-ud-q4_k_xl/tokenizer/tokenizer.json (0.00 GiB)
+Copied in 0.0 s
+Copying /models/strata-work/data/packs/unsloth-ud-q4_k_xl/tokenizer/vocab.json (0.01 GiB)
+Copied in 0.0 s
+Released source file cache where the OS permits; files are unchanged
+Staged config: /home/bjwl/strata-dev/bench-configs/unsloth-ud-q4_k_xl-8gpu-base-tmpfs.json
+{"case": "warmup", "repeat": -1, "first_token_s": 4.275574422000318, "wall_s": 6.813271385000007, "timings": {"cache_n": 0, "prompt_n": 40, "prompt_ms": 4112.0, "prompt_per_token_ms": 102.8, "prompt_per_second": 9.7, "predicted_n": 21, "predicted_ms": 2686.5, "predicted_per_token_ms": 127.929, "predicted_per_second": 7.8, "draft_n": 10, "draft_n_accepted": 10}}
+{"case": "code", "repeat": 0, "first_token_s": 6.494536344999688, "wall_s": 30.87096792199918, "timings": {"cache_n": 0, "prompt_n": 64, "prompt_ms": 6338.8, "prompt_per_token_ms": 99.044, "prompt_per_second": 10.1, "predicted_n": 192, "predicted_ms": 24520.6, "predicted_per_token_ms": 127.711, "predicted_per_second": 7.8, "draft_n": 97, "draft_n_accepted": 92}}
+{"case": "prose", "repeat": 0, "first_token_s": 6.346729585000503, "wall_s": 32.03873612799998, "timings": {"cache_n": 0, "prompt_n": 64, "prompt_ms": 6191.4, "prompt_per_token_ms": 96.741, "prompt_per_second": 10.3, "predicted_n": 192, "predicted_ms": 25836.4, "predicted_per_token_ms": 134.565, "predicted_per_second": 7.4, "draft_n": 96, "draft_n_accepted": 82}}
+{"case": "swedish", "repeat": 0, "first_token_s": 13.21587428300063, "wall_s": 41.534269445000064, "timings": {"cache_n": 0, "prompt_n": 83, "prompt_ms": 13063.0, "prompt_per_token_ms": 157.386, "prompt_per_second": 6.4, "predicted_n": 192, "predicted_ms": 28458.8, "predicted_per_token_ms": 148.223, "predicted_per_second": 6.7, "draft_n": 96, "draft_n_accepted": 64}}
+{"case": "code", "repeat": 1, "first_token_s": 6.2007656450005015, "wall_s": 30.428444558000592, "timings": {"cache_n": 0, "prompt_n": 64, "prompt_ms": 6033.6, "prompt_per_token_ms": 94.275, "prompt_per_second": 10.6, "predicted_n": 192, "predicted_ms": 24374.9, "predicted_per_token_ms": 126.953, "predicted_per_second": 7.9, "draft_n": 97, "draft_n_accepted": 89}}
+{"case": "prose", "repeat": 1, "first_token_s": 6.661085654999624, "wall_s": 32.99226762299986, "timings": {"cache_n": 0, "prompt_n": 64, "prompt_ms": 6506.9, "prompt_per_token_ms": 101.67, "prompt_per_second": 9.8, "predicted_n": 192, "predicted_ms": 26471.8, "predicted_per_token_ms": 137.874, "predicted_per_second": 7.3, "draft_n": 97, "draft_n_accepted": 76}}
+{"case": "swedish", "repeat": 1, "first_token_s": 13.229799026000364, "wall_s": 40.57809581100082, "timings": {"cache_n": 0, "prompt_n": 83, "prompt_ms": 13046.8, "prompt_per_token_ms": 157.19, "prompt_per_second": 6.4, "predicted_n": 192, "predicted_ms": 27489.7, "predicted_per_token_ms": 143.176, "predicted_per_second": 7.0, "draft_n": 94, "draft_n_accepted": 65}}
+SERVICE_READY {"started_utc": "2026-10-05T23:48:13.693295+00:00", "server_pid": 15861, "source_config": "/home/bjwl/strata-dev/bench-configs/unsloth-ud-q4_k_xl-8gpu-base.json", "drop_source_cache": true, "ready_s": 64.11357164999936, "health": {"status": "ok", "max_context": 4096, "model": "strata-m10-unsloth-ud-q4_k_xl", "images": false, "api_key": true, "loaded": true, "service": "strata"}}
+arithmetic '323' {'cache_n': 0, 'prompt_n': 42, 'prompt_ms': 5421.7, 'prompt_per_token_ms': 129.088, 'prompt_per_second': 7.7, 'predicted_n': 4, 'predicted_ms': 771.0, 'predicted_per_token_ms': 192.75, 'predicted_per_second': 5.2, 'draft_n': 2, 'draft_n_accepted': 2}
+swedish_complete 'Luftvärmepumpen blir mindre effektiv eftersom den måste hämta värme från allt kallare utomhusluft, vilket kräver mer arbete av kompressorn. Samtidigt ökar värmeförlusterna genom husets skal, vilket tvingar pumpen att arbeta hårdare för att upprätthålla inomhustemperaturen. Vid mycket låga temperaturer kan även isbildning på utedelen hindra luftflödet och sänka verkningsgraden ytterligare.' {'cache_n': 0, 'prompt_n': 60, 'prompt_ms': 7121.6, 'prompt_per_token_ms': 118.693, 'prompt_per_second': 8.4, 'predicted_n': 116, 'predicted_ms': 20675.9, 'predicted_per_token_ms': 178.241, 'predicted_per_second': 5.6, 'draft_n': 50, 'draft_n_accepted': 36}
+python_complete '```python\ndef merge_sorted(a, b):\n    result = []\n    i, j = 0, 0\n    while i < len(a) and j < len(b):\n        if a[i] <= b[j]:\n            result.append(a[i])\n            i += 1\n        else:\n            result.append(b[j])\n            j += 1\n    while i < len(a):\n        result.append(a[i])\n        i += 1\n    while j < len(b):\n        result.append(b[j])\n        j += 1\n    return result\n```' {'cache_n': 0, 'prompt_n': 65, 'prompt_ms': 8191.5, 'prompt_per_token_ms': 126.023, 'prompt_per_second': 7.9, 'predicted_n': 129, 'predicted_ms': 19211.5, 'predicted_per_token_ms': 148.926, 'predicted_per_second': 6.7, 'draft_n': 66, 'draft_n_accepted': 63}
+near_4k_context 'birch' {'cache_n': 0, 'prompt_n': 3896, 'prompt_ms': 77065.3, 'prompt_per_token_ms': 19.781, 'prompt_per_second': 50.6, 'predicted_n': 3, 'predicted_ms': 482.8, 'predicted_per_token_ms': 160.933, 'predicted_per_second': 6.2, 'draft_n': 1, 'draft_n_accepted': 1}
+context_reuse 'birch' {'cache_n': 3898, 'prompt_n': 23, 'prompt_ms': 3444.3, 'prompt_per_token_ms': 149.752, 'prompt_per_second': 6.7, 'predicted_n': 3, 'predicted_ms': 735.2, 'predicted_per_token_ms': 245.067, 'predicted_per_second': 4.1, 'draft_n': 3, 'draft_n_accepted': 3}
+SERVICE_CHECKS_COMPLETE

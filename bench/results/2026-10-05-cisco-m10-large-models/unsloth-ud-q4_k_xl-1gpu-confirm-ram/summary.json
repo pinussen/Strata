@@ -1,0 +1,12 @@
+{
+  "run": "unsloth-ud-q4_k_xl-1gpu-confirm-ram",
+  "state": "failed",
+  "startup_s": null,
+  "gpu_indices": [
+    0
+  ],
+  "cases": {},
+  "telemetry_samples": 1,
+  "min_available_ram_gib": 249.12947845458984,
+  "max_swap_used_bytes": 1785856
+}

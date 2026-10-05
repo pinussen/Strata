@@ -557,9 +557,9 @@ def cc(g) -> str:
 OLD_GPUS = None       # why pre-Turing cards are admitted in this run (old_gpus_opt_in), None: they are not
 
 
-def experimental_sm52() -> bool:
-    """Fork-only Maxwell opt-in.  Tesla M10 is sm_52 and needs the local CUDA 12 build path."""
-    return os.environ.get("STRATA_EXPERIMENTAL_SM52", "").strip() == "1" or (
+def experimental_sm50() -> bool:
+    """Fork-only Maxwell opt-in.  Tesla M10 is sm_50 and needs the local CUDA 12 build path."""
+    return os.environ.get("STRATA_EXPERIMENTAL_SM50", "").strip() == "1" or (
         OLD_GPUS is not None and str(OLD_GPUS).startswith("maxwell:")
     )
 
@@ -571,8 +571,8 @@ def experimental_sm60() -> bool:
     return os.environ.get("STRATA_EXPERIMENTAL_SM60", "").strip() == "1" or OLD_GPUS is not None
 
 
-def sm52_card(arch) -> bool:
-    return int(arch) == 52
+def sm50_card(arch) -> bool:
+    return int(arch) == 50
 
 
 def sm60_card(arch) -> bool:
@@ -584,12 +584,12 @@ def old_gpus_opt_in(found, named=(), cuda=None, other=False):
     the user named one (`named`: --gpu / --gpus), asked for --cuda 12, set STRATA_EXPERIMENTAL_SM60=1, or the PC has
     no card the ready-made engine runs on and no supported AMD card (`other`; it used to stop there).  A PC with a
     newer card keeps recommending it."""
-    maxwell = [g for g in found if sm52_card(g["arch"])]
+    maxwell = [g for g in found if sm50_card(g["arch"])]
     old = [g for g in found if sm60_card(g["arch"])]
     if not maxwell and not old:
         return None
-    if maxwell and os.environ.get("STRATA_EXPERIMENTAL_SM52", "").strip() == "1":
-        return "maxwell:STRATA_EXPERIMENTAL_SM52=1"
+    if maxwell and os.environ.get("STRATA_EXPERIMENTAL_SM50", "").strip() == "1":
+        return "maxwell:STRATA_EXPERIMENTAL_SM50=1"
     if os.environ.get("STRATA_EXPERIMENTAL_SM60", "").strip() == "1" and old:
         return "STRATA_EXPERIMENTAL_SM60=1"
     picked_maxwell = [g for g in maxwell if g["index"] in set(named)]
@@ -601,8 +601,6 @@ def old_gpus_opt_in(found, named=(), cuda=None, other=False):
     if picked:
         return "you chose " + ", ".join(f"GPU {g['index']} ({g['name']})" for g in picked)
     if not other and not any(int(g["arch"]) >= CUDA13_MIN_ARCH for g in found):
-        if maxwell and not old:
-            return "maxwell:it is the only kind of NVIDIA GPU in this PC"
         if old:
             return "it is the only kind of NVIDIA GPU in this PC"
     return None
@@ -649,12 +647,12 @@ def config_toolkit(cfg: dict) -> int:
 def gpu_problem(g, together=False):
     """Why Strata cannot use this card, in plain words (None: it can)."""
     if int(g["arch"]) < 75 and not ((sm60_card(g["arch"]) and experimental_sm60()) or
-                                     (sm52_card(g["arch"]) and experimental_sm52())):
+                                     (sm50_card(g["arch"]) and experimental_sm50())):
         hint = ""
         if sm60_card(g["arch"]):
             hint = "; experimental: choose it with --gpu " + str(g["index"]) + " (the CUDA 12 engine, docs/OLDER_GPUS.md)"
-        elif sm52_card(g["arch"]):
-            hint = "; fork experimental: choose it with --gpu " + str(g["index"]) + " (Maxwell sm_52; docs/M10_PORTING_PLAN.md)"
+        elif sm50_card(g["arch"]):
+            hint = "; fork experimental: choose it with --gpu " + str(g["index"]) + " (Maxwell sm_50; docs/M10_PORTING_PLAN.md)"
         return (f"not supported - older than the RTX 20 series (compute capability {cc(g)}; Strata needs 7.5 or "
                 "newer" + hint + ")")
     if together and g["vram_gb"] < SPLIT_MIN_VRAM_GB - 0.5:
@@ -2280,7 +2278,7 @@ def engine_defs(archs, toolkit=13) -> list:
     """Extra CMake definitions for the selected CUDA architecture family."""
     amin = min(int(x) for x in archs)
     if amin < 60:
-        return ["-DSTRATA_EXPERIMENTAL_SM52=ON"]
+        return ["-DSTRATA_EXPERIMENTAL_SM50=ON"]
     return ["-DSTRATA_EXPERIMENTAL_SM60=ON"] if amin < 75 or int(toolkit) == 12 else []
 
 
