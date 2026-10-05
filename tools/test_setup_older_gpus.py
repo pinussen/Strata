@@ -28,6 +28,7 @@ def card(i, name, vram, arch, driver="580.97"):
 
 V100 = card(0, "Tesla V100-PCIE-32GB", 32.0, "70", "575.57")
 P40 = card(0, "Tesla P40", 24.0, "61", "535.104")
+M10 = card(0, "Tesla M10", 8.0, "52", "535.104")
 
 
 class Choice(unittest.TestCase):
@@ -56,6 +57,7 @@ class Choice(unittest.TestCase):
         self.assertEqual(setup.config_toolkit({"exe": "/s/engine-cuda12/strata.exe"}), 12)
         self.assertEqual(setup.config_toolkit({"exe": "x", "cuda": 12}), 12)
         self.assertEqual(setup.engine_defs([86], 12), ["-DSTRATA_EXPERIMENTAL_SM60=ON"])
+        self.assertEqual(setup.engine_defs([52], 12), ["-DSTRATA_EXPERIMENTAL_SM52=ON"])
         self.assertEqual(setup.engine_defs([86]), [])
 
 
@@ -79,7 +81,9 @@ class OptIn(unittest.TestCase):
         self.assertEqual(setup.old_gpus_opt_in([rtx, v100], cuda="12"), "--cuda 12")
         self.assertIn("only kind", setup.old_gpus_opt_in([V100]))
         self.assertIsNone(setup.old_gpus_opt_in([V100], other=True))            # an AMD card it can use instead
-        self.assertIsNone(setup.old_gpus_opt_in([card(0, "GTX 980", 4.0, "52")]))
+        self.assertIn("maxwell:", setup.old_gpus_opt_in([M10]))
+        with mock.patch.dict(os.environ, {"STRATA_EXPERIMENTAL_SM52": "1"}):
+            self.assertEqual(setup.old_gpus_opt_in([rtx, M10]), "maxwell:STRATA_EXPERIMENTAL_SM52=1")
         with mock.patch.dict(os.environ, {"STRATA_EXPERIMENTAL_SM60": "1"}):
             self.assertEqual(setup.old_gpus_opt_in([rtx, v100]), "STRATA_EXPERIMENTAL_SM60=1")
 
@@ -94,7 +98,9 @@ class OptIn(unittest.TestCase):
             self.assertIsNotNone(setup.gpu_problem(V100))
         with mock.patch.object(setup, "OLD_GPUS", "you chose GPU 0"):
             self.assertIsNone(setup.gpu_problem(V100))
-            self.assertIsNotNone(setup.gpu_problem(card(0, "GTX 980", 4.0, "52")))
+            self.assertIsNotNone(setup.gpu_problem(M10))
+        with mock.patch.object(setup, "OLD_GPUS", "maxwell:you chose GPU 0"):
+            self.assertIsNone(setup.gpu_problem(M10))
 
 
 class Libraries(unittest.TestCase):
