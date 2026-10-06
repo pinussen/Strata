@@ -1,0 +1,41 @@
+{
+  "requests_per_reference_run": 13,
+  "payloads_identical_across_variants": true,
+  "cache_n_always_zero": true,
+  "short_cases_all_192_tokens": true,
+  "all_functional_checks_passed": true,
+  "engine_read_bytes_during_requests": {
+    "reference-q4": {
+      "min": 8663040,
+      "max": 11841536,
+      "delta": 3178496
+    },
+    "reference-q8": {
+      "min": 0,
+      "max": 0,
+      "delta": 0
+    },
+    "reference-bf16": {
+      "min": 5738496,
+      "max": 5869568,
+      "delta": 131072
+    }
+  },
+  "engine_read_bytes_after_warmup": {
+    "reference-q4": {
+      "min": 11841536,
+      "max": 11841536,
+      "delta": 0
+    },
+    "reference-q8": {
+      "min": 0,
+      "max": 0,
+      "delta": 0
+    },
+    "reference-bf16": {
+      "min": 5869568,
+      "max": 5869568,
+      "delta": 0
+    }
+  }
+}

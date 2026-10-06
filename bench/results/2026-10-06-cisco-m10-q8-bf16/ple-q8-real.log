@@ -1,0 +1,2 @@
+Q8_0 mmap: 32 probe rows, single/collect/prefetch/batch exact PASS
+Q8_0 direct: 32 probe rows, single/collect/prefetch/batch exact PASS

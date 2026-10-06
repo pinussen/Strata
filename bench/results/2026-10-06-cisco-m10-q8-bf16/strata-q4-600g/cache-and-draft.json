@@ -1,0 +1,92 @@
+[
+  {
+    "case": "warmup",
+    "repeat": -1,
+    "cache_hit_percent": 74.0,
+    "cache_hits": 7311,
+    "cache_lookups": 9874,
+    "pcie_or_other_gpu": 206,
+    "drafts": 10,
+    "accepted": 10
+  },
+  {
+    "case": "code",
+    "repeat": 0,
+    "cache_hit_percent": 89.7,
+    "cache_hits": 85320,
+    "cache_lookups": 95131,
+    "pcie_or_other_gpu": 389,
+    "drafts": 98,
+    "accepted": 91
+  },
+  {
+    "case": "prose",
+    "repeat": 0,
+    "cache_hit_percent": 92.6,
+    "cache_hits": 94548,
+    "cache_lookups": 102115,
+    "pcie_or_other_gpu": 125,
+    "drafts": 98,
+    "accepted": 78
+  },
+  {
+    "case": "swedish",
+    "repeat": 0,
+    "cache_hit_percent": 96.5,
+    "cache_hits": 101428,
+    "cache_lookups": 105099,
+    "pcie_or_other_gpu": 21,
+    "drafts": 93,
+    "accepted": 66
+  },
+  {
+    "case": "code",
+    "repeat": 1,
+    "cache_hit_percent": 94.6,
+    "cache_hits": 90689,
+    "cache_lookups": 95861,
+    "pcie_or_other_gpu": 139,
+    "drafts": 99,
+    "accepted": 91
+  },
+  {
+    "case": "prose",
+    "repeat": 1,
+    "cache_hit_percent": 97.7,
+    "cache_hits": 101334,
+    "cache_lookups": 103678,
+    "pcie_or_other_gpu": 2,
+    "drafts": 100,
+    "accepted": 77
+  },
+  {
+    "case": "swedish",
+    "repeat": 1,
+    "cache_hit_percent": 98.0,
+    "cache_hits": 108139,
+    "cache_lookups": 110394,
+    "pcie_or_other_gpu": 6,
+    "drafts": 96,
+    "accepted": 59
+  },
+  {
+    "case": "needle_48",
+    "repeat": 0,
+    "cache_hit_percent": 79.5,
+    "cache_hits": 1129,
+    "cache_lookups": 1421,
+    "pcie_or_other_gpu": 19,
+    "drafts": 1,
+    "accepted": 1
+  },
+  {
+    "case": "needle_144",
+    "repeat": 0,
+    "cache_hit_percent": 80.5,
+    "cache_hits": 1145,
+    "cache_lookups": 1423,
+    "pcie_or_other_gpu": 17,
+    "drafts": 1,
+    "accepted": 1
+  }
+]

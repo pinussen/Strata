@@ -1,0 +1,4 @@
+8fcbc71f2b3f3f8d0aaf5555a2e99b5e06b5e25dabc311269f6f2841380ed691  /home/bjwl/strata-dev/build-llama-m10/bin/llama-server
+81badcb79cfc7c965006350a11097e495d8cedfe8a9ee0a5e732574caaf20c47  /home/bjwl/strata-dev/build-llama-m10/bin/libllama.so
+a9be348389fcbc9fa2a1277466592c86656e9f8dcc0ceb10ad9a5f8015a213e0  /home/bjwl/strata-dev/build-llama-m10/bin/libggml-cuda.so
+629bc388b3f8db2ff954fcc0cd6e8755b3e2615360a7c2ba1131266b7cce8fde  /home/bjwl/strata-dev/build-llama-m10/bin/libggml-cpu.so

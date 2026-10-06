@@ -13,9 +13,17 @@ on one GPU but failed when the first request instantiated the CUDA graph.
 ## Full-model operating configuration
 
 The [full-model report](../bench/results/2026-10-05-cisco-m10-large-models/README.md) records the 83.6 GB IQ3_S
-and 111.3 GB Unsloth Q4 tests. VM 104 now has 256 GiB configured RAM. The interactive configuration uses Q4,
+and 111.3 GB Unsloth Q4 tests. The subsequent [Q8/BF16 experiment](../bench/results/2026-10-06-cisco-m10-q8-bf16/README.md)
+increased VM 104 to 600 GiB configured RAM (~590 GiB usable). The interactive configuration uses Q4,
 eight 8 GiB CUDA devices, a 4,096-token context and speculative window 2. One GPU is a measured alternative
 for faster generation from short questions, at the cost of slower prompt processing.
+
+The Q8/BF16 comparison is complete: Q8 runs in Strata at 4.75–5.60 tok/s across the tested
+generation cases; full BF16 runs in the separate llama.cpp reference engine at 2.63–2.65 tok/s.
+Native Strata BF16 remains unsupported. Q8 source files and its pack remain on NAS; BF16's
+354 GB of files remain under `/mnt/strata-large/models/unsloth-bf16` in RAM and are lost at
+reboot. Q4 is the restored interactive default. Raw replies, timings, validation and telemetry
+are saved in the comparison report; all timed runs used zero observed guest swap.
 
 Connect to the guest with `ssh bjwl@192.168.3.73`. From `/home/bjwl/Strata`, start the prepared model with:
 
@@ -35,7 +43,7 @@ occupied port. Stop the existing server by its recorded PID in `/home/bjwl/strat
 after checking that PID still belongs to `serve.server`. For the one-GPU alternative, use
 `unsloth-ud-q4_k_xl-1gpu-base.json`. Stop the old server and wait for its engine to exit before switching.
 
-The dedicated `/mnt/strata-ram` tmpfs survives logout. It is mounted from fstab after boot, but contains no files
+The dedicated `/mnt/strata-ram` tmpfs (256 GiB cap) survives logout. It is mounted from fstab after boot, but contains no files
 until staging runs again. A cold copy of the model from NAS takes many minutes. The launcher skips already
 staged unchanged files and releases redundant source cache before loading. Original model files stay on NAS.
 This is a manually launched server, not a boot service. Its logs are `service/server.log` and `service/engine.log`.

@@ -1,0 +1,7 @@
+{
+  "shapes_identical": true,
+  "tensors_per_variant": 1224,
+  "stored_values": 176943899520,
+  "ple_values": 51200245760,
+  "note": "Counts of stored main GGUF tensor values; separate MTP file excluded."
+}

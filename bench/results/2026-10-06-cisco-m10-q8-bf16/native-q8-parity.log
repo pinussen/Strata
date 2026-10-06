@@ -1,0 +1,6 @@
+          width invariance (1 vs 3 tokens): gate/up 0, down 0 rows differ
+          q8_0 down rows, AVX2 multi-token vs ggml vec_dot: 0 of 36 token-sets differ in any bit; 4 tokens one thread 467 us vs ggml 397 us (0.85x)
+          gpu decode-once vs per-entry kernels: bitwise equal
+          GPU dequant vs ggml to_float: rel 0.00e+00, 0 of 4915200 values differ in any bit; fp16 of it: 0 differ; embedding rows: 0 of 640 differ
+synthetic q8_0    /q8_0    blob  5222400  cpu rel 1.27e-02  gpu rel 1.27e-02  cpu-gpu 1.09e-07  ok
+native_expert_parity: 0 failures

@@ -1,0 +1,8 @@
+{
+  "time": "2026-10-06T22:37:19.226530+00:00",
+  "pid": 19951,
+  "shard": 7,
+  "reason": "Slow stream; resume through downloader retry with existing SHA256 state.",
+  "socket": "ESTAB 0      0       192.168.3.73:53716 15.237.164.118:443  users:((\"python\",pid=19951,fd=3))",
+  "result": "Netid State Recv-Q Send-Q Local Address:Port    Peer Address:Port Process\ntcp   ESTAB 0      0       192.168.3.73:53716 15.237.164.118:https       \n"
+}

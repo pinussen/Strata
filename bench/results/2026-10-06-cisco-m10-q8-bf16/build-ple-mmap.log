@@ -1,0 +1,9 @@
+[1/5] Building CXX object CMakeFiles/strata_kernels.dir/src/kernels/ngram.cpp.o
+[2/5] Building CXX object CMakeFiles/ple_native_parity.dir/src/kernels/ple_native_parity.cpp.o
+[3/5] Linking CXX static library libstrata_kernels.a
+[4/5] Linking CXX executable ple_native_parity
+[5/5] Linking CXX executable strata
+Q8_0 mmap: 32 probe rows, single/collect/prefetch/batch exact PASS
+Q8_0 locked mmap: 32 probe rows, single/collect/prefetch/batch exact PASS
+BF16 mmap: 32 probe rows, single/collect/prefetch/batch exact PASS
+BF16 locked mmap: 32 probe rows, single/collect/prefetch/batch exact PASS

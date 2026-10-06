@@ -1,0 +1,6 @@
+Q8_0 mode 1: 32 probe rows, single/collect/prefetch/batch exact PASS
+Q8_0 mode 0: 32 probe rows, single/collect/prefetch/batch exact PASS
+Q8_0 mode 1: 32 probe rows, single/collect/prefetch/batch exact PASS
+BF16 mode 1: 32 probe rows, single/collect/prefetch/batch exact PASS
+BF16 mode 0: 32 probe rows, single/collect/prefetch/batch exact PASS
+BF16 mode 1: 32 probe rows, single/collect/prefetch/batch exact PASS

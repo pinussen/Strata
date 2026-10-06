@@ -1,0 +1,10 @@
+0.00.000.394 I srv  llama_server: initializing ...
+Available devices:
+  CUDA0: Tesla M10 (8127 MiB, 8096 MiB free)
+  CUDA1: Tesla M10 (8127 MiB, 8096 MiB free)
+  CUDA2: Tesla M10 (8127 MiB, 8096 MiB free)
+  CUDA3: Tesla M10 (8127 MiB, 8096 MiB free)
+  CUDA4: Tesla M10 (8127 MiB, 8096 MiB free)
+  CUDA5: Tesla M10 (8127 MiB, 8096 MiB free)
+  CUDA6: Tesla M10 (8127 MiB, 8096 MiB free)
+  CUDA7: Tesla M10 (8127 MiB, 8096 MiB free)

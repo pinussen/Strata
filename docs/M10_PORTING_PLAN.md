@@ -14,6 +14,11 @@ one, two, four and eight 8 GiB devices with 256 GiB guest RAM. See the
 [full-model measurements](../bench/results/2026-10-05-cisco-m10-large-models/README.md) for decode/prefill
 tradeoffs, storage fixes and remaining limits.
 
+Higher-precision follow-up (2026-10-06): the 188.2 GB Q8 variant completes the Strata benchmark
+on eight GPUs with 600 GiB guest RAM. Q8_0/BF16 PLE readers were added; full native BF16 experts
+remain unsupported. The [Q8/BF16 comparison](../bench/results/2026-10-06-cisco-m10-q8-bf16/README.md)
+separates Strata results from a pinned llama.cpp reference engine used for the precision comparison.
+
 This document tracks the work needed to make Strata run experimentally on NVIDIA Tesla M10 cards (Maxwell, compute capability 5.0), with the initial target being a Cisco server containing multiple M10 boards.
 
 The goal is **not** to make Strata a generic old-GPU runtime. The first target is to keep the current Qwen3.8-Flash-Next model architecture and make the existing CUDA engine work on sm_50 with as little divergence from upstream as possible.

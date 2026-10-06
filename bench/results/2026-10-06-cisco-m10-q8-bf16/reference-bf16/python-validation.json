@@ -1,0 +1,13 @@
+{
+  "state": "passed",
+  "cases": 107,
+  "random_seed": 1010,
+  "checks": [
+    "sorted merge",
+    "duplicates retained",
+    "inputs unchanged",
+    "new result list"
+  ],
+  "review": "Manually reviewed before execution; Markdown fence removed.",
+  "format_note": "Response used Markdown despite requesting only Python code."
+}

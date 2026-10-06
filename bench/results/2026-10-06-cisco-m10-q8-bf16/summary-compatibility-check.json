@@ -1,0 +1,9 @@
+{
+  "state": "passed",
+  "existing_summary_values_unchanged": true,
+  "source_run": "unsloth-ud-q4_k_xl-8gpu-base-ram",
+  "new_fields": [
+    "engine",
+    "max_engine_rss_gib"
+  ]
+}

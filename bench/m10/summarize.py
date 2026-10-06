@@ -1,4 +1,4 @@
-"""Summarize saved run_benchmark.py outputs without contacting the model server."""
+"""Summarize saved Strata or reference runs without contacting the model server."""
 import argparse
 import json
 from pathlib import Path
@@ -14,10 +14,12 @@ def main():
         requests_path = root / "requests.jsonl"
         rows = [json.loads(s) for s in requests_path.read_text().splitlines()] if requests_path.exists() else []
         tele = [json.loads(s) for s in (root / "telemetry.jsonl").read_text().splitlines()]
-        cfg = json.loads((root / "config.json").read_text())
-        active = cfg.get("gpu", 0)
+        manifest = json.loads((root / "manifest.json").read_text())
+        cfg = json.loads((root / "config.json").read_text()) if (root / "config.json").exists() else {}
+        active = cfg.get("gpu", manifest.get("gpu_indices", 0))
         active = [active] if isinstance(active, int) else active
         report = {"run": root.name, "state": status["state"], "startup_s": status.get("startup_s"),
+                  "engine": manifest.get("engine", "strata"),
                   "gpu_indices": active, "cases": {}, "telemetry_samples": len(tele)}
         for name in dict.fromkeys(r["case"] for r in rows):
             selected = [r for r in rows if r["case"] == name]
@@ -51,7 +53,8 @@ def main():
                 "prompt_tps_median": statistics.median(prompt),
                 "first_token_s_median": statistics.median(r["first_token_s"] for r in selected),
                 "completion_tokens": [r["final"]["usage"]["completion_tokens"] for r in selected],
-                "finish_reasons": [r["final"]["choices"][0]["finish_reason"] for r in selected],
+                "finish_reasons": [r["finish_reason"] if "finish_reason" in r else
+                                   r["final"]["choices"][0]["finish_reason"] for r in selected],
                 "max_temperature_c": max(numbers("temperature.gpu"), default=None),
                 "max_vram_used_mib": max(numbers("memory.used"), default=None),
                 "active_gpu_power_w_mean": statistics.mean(totals) if totals else None,
@@ -60,6 +63,7 @@ def main():
             }
         report["min_available_ram_gib"] = min(t["mem_available_bytes"] for t in tele) / 2**30
         report["max_swap_used_bytes"] = max(t["swap_used_bytes"] for t in tele)
+        report["max_engine_rss_gib"] = max((t.get("engine_rss_bytes", 0) for t in tele), default=0) / 2**30
         (root / "summary.json").write_text(json.dumps(report, indent=2) + "\n")
         print(json.dumps(report))
 

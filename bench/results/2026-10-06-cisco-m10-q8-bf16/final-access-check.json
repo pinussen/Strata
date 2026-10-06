@@ -1,0 +1,66 @@
+{
+  "time": "2026-10-06T23:22:08.111291+00:00",
+  "url": "http://192.168.3.73:8080",
+  "health": {
+    "status": "ok",
+    "max_context": 4096,
+    "model": "strata-m10-unsloth-ud-q4_k_xl",
+    "images": false,
+    "api_key": true,
+    "loaded": true,
+    "service": "strata"
+  },
+  "unauthenticated_models_status": 401,
+  "authenticated_models_status": 200,
+  "arithmetic_request": {
+    "model": "strata-m10-unsloth-ud-q4_k_xl",
+    "temperature": 0,
+    "max_tokens": 16,
+    "reasoning_effort": "none",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is 17 times 19? Reply with only the number."
+      }
+    ]
+  },
+  "arithmetic_response": {
+    "id": "chatcmpl-afcd64598d7f4ef3962ecf0d",
+    "object": "chat.completion",
+    "created": 1791328923,
+    "model": "strata-m10-unsloth-ud-q4_k_xl",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "323"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 28,
+      "completion_tokens": 4,
+      "total_tokens": 32,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 28,
+      "prompt_ms": 3733.4,
+      "prompt_per_token_ms": 133.336,
+      "prompt_per_second": 7.5,
+      "predicted_n": 4,
+      "predicted_ms": 787.8,
+      "predicted_per_token_ms": 196.95,
+      "predicted_per_second": 5.1,
+      "draft_n": 2,
+      "draft_n_accepted": 2
+    }
+  },
+  "arithmetic_wall_s": 4.52882031199988,
+  "arithmetic_correct": true
+}

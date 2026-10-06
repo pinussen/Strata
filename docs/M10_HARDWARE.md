@@ -19,8 +19,12 @@ probe report **5.0** on all eight devices in this machine. Build for `sm_50`.
 
 The table records the initial bring-up. The subsequent
 [full-model experiments](../bench/results/2026-10-05-cisco-m10-large-models/README.md) increased VM 104 to
-256 GiB configured RAM (~251 GiB usable), retaining 24 vCPUs. Their measurements record this separately. The guest now has a dedicated 128 GiB-cap tmpfs at
-`/mnt/strata-ram` for model copies; its files must be restaged after reboot. The persistent source remains on NFS.
+256 GiB configured RAM (~251 GiB usable), retaining 24 vCPUs. Their measurements record this separately.
+The [Q8/BF16 experiment](../bench/results/2026-10-06-cisco-m10-q8-bf16/README.md) subsequently increased it to
+600 GiB configured (~590 GiB usable). `/mnt/strata-ram` now has a 256 GiB tmpfs cap; a separate
+`/mnt/strata-large` has a 400 GiB cap for the temporary BF16 download. These caps do not reserve RAM:
+combined file usage and engine allocations must fit in the guest. Files on both mounts are lost at reboot.
+The persistent Q4 and Q8 sources are on NFS; BF16 currently has no persistent copy.
 
 The guest exposes one NUMA node. Its `nvidia-smi topo -m` reports PHB for every pair, which does not describe
 the host's two-socket topology: host PCI devices `60:00.0` through `63:00.0` are behind one PCIe switch,

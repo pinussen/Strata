@@ -61,3 +61,21 @@ model's files. This launcher does not create a boot service.
 `check_live_server.py` records complete arithmetic, Swedish and Python responses, a prompt close to 4K tokens,
 and a follow-up that must reuse the prompt cache. It accepts `--api-key-file`; credentials are not recorded in
 the results. Generated Python is saved for review and never executed by this checker.
+
+
+`download_manifest.py` downloads the experimental Q8_0 or BF16 variant from a saved Hugging Face
+manifest, at its pinned revision. It verifies file size and SHA256, supports partial-file resumption,
+and writes progress JSON. BF16 currently needs temporary RAM storage on this machine; the NAS has
+insufficient space for all variants together. These downloads do not imply full engine support.
+`python3 bench/m10/test_download_manifest.py` checks partial resumption, disconnect recovery,
+ignored HTTP ranges and checksum failures without downloading models.
+
+`run_reference_benchmark.py` uses a separately built, pinned llama.cpp server to compare variants
+under common settings. It binds to localhost, keeps experts and PLE on the CPU, and splits dense
+layers across eight GPUs. It disables speculative decoding, prompt reuse and thinking, uses F16
+KV, and saves raw stream chunks as well as finish reasons and timings. Supply the existing server
+binary, first GGUF shard, variant, engine source revision and a new output directory. Do not run it
+beside another inference engine or downloads during a timed comparison. `--smoke` runs only warmup.
+The reference measurements must be identified as llama.cpp results, separately from Strata results.
+`test_reference_stream.py` checks separate finish/usage chunks and rejects incomplete/error streams.
+`summarize.py` accepts either runner's saved outputs.

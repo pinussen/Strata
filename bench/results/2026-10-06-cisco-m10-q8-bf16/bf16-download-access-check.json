@@ -1,0 +1,14 @@
+{
+  "time": "2026-10-06T21:53:43.216556+00:00",
+  "health": {
+    "status": "ok",
+    "max_context": 4096,
+    "model": "strata-m10-unsloth-ud-q4_k_xl",
+    "images": false,
+    "api_key": true,
+    "loaded": true,
+    "service": "strata"
+  },
+  "unauthenticated_models_status": 401,
+  "authenticated_models_status": 200
+}

@@ -1,0 +1,12 @@
+Internal ctest changing into directory: /home/bjwl/strata-dev/build-m10
+Test project /home/bjwl/strata-dev/build-m10
+    Start 67: ple_native_parity
+1/1 Test #67: ple_native_parity ................   Passed    0.02 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.03 sec
+Q8_0 mmap: 32 probe rows, single/collect/prefetch/batch exact PASS
+Q8_0 locked mmap: 32 probe rows, single/collect/prefetch/batch exact PASS
+BF16 mmap: 32 probe rows, single/collect/prefetch/batch exact PASS
+BF16 locked mmap: 32 probe rows, single/collect/prefetch/batch exact PASS

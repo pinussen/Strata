@@ -1,0 +1,47 @@
+Internal ctest changing into directory: /home/bjwl/strata-dev/build-m10
+Test project /home/bjwl/strata-dev/build-m10
+    Start 37: ple_parity
+Could not find executable /home/bjwl/strata-dev/build-m10/ple_parity
+Looked in the following places:
+/home/bjwl/strata-dev/build-m10/ple_parity
+/home/bjwl/strata-dev/build-m10/ple_parity
+/home/bjwl/strata-dev/build-m10/Release/ple_parity
+/home/bjwl/strata-dev/build-m10/Release/ple_parity
+/home/bjwl/strata-dev/build-m10/Debug/ple_parity
+/home/bjwl/strata-dev/build-m10/Debug/ple_parity
+/home/bjwl/strata-dev/build-m10/MinSizeRel/ple_parity
+/home/bjwl/strata-dev/build-m10/MinSizeRel/ple_parity
+/home/bjwl/strata-dev/build-m10/RelWithDebInfo/ple_parity
+/home/bjwl/strata-dev/build-m10/RelWithDebInfo/ple_parity
+/home/bjwl/strata-dev/build-m10/Deployment/ple_parity
+/home/bjwl/strata-dev/build-m10/Deployment/ple_parity
+/home/bjwl/strata-dev/build-m10/Development/ple_parity
+/home/bjwl/strata-dev/build-m10/Development/ple_parity
+home/bjwl/strata-dev/build-m10/ple_parity
+home/bjwl/strata-dev/build-m10/ple_parity
+home/bjwl/strata-dev/build-m10/Release/ple_parity
+home/bjwl/strata-dev/build-m10/Release/ple_parity
+home/bjwl/strata-dev/build-m10/Debug/ple_parity
+home/bjwl/strata-dev/build-m10/Debug/ple_parity
+home/bjwl/strata-dev/build-m10/MinSizeRel/ple_parity
+home/bjwl/strata-dev/build-m10/MinSizeRel/ple_parity
+home/bjwl/strata-dev/build-m10/RelWithDebInfo/ple_parity
+home/bjwl/strata-dev/build-m10/RelWithDebInfo/ple_parity
+home/bjwl/strata-dev/build-m10/Deployment/ple_parity
+home/bjwl/strata-dev/build-m10/Deployment/ple_parity
+home/bjwl/strata-dev/build-m10/Development/ple_parity
+home/bjwl/strata-dev/build-m10/Development/ple_parity
+Unable to find executable: /home/bjwl/strata-dev/build-m10/ple_parity
+1/3 Test #37: ple_parity .......................***Not Run   0.00 sec
+    Start 46: ple_reader_selftest
+2/3 Test #46: ple_reader_selftest ..............   Passed   43.32 sec
+    Start 67: ple_native_parity
+3/3 Test #67: ple_native_parity ................   Passed    0.02 sec
+
+67% tests passed, 1 tests failed out of 3
+
+Total Test time (real) =  43.34 sec
+
+The following tests FAILED:
+	 37 - ple_parity (Not Run)
+Errors while running CTest

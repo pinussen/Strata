@@ -1,0 +1,5 @@
+{
+  "seconds": 63.05865320800058,
+  "available_ram_bytes": 453208010752,
+  "note": "Sequential read to warm NAS file cache before reference test; no second model copy."
+}

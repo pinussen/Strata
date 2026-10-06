@@ -1,0 +1,5 @@
+fc832fa9f1572347e6b804f07401d34fd71c4c669e729e0ac5c90d31a91eb13b  /home/bjwl/strata-dev/build-m10/strata
+4492d7002a7ee5c9d45ae740172838d9f1c78807f2a2c5c4da4f4cc148af203d  /home/bjwl/strata-dev/build-m10/ple_native_parity
+3c0d13928901b86a94f9f26185050e209db512525c4396874c2728df307a113e  /home/bjwl/Strata/src/kernels/ngram.cpp
+163a0539d3f1156caa8e01fe7bcf22945ce166ea091ce80a3cd44aabb5776b1e  /home/bjwl/Strata/include/strata/kernels/ngram.hpp
+f7a100d2b5a23cefb58c9edbfe75a23bae65b9804719bf40ddb04d332c16a2f6  /home/bjwl/Strata/src/kernels/ple_native_parity.cpp

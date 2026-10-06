@@ -1,0 +1,16 @@
+{
+  "stage": "downloading",
+  "variant": "Q8_0",
+  "revision": "766911a6b7369840a91dbcd95f9f997acaab6cd6",
+  "time": "2026-10-06T20:41:22.632441+00:00",
+  "elapsed_s": 3799.77815585,
+  "completed": [
+    "Qwen3.8-Flash-Next-Q8_0-00001-of-00006.gguf",
+    "Qwen3.8-Flash-Next-Q8_0-00002-of-00006.gguf",
+    "Qwen3.8-Flash-Next-Q8_0-00003-of-00006.gguf",
+    "Qwen3.8-Flash-Next-Q8_0-00004-of-00006.gguf"
+  ],
+  "file": "Qwen3.8-Flash-Next-Q8_0-00005-of-00006.gguf",
+  "bytes": 134217728,
+  "total_bytes": 49668930400
+}

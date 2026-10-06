@@ -1,0 +1,2 @@
+FAIL: DirectFile: cannot open /mnt/strata-large/strata-ple-native-2608956919140/8.gguf
+Q8_0 mode 1: 32 probe rows, single/collect/prefetch/batch exact PASS

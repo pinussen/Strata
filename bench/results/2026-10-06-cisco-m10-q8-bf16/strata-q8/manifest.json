@@ -1,0 +1,17 @@
+{
+  "started": "2026-10-06T21:43:15.151359+00:00",
+  "argv": [
+    "bench/m10/run_benchmark.py",
+    "--config",
+    "/home/bjwl/strata-dev/q8-bf16/strata-q8-source.json",
+    "--out",
+    "/home/bjwl/strata-dev/q8-bf16/strata-q8"
+  ],
+  "vm_memory_bytes": 633650192384,
+  "logical_cpus": 24,
+  "prompts": {
+    "code": "Write a Python function that merges two sorted lists into one sorted list without using sorted(). Include a docstring and three assert-based examples. Explain its time complexity briefly.",
+    "prose": "Explain in four detailed paragraphs how a refrigerator moves heat from inside to outside. Cover the compressor, condenser, expansion valve and evaporator. Use plain language.",
+    "swedish": "Förklara på svenska hur en värmepump fungerar. Skriv fyra tydliga stycken om köldmedium, kompressor, värmeväxlare och varför utomhustemperaturen påverkar effektiviteten."
+  }
+}

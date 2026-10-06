@@ -1,0 +1,9 @@
+Started BF16 parallel download 19948
+Started Q4 LAN service 19949
+Q4 LAN service ready
+BF16 download verified; stopping Q4 for measurements
+Running ['/home/bjwl/strata-dev/build-m10/ple_native_parity', '--mmap-only', '/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00003-of-00008.gguf']
+Running ['/home/bjwl/strata-dev/venv/bin/python', '-u', '/home/bjwl/Strata/bench/m10/run_reference_benchmark.py', '--server', '/home/bjwl/strata-dev/build-llama-m10/bin/llama-server', '--model', '/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00001-of-00008.gguf', '--variant', 'BF16', '--source-revision', '3cf03257f219afbe7334045ff7c6a06ac68c627d', '--out', '/home/bjwl/strata-dev/q8-bf16/reference-bf16']
+Started Q4 LAN service 26710
+Q4 LAN service ready
+BF16 experiment finished; Q4 LAN service restored

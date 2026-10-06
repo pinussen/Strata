@@ -1,0 +1,6 @@
+Before: Filename				Type		Size		Used		Priority
+/swap.img                               file		5394428		3097216		-2
+
+After: Filename				Type		Size		Used		Priority
+/swap.img                               file		5394428		0		-2
+

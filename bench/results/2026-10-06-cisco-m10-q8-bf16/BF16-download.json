@@ -1,0 +1,65 @@
+{
+  "stage": "complete",
+  "variant": "BF16",
+  "revision": "766911a6b7369840a91dbcd95f9f997acaab6cd6",
+  "time": "2026-10-06T22:45:03.208582+00:00",
+  "elapsed_s": 3233.987215883999,
+  "completed": [
+    "Qwen3.8-Flash-Next-BF16-00001-of-00008.gguf",
+    "Qwen3.8-Flash-Next-BF16-00002-of-00008.gguf",
+    "Qwen3.8-Flash-Next-BF16-00003-of-00008.gguf",
+    "Qwen3.8-Flash-Next-BF16-00004-of-00008.gguf",
+    "Qwen3.8-Flash-Next-BF16-00005-of-00008.gguf",
+    "Qwen3.8-Flash-Next-BF16-00006-of-00008.gguf",
+    "Qwen3.8-Flash-Next-BF16-00007-of-00008.gguf",
+    "Qwen3.8-Flash-Next-BF16-00008-of-00008.gguf"
+  ],
+  "file": "parallel_shards",
+  "bytes": 0,
+  "workers": [
+    {
+      "stage": "complete",
+      "variant": "BF16",
+      "revision": "766911a6b7369840a91dbcd95f9f997acaab6cd6",
+      "time": "2026-10-06T22:10:11.166891+00:00",
+      "elapsed_s": 1141.8999970919995,
+      "completed": [
+        "Qwen3.8-Flash-Next-BF16-00001-of-00008.gguf",
+        "Qwen3.8-Flash-Next-BF16-00002-of-00008.gguf",
+        "Qwen3.8-Flash-Next-BF16-00003-of-00008.gguf"
+      ]
+    },
+    {
+      "stage": "complete",
+      "variant": "BF16",
+      "revision": "766911a6b7369840a91dbcd95f9f997acaab6cd6",
+      "time": "2026-10-06T22:45:02.077026+00:00",
+      "elapsed_s": 3232.8104456829988,
+      "completed": [
+        "Qwen3.8-Flash-Next-BF16-00004-of-00008.gguf",
+        "Qwen3.8-Flash-Next-BF16-00007-of-00008.gguf"
+      ]
+    },
+    {
+      "stage": "complete",
+      "variant": "BF16",
+      "revision": "766911a6b7369840a91dbcd95f9f997acaab6cd6",
+      "time": "2026-10-06T22:37:34.358456+00:00",
+      "elapsed_s": 2785.0902713680007,
+      "completed": [
+        "Qwen3.8-Flash-Next-BF16-00005-of-00008.gguf",
+        "Qwen3.8-Flash-Next-BF16-00008-of-00008.gguf"
+      ]
+    },
+    {
+      "stage": "complete",
+      "variant": "BF16",
+      "revision": "766911a6b7369840a91dbcd95f9f997acaab6cd6",
+      "time": "2026-10-06T22:22:39.138974+00:00",
+      "elapsed_s": 1889.871053248,
+      "completed": [
+        "Qwen3.8-Flash-Next-BF16-00006-of-00008.gguf"
+      ]
+    }
+  ]
+}

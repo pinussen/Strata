@@ -6,6 +6,13 @@ cases pass, including fixture preparation. Three short model requests produce th
 two, four and eight GPUs, using explicit splits and a 1,536 MiB VRAM reserve. See the
 [bring-up report](../bench/results/2026-10-05-cisco-m10/README.md) for results and limits.
 
+The 2026-10-06 [Q8/BF16 follow-up](../bench/results/2026-10-06-cisco-m10-q8-bf16/README.md)
+adds Q8_0 and BF16 PLE row decoding, checked against ggml on synthetic data and real Q8/BF16 weights.
+Q8 full-model inference now completes the Strata benchmark on eight M10 GPUs. This does not
+provide full BF16 inference: the native CPU expert activation buffer, GPU expert dispatch and
+native output-head dispatch still need BF16 work. BF16 completes the separate reference-engine
+benchmark at approximately 2.64 tok/s on this machine.
+
 ## What already helps us
 
 Several existing low-architecture paths are directly useful:

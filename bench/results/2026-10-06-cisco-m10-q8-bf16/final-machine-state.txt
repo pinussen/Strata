@@ -1,0 +1,9 @@
+Tue Oct  6 23:22:38 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:           590Gi        78Gi        73Gi       436Gi       438Gi        71Gi
+Swap:          5.1Gi          0B       5.1Gi
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv   77G   68G  6.0G  92% /
+192.168.2.6:/tank/ai-models        500G  491G  9.8G  99% /models
+tmpfs                              256G  106G  151G  42% /mnt/strata-ram
+tmpfs                              400G  330G   71G  83% /mnt/strata-large
