@@ -49,7 +49,8 @@ cache warmth and startup time matter when comparing runs. GPU power is not whole
 prompts are performance and sanity checks, not a model-quality evaluation.
 
 `start_server.py` provides the same staging step for interactive use, then replaces itself with the localhost
-server. Run it with the server venv, specifying `--config`, `--data`, `--dest` and a local `--runtime` directory
+server by default. For direct LAN access, pass `--host 192.168.3.73` and `--api-key-file`;
+the launcher refuses a bind beyond localhost without a key file. Run it with the server venv, specifying `--config`, `--data`, `--dest` and a local `--runtime` directory
 for its generated config and engine log. Port 8080 is the default. It refuses an occupied port before staging.
 It also accepts `--drop-source-cache` for the RAM-backed setup.
 Pass `--api-key-file` to read a key from a private file; the generated server config is mode 0600. Following

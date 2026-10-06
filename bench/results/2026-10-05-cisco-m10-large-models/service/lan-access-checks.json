@@ -1,0 +1,68 @@
+{
+  "checked_utc": "2026-10-06T19:19:02.712595+00:00",
+  "base_url": "http://192.168.3.73:8080",
+  "checks": {
+    "web": {
+      "status": 200
+    },
+    "models_unauthenticated": {
+      "status": 401
+    },
+    "models_authenticated": {
+      "status": 200
+    },
+    "health": {
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "max_context": 4096,
+        "model": "strata-m10-unsloth-ud-q4_k_xl",
+        "images": false,
+        "api_key": true,
+        "loaded": true,
+        "service": "strata"
+      }
+    },
+    "lan_inference": {
+      "state": "passed",
+      "response": {
+        "id": "chatcmpl-50cec8f61eb34cc6b8c843d5",
+        "object": "chat.completion",
+        "created": 1791314342,
+        "model": "strata-m10-unsloth-ud-q4_k_xl",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "323"
+            },
+            "finish_reason": "stop"
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 28,
+          "completion_tokens": 4,
+          "total_tokens": 32,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 28,
+          "prompt_ms": 3251.6,
+          "prompt_per_token_ms": 116.129,
+          "prompt_per_second": 8.6,
+          "predicted_n": 4,
+          "predicted_ms": 723.7,
+          "predicted_per_token_ms": 180.925,
+          "predicted_per_second": 5.5,
+          "draft_n": 2,
+          "draft_n_accepted": 2
+        }
+      }
+    }
+  },
+  "state": "passed"
+}

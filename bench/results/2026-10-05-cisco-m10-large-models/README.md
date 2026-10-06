@@ -229,3 +229,15 @@ non-thinking measurements. The API equivalent is `reasoning_effort: "none"`.
 
 Remaining experiments: longer contexts, simultaneous requests, host NUMA/CPU placement, different worker
 counts and GPU profiling. None is implied by the short functional and performance checks above.
+
+## LAN access update — 2026-10-06
+
+At the user's request, the existing eight-GPU Q4 server now binds directly to `192.168.3.73:8080`, with the
+same API key required. The launcher supports `--host` and refuses a non-localhost address without an API key
+file. The earlier localhost access records above describe the original benchmark session.
+
+[Direct LAN verification](service/lan-access-checks.json), run from the workspace machine, confirms HTTP 200
+for the web UI and authenticated API, HTTP 401 for the unauthenticated API, loaded health, and a complete
+arithmetic answer (`323`). [Launch metadata](service/launch-lan.json) records the restarted instance.
+The optional workspace localhost tunnel now forwards to the guest's LAN address. See the updated
+[operating instructions](../../../docs/M10_LOCAL_HANDOFF.md#full-model-operating-configuration).

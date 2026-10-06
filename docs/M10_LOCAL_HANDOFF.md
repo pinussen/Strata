@@ -25,6 +25,7 @@ Connect to the guest with `ssh bjwl@192.168.3.73`. From `/home/bjwl/Strata`, sta
   --data /models/strata-work/data \
   --dest /mnt/strata-ram/data \
   --runtime /home/bjwl/strata-dev/service \
+  --host 192.168.3.73 \
   --drop-source-cache \
   --api-key-file /home/bjwl/strata-dev/service/api-key
 ```
@@ -40,18 +41,20 @@ staged unchanged files and releases redundant source cache before loading. Origi
 This is a manually launched server, not a boot service. Its logs are `service/server.log` and `service/engine.log`.
 For unattended shell use, redirect output to `service/server.log` and run the launcher with `nohup`.
 
-The server binds to `127.0.0.1:8080` and requires the private key from the file above. The workspace machine has
-the same key in `/home/bjwl/.config/strata-m10-cisco/api-key`. Never commit either key or the generated
-`service/server.json`. Forward the port from the workspace with:
+At the user's request, the server now binds to `192.168.3.73:8080` for direct LAN access and requires
+the existing private API key. Open `http://192.168.3.73:8080` and enter that key under About > Settings.
+The guest key is `/home/bjwl/strata-dev/service/api-key`; the workspace copy is
+`/home/bjwl/.config/strata-m10-cisco/api-key`. Never commit either key or the generated `service/server.json`.
+The launcher defaults to localhost and refuses a non-localhost bind without `--api-key-file`.
+
+Select Thinking: Off to match the non-thinking benchmarks; the web app defaults to high thinking.
+The OpenAI-compatible API base is `http://192.168.3.73:8080/v1`.
+For an optional localhost SSH forward, the remote target is now the guest's LAN address:
 
 ```bash
-ssh -N -L 127.0.0.1:8080:127.0.0.1:8080 \
+ssh -N -L 127.0.0.1:8080:192.168.3.73:8080 \
   -o ExitOnForwardFailure=yes bjwl@192.168.3.73
 ```
-
-Open `http://127.0.0.1:8080` and enter that key under About > Settings.
-Select Thinking: Off to match the non-thinking benchmarks; the web app defaults to high thinking. The OpenAI-compatible API base is
-`http://127.0.0.1:8080/v1`. A forward must run on the machine whose browser or client uses this address.
 
 ## 1. Capture the machine
 
