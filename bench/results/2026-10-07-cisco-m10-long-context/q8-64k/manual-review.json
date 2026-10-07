@@ -1,0 +1,17 @@
+{
+  "method": "Manual, unblinded review of quantities/range claims and whitespace word counts. Partial review: 64K is still running.",
+  "swedish": {
+    "16k": {
+      "word_count_whitespace": 117,
+      "inventory_values_correct": true,
+      "range_claim_correct": false,
+      "notes": "Incorrect station range 000–333; actual stations are 000–136. Includes operational suggestions beyond the ledger."
+    },
+    "32k": {
+      "word_count_whitespace": 98,
+      "inventory_values_correct": true,
+      "range_claim_correct": true,
+      "notes": "Correct record range 00000–00706; two words short of requested minimum 100."
+    }
+  }
+}

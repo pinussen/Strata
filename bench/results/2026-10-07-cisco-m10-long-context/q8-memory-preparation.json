@@ -16,5 +16,8 @@
     }
   ],
   "bf16_unchanged": true,
-  "available_gib_after_reclaim": 206.62502670288086
+  "available_gib_after_reclaim": 206.62502670288086,
+  "ple_bytes_read": 54400261312,
+  "ple_warmup_s": 462.6943991769949,
+  "available_gib_after_ple_warmup": 206.6960334777832
 }

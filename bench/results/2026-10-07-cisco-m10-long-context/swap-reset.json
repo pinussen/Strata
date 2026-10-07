@@ -1,0 +1,12 @@
+{
+  "started": 1791402247.5934389,
+  "before": {
+    "available_bytes": 32076234752,
+    "swap_used_bytes": 922206208
+  },
+  "after": {
+    "available_bytes": 31205449728,
+    "swap_used_bytes": 0
+  },
+  "finished": 1791402253.1747437
+}

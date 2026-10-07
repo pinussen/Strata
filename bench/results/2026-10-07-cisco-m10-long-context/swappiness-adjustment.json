@@ -1,0 +1,6 @@
+{
+  "time": 1791402119.0158765,
+  "previous_swappiness": 60,
+  "temporary_swappiness": 1,
+  "reason": "Avoid swapping tmpfs pages while Q8 loads reclaimable NAS source pages; restore after experiment."
+}

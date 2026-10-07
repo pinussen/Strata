@@ -14,13 +14,14 @@ Q4 klarar faktakontroller och följdfrågor vid 16K, 32K och 64K, med 65 536 som
 kontextgräns. Svenska svar ger 5,2–5,5 token/s. Ett svenskt 16K-svar blandar ihop postnummer
 med stationsnummer; det är ett avgränsat funktionstest, ingen garanti för felfria sammanfattningar.
 
-| Underlag | Första text | Följdfråga med återanvänd historik |
-| --- | ---: | ---: |
-| 14 812 token | 5 min 35 s | 7,4 s |
-| 31 224 token | 11 min 32 s | 7,7 s |
-| 63 960 token | 23 min 45 s | 8,3 s |
+| Underlag | Q4 första text | Q8 första text | Q4 följdfråga | Q8 följdfråga |
+| --- | ---: | ---: | ---: | ---: |
+| 14 812 token | 5 min 35 s | 7 min 9 s | 7,4 s | 8,2 s |
+| 31 224 token | 11 min 32 s | 14 min 11 s | 7,7 s | 8,3 s |
+| 63 960 token | 23 min 45 s | Pågår | 8,3 s | — |
 
-Q8 kör samma serie. [Metod, rådata och aktuella resultat](../bench/results/2026-10-07-cisco-m10-long-context/README.md).
+Q8 klarar också faktakontrollerna vid 16K/32K och gav 4,8 token/s i de svenska svaren.
+Q8:s 64K-test pågår. [Metod, rådata och aktuella resultat](../bench/results/2026-10-07-cisco-m10-long-context/README.md).
 Tabellerna längre ned gäller de tidigare kortkontextmätningarna.
 
 ## Maskinen och modellerna
