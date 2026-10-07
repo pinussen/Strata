@@ -1,0 +1,13 @@
+{
+  "id": "04",
+  "category": "kodning",
+  "prompt": "Fixa funktionen nedan. Svara endast med komplett Python-kod för window_counts(events, width). events är en sorterad lista av heltalstidpunkter, width ett positivt heltal. För varje event vid t ska resultatet räkna alla event som hittills setts i (t-width, t], inklusive det aktuella. Dubbletter räknas separat men framtida event får inte räknas. O(n) tid, ändra inte events. Buggy kod:\ndef window_counts(events, width):\n    left = 0\n    result = []\n    for i, t in enumerate(events):\n        while events[left] < t-width:\n            left += 1\n        result.append(i-left)\n    return result",
+  "A": {
+    "content": "```python\ndef window_counts(events, width):\n    left = 0\n    result = []\n    for i, t in enumerate(events):\n        while events[left] <= t - width:\n            left += 1\n        result.append(i - left + 1)\n    return result\n```",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "```python\ndef window_counts(events, width):\n    left = 0\n    result = []\n    for i, t in enumerate(events):\n        while events[left] <= t - width:\n            left += 1\n        result.append(i - left + 1)\n    return result\n```",
+    "reasoning": ""
+  }
+}

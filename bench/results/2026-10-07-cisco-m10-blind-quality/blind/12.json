@@ -1,0 +1,13 @@
+{
+  "id": "12",
+  "category": "teknisk problemlösning",
+  "prompt": "Två klienter läser båda version=7, saldo=100. A vill lägga till 20 och B vill dra av 30. Båda skriver ett absolut saldo med last-write-wins. Visa två möjliga felaktiga slutsaldon, det korrekta slutsaldot, och ett förslag med compare-and-swap på version som förhindrar den förlorade uppdateringen. Beskriv vad klienten måste göra efter versionskonflikt. Högst 140 ord.",
+  "A": {
+    "content": "Felaktiga slutsaldon: 120 (A vinner, B:s dragning förloras) eller 70 (B vinner, A:s tillägg förloras). Korrekta slutsaldot är 90 (100 + 20 - 30).\n\nFörslag med Compare-and-Swap (CAS): Klienten läser saldo=100, version=7. Vid skrivning skickas nytt värde, förväntad version=7 och ny version=8. Servern accepterar endast om lagrad version är 7. Om A skriver först (version 8), misslyckas B:s CAS eftersom versionen inte längre är 7.\n\nEfter versionskonflikt måste klienten läsa om det aktuella saldot och versionen, beräkna om sin operation mot det nya underlaget (t.ex. 120 - 30 = 90) och försöka skriva igen med uppdaterad version. Detta säkerställer att inga uppdateringar tappas bort.",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "Felaktiga slutsaldon: 120 (A vinner, B:s dragning förloras) eller 70 (B vinner, A:s tillägg förloras). Korrekta slutsaldot är 90 (100 + 20 - 30).\n\nFörslag med Compare-and-Swap (CAS): Klienten läser saldo=100, version=7. Vid skrivning skickas nytt värde och förväntad version=7. Servern accepterar endast om aktuell version är 7, annars avvisas skrivningen.\n\nVid versionskonflikt måste klienten:\n1. Läs in det nya saldot och den uppdaterade versionen.\n2. Återberäkna sin transaktion mot det nya underlaget.\n3. Försök igen med CAS mot den nya versionen.\n\nDetta säkerställer att inga uppdateringar tappas bort genom att tvinga fram sekventiell konsistens vid parallella skrivningar.",
+    "reasoning": ""
+  }
+}

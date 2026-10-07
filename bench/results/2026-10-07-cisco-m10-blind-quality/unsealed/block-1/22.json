@@ -1,0 +1,196 @@
+{
+  "id": "22",
+  "request": {
+    "model": "blind-model",
+    "temperature": 0,
+    "seed": 20261007,
+    "reasoning_effort": "none",
+    "max_tokens": 768,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Prov 22. Följ användarens instruktioner. Ange osäkerhet när underlag saknas."
+      },
+      {
+        "role": "user",
+        "content": "Transformera CSV nedan. Behåll endast enabled=yes OCH region=eu. Sortera numeriskt på priority stigande, vid lika priority på name alfabetiskt. Svara endast CSV med rubrik name;port och semikolon som avgränsare. Inga kodstaket, inga extra kolumner. Indata:\nname,enabled,region,priority,port\nzeta,yes,eu,2,443\nalfa,no,eu,1,80\nbeta,yes,us,1,8080\ngamma,yes,eu,10,8443\ndelta,yes,eu,2,9090\nepsilon,yes,eu,1,8000"
+      }
+    ]
+  },
+  "started_unix": 1791361855.1232064,
+  "wall_s": 19.78984217600373,
+  "first_token_s": 14.843705706000037,
+  "content": "name;port\nepsilon;8000\ndelta;9090\nzeta;443\ngamma;8443",
+  "reasoning": "",
+  "final": {
+    "id": "chatcmpl-64c2e93841974cc3a8e8fa01",
+    "object": "chat.completion.chunk",
+    "created": 1791361855,
+    "model": "blind-model",
+    "choices": [
+      {
+        "index": 0,
+        "delta": {},
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 200,
+      "completion_tokens": 32,
+      "total_tokens": 232,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 200,
+      "prompt_ms": 14640.1,
+      "prompt_per_token_ms": 73.201,
+      "prompt_per_second": 13.7,
+      "predicted_n": 32,
+      "predicted_ms": 5139.8,
+      "predicted_per_token_ms": 160.619,
+      "predicted_per_second": 6.2,
+      "draft_n": 16,
+      "draft_n_accepted": 15
+    }
+  },
+  "events": [
+    {
+      "elapsed_s": 14.843705706000037,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.181406401999993,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.182486832003633,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.47604377400421,
+      "content_chars": 8,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.77602103100071,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.777109545000712,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.065903112998058,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.066970815998502,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.401502817003347,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.69979514300212,
+      "content_chars": 6,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.99971712200204,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 17.0007836970035,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 17.298605426003633,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 17.299656128998322,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 17.636958246002905,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 17.93818408899824,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 17.939256103003572,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 18.24414563299797,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 18.24522617400362,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 18.541579794000427,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 18.542633254000975,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 18.890391421002278,
+      "content_chars": 6,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 19.191989251004998,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 19.19308519900369,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 19.49025287800032,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 19.491310516998055,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 19.78652934300044,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    }
+  ]
+}

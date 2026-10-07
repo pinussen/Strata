@@ -1,0 +1,13 @@
+{
+  "id": "31",
+  "category": "fallgropar",
+  "prompt": "Python 3 använder vanliga IEEE 754 binary64-flyttal på den aktuella maskinen. Vad skriver detta ut och varför?\nx = float(2**53)\nprint(x + 1 == x)\nprint(int(x) + 1 == int(x))\nFöreslå en representation för exakta heltalsräknare utan detta avrundningsproblem. Svara högst 110 ord.",
+  "A": {
+    "content": "`x + 1 == x` ger `True` eftersom 2⁵³ är gränsen där IEEE 754 binary64 inte kan representera nästa heltal exakt; avståndet mellan flyttal är 2, så 1 adderas bort vid avrundning. `int(x) + 1 == int(x)` ger `False` eftersom `int` i Python 3 har godtycklig precision och hanterar stora heltal exakt utan avrundning.\n\nFör exakta heltalsräknare bör man använda Pythons inbyggda `int`-typ, som automatiskt växer i storlek. Alternativt kan man använda moduler som `decimal` för decimal exakthet eller bibliotek som `gmpy2` för högpresterande godtycklig precision, men `int` är standardlösningen för heltal.",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "`x + 1 == x` ger `True` eftersom 2^53 är gränsen där IEEE 754 binary64 inte kan representera nästa heltal exakt; avståndet mellan tal är 2. `int(x) + 1 == int(x)` ger `False` eftersom Python 3:s `int` har godtycklig precision och hanterar värdet exakt.\n\nFör exakta heltalsräknare utan avrundningsfel bör man använda Pythons inbyggda `int`-typ, som automatiskt växer i storlek. Alternativt kan man använda bibliotek som `gmpy2` för högre prestanda vid mycket stora tal, eller `decimal`-modulen om decimal exakthet krävs, men `int` är standardlösningen för heltal.",
+    "reasoning": ""
+  }
+}

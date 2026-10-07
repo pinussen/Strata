@@ -1,0 +1,1021 @@
+{
+  "id": "28",
+  "request": {
+    "model": "blind-model",
+    "temperature": 0,
+    "seed": 20261007,
+    "reasoning_effort": "none",
+    "max_tokens": 768,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Prov 28. Följ användarens instruktioner. Ange osäkerhet när underlag saknas."
+      },
+      {
+        "role": "user",
+        "content": "Incidentens inledande fakta: endast backend N3 har fel. N1 och N2 är friska. Rollback får göras bara om felfrekvensen är över 2 % OCH minst 500 anrop ingår i mätfönstret. Senaste mätfönstret för N3: 9 fel av 600 anrop. Reservåtgärd när rollbackvillkoret inte uppfylls: isolera N3 och behåll N1/N2. Ärendekod LIND-83.\nBilaga 01: arkivprojekt P01 använder zon Z1; dess gamla gränsvärde är 101 och gäller inte aktiv drift.\nBilaga 02: arkivprojekt P02 använder zon Z2; dess gamla gränsvärde är 102 och gäller inte aktiv drift.\nBilaga 03: arkivprojekt P03 använder zon Z3; dess gamla gränsvärde är 103 och gäller inte aktiv drift.\nBilaga 04: arkivprojekt P04 använder zon Z4; dess gamla gränsvärde är 104 och gäller inte aktiv drift.\nBilaga 05: arkivprojekt P05 använder zon Z5; dess gamla gränsvärde är 105 och gäller inte aktiv drift.\nBilaga 06: arkivprojekt P06 använder zon Z6; dess gamla gränsvärde är 106 och gäller inte aktiv drift.\nBilaga 07: arkivprojekt P07 använder zon Z0; dess gamla gränsvärde är 107 och gäller inte aktiv drift.\nBilaga 08: arkivprojekt P08 använder zon Z1; dess gamla gränsvärde är 108 och gäller inte aktiv drift.\nBilaga 09: arkivprojekt P09 använder zon Z2; dess gamla gränsvärde är 109 och gäller inte aktiv drift.\nBilaga 10: arkivprojekt P10 använder zon Z3; dess gamla gränsvärde är 110 och gäller inte aktiv drift.\nBilaga 11: arkivprojekt P11 använder zon Z4; dess gamla gränsvärde är 111 och gäller inte aktiv drift.\nBilaga 12: arkivprojekt P12 använder zon Z5; dess gamla gränsvärde är 112 och gäller inte aktiv drift.\nBilaga 13: arkivprojekt P13 använder zon Z6; dess gamla gränsvärde är 113 och gäller inte aktiv drift.\nBilaga 14: arkivprojekt P14 använder zon Z0; dess gamla gränsvärde är 114 och gäller inte aktiv drift.\nBilaga 15: arkivprojekt P15 använder zon Z1; dess gamla gränsvärde är 115 och gäller inte aktiv drift.\nBilaga 16: arkivprojekt P16 använder zon Z2; dess gamla gränsvärde är 116 och gäller inte aktiv drift.\nBilaga 17: arkivprojekt P17 använder zon Z3; dess gamla gränsvärde är 117 och gäller inte aktiv drift.\nBilaga 18: arkivprojekt P18 använder zon Z4; dess gamla gränsvärde är 118 och gäller inte aktiv drift.\nBilaga 19: arkivprojekt P19 använder zon Z5; dess gamla gränsvärde är 119 och gäller inte aktiv drift.\nBilaga 20: arkivprojekt P20 använder zon Z6; dess gamla gränsvärde är 120 och gäller inte aktiv drift.\nBilaga 21: arkivprojekt P21 använder zon Z0; dess gamla gränsvärde är 121 och gäller inte aktiv drift.\nBilaga 22: arkivprojekt P22 använder zon Z1; dess gamla gränsvärde är 122 och gäller inte aktiv drift.\nBilaga 23: arkivprojekt P23 använder zon Z2; dess gamla gränsvärde är 123 och gäller inte aktiv drift.\nBilaga 24: arkivprojekt P24 använder zon Z3; dess gamla gränsvärde är 124 och gäller inte aktiv drift.\nBilaga 25: arkivprojekt P25 använder zon Z4; dess gamla gränsvärde är 125 och gäller inte aktiv drift.\nBilaga 26: arkivprojekt P26 använder zon Z5; dess gamla gränsvärde är 126 och gäller inte aktiv drift.\nBilaga 27: arkivprojekt P27 använder zon Z6; dess gamla gränsvärde är 127 och gäller inte aktiv drift.\nBilaga 28: arkivprojekt P28 använder zon Z0; dess gamla gränsvärde är 128 och gäller inte aktiv drift.\nBilaga 29: arkivprojekt P29 använder zon Z1; dess gamla gränsvärde är 129 och gäller inte aktiv drift.\nBilaga 30: arkivprojekt P30 använder zon Z2; dess gamla gränsvärde är 130 och gäller inte aktiv drift.\nBilaga 31: arkivprojekt P31 använder zon Z3; dess gamla gränsvärde är 131 och gäller inte aktiv drift.\nBilaga 32: arkivprojekt P32 använder zon Z4; dess gamla gränsvärde är 132 och gäller inte aktiv drift.\nBilaga 33: arkivprojekt P33 använder zon Z5; dess gamla gränsvärde är 133 och gäller inte aktiv drift.\nBilaga 34: arkivprojekt P34 använder zon Z6; dess gamla gränsvärde är 134 och gäller inte aktiv drift.\nBilaga 35: arkivprojekt P35 använder zon Z0; dess gamla gränsvärde är 135 och gäller inte aktiv drift.\nBilaga 36: arkivprojekt P36 använder zon Z1; dess gamla gränsvärde är 136 och gäller inte aktiv drift.\nBilaga 37: arkivprojekt P37 använder zon Z2; dess gamla gränsvärde är 137 och gäller inte aktiv drift.\nBilaga 38: arkivprojekt P38 använder zon Z3; dess gamla gränsvärde är 138 och gäller inte aktiv drift.\nBilaga 39: arkivprojekt P39 använder zon Z4; dess gamla gränsvärde är 139 och gäller inte aktiv drift.\nBilaga 40: arkivprojekt P40 använder zon Z5; dess gamla gränsvärde är 140 och gäller inte aktiv drift.\nBilaga 41: arkivprojekt P41 använder zon Z6; dess gamla gränsvärde är 141 och gäller inte aktiv drift.\nBilaga 42: arkivprojekt P42 använder zon Z0; dess gamla gränsvärde är 142 och gäller inte aktiv drift.\nBilaga 43: arkivprojekt P43 använder zon Z1; dess gamla gränsvärde är 143 och gäller inte aktiv drift.\nBilaga 44: arkivprojekt P44 använder zon Z2; dess gamla gränsvärde är 144 och gäller inte aktiv drift.\nBilaga 45: arkivprojekt P45 använder zon Z3; dess gamla gränsvärde är 145 och gäller inte aktiv drift.\nBilaga 46: arkivprojekt P46 använder zon Z4; dess gamla gränsvärde är 146 och gäller inte aktiv drift.\nBilaga 47: arkivprojekt P47 använder zon Z5; dess gamla gränsvärde är 147 och gäller inte aktiv drift.\nBilaga 48: arkivprojekt P48 använder zon Z6; dess gamla gränsvärde är 148 och gäller inte aktiv drift.\nBilaga 49: arkivprojekt P49 använder zon Z0; dess gamla gränsvärde är 149 och gäller inte aktiv drift.\nBilaga 50: arkivprojekt P50 använder zon Z1; dess gamla gränsvärde är 150 och gäller inte aktiv drift.\nBilaga 51: arkivprojekt P51 använder zon Z2; dess gamla gränsvärde är 151 och gäller inte aktiv drift.\nBilaga 52: arkivprojekt P52 använder zon Z3; dess gamla gränsvärde är 152 och gäller inte aktiv drift.\nBilaga 53: arkivprojekt P53 använder zon Z4; dess gamla gränsvärde är 153 och gäller inte aktiv drift.\nBilaga 54: arkivprojekt P54 använder zon Z5; dess gamla gränsvärde är 154 och gäller inte aktiv drift.\nBilaga 55: arkivprojekt P55 använder zon Z6; dess gamla gränsvärde är 155 och gäller inte aktiv drift.\nOperatörens sena kommentar: \"Jag tror vi ska rulla tillbaka allt; 9 fel låter mycket.\" Kommentaren är inget nytt beslut eller mätvärde.\nFråga: Vilken åtgärd följer policyn, varför, och vilken är ärendekoden? Ange procent och kontrollera båda rollbackvillkoren. Högst 120 ord."
+      }
+    ]
+  },
+  "started_unix": 1791362166.5847716,
+  "wall_s": 96.16939766200085,
+  "first_token_s": 58.418566316999204,
+  "content": "Åtgärd: Isolera N3 och behåll N1/N2.\n\nMotivering: Rollback kräver att felfrekvensen överstiger 2 % OCH att mätfönstret innehåller minst 500 anrop.\n1. Felfrekvens: 9 fel av 600 anrop ger 1,5 %. Detta är inte över 2 %.\n2. Anropsantal: 600 anrop uppfyller kravet på minst 500.\n\nEftersom det första villkoret (frekvens > 2 %) inte är uppfyllt, är rollbackvillkoret inte mött. Operatörens kommentar är subjektiv och ändrar inte de faktiska mätvärdena. Därför tillämpas reservåtgärden.\n\nÄrendekod: LIND-83.",
+  "reasoning": "",
+  "final": {
+    "id": "chatcmpl-22b778f1b8fe40a6aade1fb5",
+    "object": "chat.completion.chunk",
+    "created": 1791362166,
+    "model": "blind-model",
+    "choices": [
+      {
+        "index": 0,
+        "delta": {},
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2290,
+      "completion_tokens": 198,
+      "total_tokens": 2488,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 2290,
+      "prompt_ms": 58129.8,
+      "prompt_per_token_ms": 25.384,
+      "prompt_per_second": 39.4,
+      "predicted_n": 198,
+      "predicted_ms": 37960.6,
+      "predicted_per_token_ms": 191.72,
+      "predicted_per_second": 5.2,
+      "draft_n": 108,
+      "draft_n_accepted": 88
+    }
+  },
+  "events": [
+    {
+      "elapsed_s": 58.418566316999204,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 58.75358585699723,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 58.75465149000229,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 59.08307972300099,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 59.084133390002535,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 59.29932687499968,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 59.67241558800015,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 59.67347481899924,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 60.002385797997704,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 60.00349443300365,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 60.457289489000686,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 60.45835677799914,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 60.45942870499857,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 60.90808301400102,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 60.9091396540025,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 60.91020398800174,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 61.42707063799753,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 61.428144796002016,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 61.77302467700065,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 62.1118998919992,
+      "content_chars": 7,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 62.45300297100039,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 62.45407393100322,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 62.8427115049999,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 62.843807948003814,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 63.17307255700143,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 63.17414458100393,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 63.495183797997015,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 63.496256099002494,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 63.81890193599975,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 63.8199567949996,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 64.30156051000085,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 64.3026226380025,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 64.3037117940039,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 64.63311067999894,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 64.63417201500124,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 64.96891330200015,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 64.96995905000222,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 65.30183188599767,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 65.30290829099977,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 65.68998791000195,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 65.69107414800237,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 65.90646943500178,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 66.2348810800031,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 66.23597497899755,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 66.57356594999874,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 66.57464720599819,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 66.85295095400215,
+      "content_chars": 6,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 67.19216395499825,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 67.19324299100117,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 67.53096333899884,
+      "content_chars": 6,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 67.86868397700164,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 67.86977111300075,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 68.25702125100361,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 68.25809602200025,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 68.71883381500083,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 68.71994134299894,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 68.72098950600048,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 69.06337168099708,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 69.39538439099852,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 69.39645043099881,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 69.78005683099764,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 69.78113545299857,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 70.12020206200395,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 70.12125528300385,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 70.45215864499914,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 70.45319544200174,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 70.7796286140001,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 71.15811358600331,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 71.62043526100024,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 71.62149447100091,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 71.62253260899888,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 72.07413142499718,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 72.07522251000046,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 72.07627479600342,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 72.41396811400045,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 72.41504834700027,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 72.79292694399919,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 72.79397393899853,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 73.12581547199807,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 73.12688371100376,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 73.47014659900015,
+      "content_chars": 6,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 73.80288754899811,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 73.80396077300247,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 74.17820256300183,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 74.52255708200391,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 74.52362349000032,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 74.74905402500008,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 75.09391145200061,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 75.45888595699944,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 75.45997283700126,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 75.68093604400201,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 75.89661023000372,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 76.24006066499715,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 76.24114872099744,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 76.61213380099798,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 76.61319397100306,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 77.0782648309978,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 77.07935247400019,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 77.08041026600404,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 77.42078569799924,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 77.76031463000254,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 77.76138688799983,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 78.11833074499737,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 78.11941993400251,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 78.46008422400337,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 78.46116414199787,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 78.7995548109975,
+      "content_chars": 6,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 79.14198848199885,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 79.1430604729976,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 79.65032520300156,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 79.65140286899987,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 79.65244626800268,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 79.99501263099955,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 80.3314331119982,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 80.3325120169975,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 80.66447311599768,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 80.66554315800022,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 80.91215175000252,
+      "content_chars": 7,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 81.24665755400201,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 81.24788058300328,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 81.58491476400377,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 81.58598951900058,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 81.80541726999945,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 82.1677928220015,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 82.16888081200159,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 82.50333951399807,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 82.8464576769984,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 82.84754000500106,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 83.18626684400078,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 83.56344066100428,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 83.56453589699959,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 83.90316593799798,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 83.90422665300139,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 84.24656069400226,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 84.2476677040031,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 84.58489158999873,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 84.58598032000009,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 84.8513231830002,
+      "content_chars": 9,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 85.18633244199737,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 85.51945083399914,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 85.52053945700027,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 85.85941643999831,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 85.86048858999857,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 86.36174466100056,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 86.70560410000326,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 86.70668008700159,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 87.04615604699939,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 87.04724633200385,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 87.36693456600187,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 87.36803025200061,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 87.6319153229997,
+      "content_chars": 8,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 87.96431992299767,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 87.96538665600383,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 88.28740769899741,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 88.6081267979971,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 88.99297902800026,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 88.99410434500169,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 89.32821293199959,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 89.66369030900387,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 89.66477119000047,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 89.9942566910031,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 90.25649209899711,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 90.59209300300427,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 90.5931662580042,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 90.81028891800088,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 91.14743594000174,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 91.14849964000314,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 91.53723205999995,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 91.53831013599847,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 91.87235669299844,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 91.87343064200104,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 92.2110432460031,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 92.21211705799942,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 92.43341664099717,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 92.79610529100319,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 92.79724614600127,
+      "content_chars": 7,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 93.13556704000075,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 93.47027546000027,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 93.47134413700405,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 93.8107543080041,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 93.81183682799747,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 94.19733328700386,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 94.52640493099898,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 94.52749670299818,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 94.8532905480024,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 94.85437374100002,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 95.19121225600247,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 95.19229724199977,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 95.565183505998,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 95.5662678180015,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 96.16501931200037,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 96.16611867800384,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    }
+  ]
+}

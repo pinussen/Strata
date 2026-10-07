@@ -1,0 +1,13 @@
+{
+  "id": "05",
+  "category": "systemadministration",
+  "prompt": "Linux: /srv/data/a och /srv/data/b är hårda länkar till samma vanliga fil på samma filsystem. Filen är 8 GiB och har två länkar. En process har filen öppen för läsning. Vi kör först rm /srv/data/a, sedan rm /srv/data/b, och sist avslutar processen. Inga andra länkar, snapshots eller processer finns. Förklara vid vilka steg filens lagringsblock kan frigöras och varför du och df kan ge olika bild efter andra rm. Föreslå ett lämpligt läskommando för att hitta öppna raderade filer. Högst 140 ord.",
+  "A": {
+    "content": "Block frigörs först när processen avslutas. `rm` tar bara bort katalogposten och minskar länkräknaren. Efter `rm /srv/data/a` är länkräknaren 1. Efter `rm /srv/data/b` blir den 0, men eftersom en process har filen öppen markeras den som \"deleted\" men blocken behålls. `df` visar ofta att utrymmet är frigjort eftersom det räknar på katalogposter, medan `du` (och filsystemet internt) visar att blocken fortfarande är allokerade till den öppna filen. Skillnaden uppstår mellan andra `rm` och processavslut. För att hitta dessa filer används: `lsof +L1` eller `lsof | grep deleted`. Dessa kommandon listar öppna filer med noll länkar, vilket avslöjar varför utrymmet inte återvunnits trots att filerna är borttagna från filsystemet.",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "Block frigörs först när processen avslutas. `rm` tar bara bort katalogposten och minskar länkantalet. Efter `rm /srv/data/a` är antalet 1. Efter `rm /srv/data/b` är antalet 0, men filen är fortfarande öppen av processen, så inoden och blocken behålls. Vid processavslutning stängs filbeskrivaren, referensräknaren blir noll, och blocken frigörs.\n\n`df` visar ofta inte den frigjorda utrymmet direkt efter `rm` eftersom blocken är reserverade av den öppna filen. `du` kan också vara vilseledande om den inte räknar öppna raderade filer korrekt i vissa verktyg, men huvudorsaken är att utrymmet inte är tillgängligt för nya filer förrän filen stängs.\n\nKommando för att hitta öppna raderade filer:\n`lsof +L1`",
+    "reasoning": ""
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "id": "21",
+  "request": {
+    "model": "blind-model",
+    "temperature": 0,
+    "seed": 20261007,
+    "reasoning_effort": "none",
+    "max_tokens": 768,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Prov 21. Följ användarens instruktioner. Ange osäkerhet när underlag saknas."
+      },
+      {
+        "role": "user",
+        "content": "Returnera endast giltig JSON utan kodstaket med exakt nycklarna \"owner\", \"ports\", \"tls\", \"note\" i den ordningen. owner ska vara \"Åsa\", ports en stigande lista med de unika talen ur 443, 80, 443, 8080. tls ska vara boolean true. note ska vara JSON null, inte strängen \"null\". Ingen annan text."
+      }
+    ]
+  },
+  "started_unix": 1791361836.6564703,
+  "wall_s": 18.465655767002318,
+  "first_token_s": 13.615255359996809,
+  "content": "{\"owner\":\"Åsa\",\"ports\":[80,443,8080],\"tls\":true,\"note\":null}",
+  "reasoning": "",
+  "final": {
+    "id": "chatcmpl-d1e86aa8b68e49dc837e950f",
+    "object": "chat.completion.chunk",
+    "created": 1791361836,
+    "model": "blind-model",
+    "choices": [
+      {
+        "index": 0,
+        "delta": {},
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 137,
+      "completion_tokens": 29,
+      "total_tokens": 166,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 137,
+      "prompt_ms": 13361.4,
+      "prompt_per_token_ms": 97.528,
+      "prompt_per_second": 10.3,
+      "predicted_n": 29,
+      "predicted_ms": 5052.3,
+      "predicted_per_token_ms": 174.217,
+      "predicted_per_second": 5.7,
+      "draft_n": 14,
+      "draft_n_accepted": 13
+    }
+  },
+  "events": [
+    {
+      "elapsed_s": 13.615255359996809,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 13.985560237000755,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 13.986646366000059,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 14.194751271999849,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 14.510876371998165,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 14.51196766099747,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 14.836264434998157,
+      "content_chars": 5,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 14.837346806001733,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.197695041999395,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.198735705998843,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.512284039003134,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.513311479997355,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.832174695999129,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.833208798998385,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.147711397999956,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.148742878998746,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.50800434499979,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.50904160799837,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.823046144003456,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.824142397003016,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 17.14685554600146,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 17.466013719997136,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 17.46707105400128,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 17.828425063002214,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 17.82947126199724,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 18.145265245999326,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 18.146316878002835,
+      "content_chars": 4,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 18.46241072999692,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    }
+  ]
+}

@@ -1,0 +1,1226 @@
+[
+  {
+    "id": "01",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": 2,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Båda returnerar lista av tupler och sorterar en kopia. Slår ihop delad ändpunkt men inte heltalsgrannar."
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": 2,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Båda returnerar lista av tupler och sorterar en kopia. Slår ihop delad ändpunkt men inte heltalsgrannar."
+    },
+    "winner": "tie",
+    "rationale": "Funktionellt likvärdiga, korrekta lösningar; ingen vinst för enbart kortare kod eller kommentarer.",
+    "verification": "Manual safety/code review plus automatic-checks.json: 105/105 tests per answer. Markdown code fences accepted as presentation of Python source; prompt did not explicitly prohibit fences."
+  },
+  {
+    "id": "02",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": 2,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Båda accepterar ASCII-siffror, korrekta enheter och omgivande whitespace. A strippar före regex, B matchar whitespace i regex. B:s många kommentarer påverkar inte funktionen."
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": 2,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Båda accepterar ASCII-siffror, korrekta enheter och omgivande whitespace. A strippar före regex, B matchar whitespace i regex. B:s många kommentarer påverkar inte funktionen."
+    },
+    "winner": "tie",
+    "rationale": "Funktionellt likvärdiga, korrekta lösningar; ingen vinst för enbart kortare kod eller kommentarer.",
+    "verification": "Manual safety/code review plus automatic-checks.json: 24/24 tests per answer. Markdown code fences accepted as presentation of Python source; prompt did not explicitly prohibit fences."
+  },
+  {
+    "id": "03",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": 2,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Båda använder min-heap, deduplicerar kanter och detekterar cykler inklusive självloop. Oordnad iteration av grannar ändrar inte heapens val."
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": 2,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Båda använder min-heap, deduplicerar kanter och detekterar cykler inklusive självloop. Oordnad iteration av grannar ändrar inte heapens val."
+    },
+    "winner": "tie",
+    "rationale": "Funktionellt likvärdiga, korrekta lösningar; ingen vinst för enbart kortare kod eller kommentarer.",
+    "verification": "Manual safety/code review plus automatic-checks.json: 40/40 tests per answer. Markdown code fences accepted as presentation of Python source; prompt did not explicitly prohibit fences."
+  },
+  {
+    "id": "04",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": 2,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Båda rättar både vänstergränsen till <= och antal till i-left+1. Pekaren går sammanlagt högst n steg; width>0 gör indexeringen säker."
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": 2,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Båda rättar både vänstergränsen till <= och antal till i-left+1. Pekaren går sammanlagt högst n steg; width>0 gör indexeringen säker."
+    },
+    "winner": "tie",
+    "rationale": "Funktionellt likvärdiga, korrekta lösningar; ingen vinst för enbart kortare kod eller kommentarer.",
+    "verification": "Manual safety/code review plus automatic-checks.json: 104/104 tests per answer. Markdown code fences accepted as presentation of Python source; prompt did not explicitly prohibit fences."
+  },
+  {
+    "id": "05",
+    "A": {
+      "scores": {
+        "correctness": 0,
+        "instruction_following": 2,
+        "reasoning_consistency": 0,
+        "code_quality": null,
+        "no_hallucinations": 0,
+        "usefulness": 0
+      },
+      "objective_errors": [
+        "Byter plats på du och df: påstår att df räknar katalogposter och visar frigjort utrymme, medan du räknar den öppna avlänkade filens block."
+      ],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": false,
+      "notes": "Länktal och sista close är rätt, men det centrala diagnosrådet om du/df är omvänt."
+    },
+    "B": {
+      "scores": {
+        "correctness": 1,
+        "instruction_following": 1,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 1
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "Förklarar inte tydligt att du följer katalogposter och därför inte hittar den avlänkade filen."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Rätt blocklivslängd, rätt df och lsof +L1. Formuleringen om att du skulle räkna öppna raderade filer korrekt är oklar, inte en användbar mekanisk förklaring."
+    },
+    "winner": "B",
+    "rationale": "B undviker A:s felaktiga du/df-diagnos, men är fortfarande ofullständig.",
+    "verification": "gold-verification.json case 05; Linux close(2); manual check of directory traversal versus allocated blocks."
+  },
+  {
+    "id": "06",
+    "A": {
+      "scores": {
+        "correctness": 1,
+        "instruction_following": 2,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 1,
+        "usefulness": 1
+      },
+      "objective_errors": [
+        "Påstår att notifierade handlers körs i notifieringsordning. De körs i definitions-/inladdningsordning."
+      ],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Taskordningen med flush före healthcheck är rätt. Befintlig handler antas finnas enligt uppgiften; att den inte återges räknas inte som fel."
+    },
+    "B": {
+      "scores": {
+        "correctness": 1,
+        "instruction_following": 2,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 1,
+        "usefulness": 1
+      },
+      "objective_errors": [
+        "Påstår att notifierade handlers körs i notifieringsordning. De körs i definitions-/inladdningsordning."
+      ],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Rätt flush och förklaring att alla väntande handlers påverkas. Samma fel om ordning som A."
+    },
+    "winner": "tie",
+    "rationale": "Båda rättar huvudflödet men ger samma felaktiga extra uppgift om handlerordning.",
+    "verification": "Ansible Handlers, Notifying handlers and Controlling when handlers run; FACIT.md links. No deployment performed."
+  },
+  {
+    "id": "07",
+    "A": {
+      "scores": {
+        "correctness": 0,
+        "instruction_following": 2,
+        "reasoning_consistency": 0,
+        "code_quality": null,
+        "no_hallucinations": 1,
+        "usefulness": 0
+      },
+      "objective_errors": [
+        "Beskriver den ursprungliga db-instansen på index 2 som om den nu ligger på index 1; count-adresser flyttar inte instansen så.",
+        "Rekommenderar moved-block och plan innan resursdefinitionen ändras från count. Moved-konfigurationen måste beskriva målresurserna med for_each; rådet är inte en fungerande stegordning."
+      ],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": false,
+      "notes": "Slutresultatet av count-borttagning och alla tre HCL-adresspar är rätt, men migrationsinstruktionen är fel."
+    },
+    "B": {
+      "scores": {
+        "correctness": 1,
+        "instruction_following": 2,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 1,
+        "usefulness": 1
+      },
+      "objective_errors": [
+        "Påstår att index-2-instansen kan bli orphaned eller bara tas ur state beroende på sekvens. Under de givna förutsättningarna planeras den för förstörelse; den flyttar inte till index 1."
+      ],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Den avslutande migrationen är användbar: moved + for_each med alla gamla namn, apply, därefter borttagning av worker."
+    },
+    "winner": "B",
+    "rationale": "B ger en genomförbar migration utan ombyggnad. A:s föreslagna ordning för moved och resursdefinition är fel. B:s count-förklaring behöver dock rättas.",
+    "verification": "Frozen gold plus Terraform Refactor modules; manual HCL/address review. 161/200 prose words, within 220 plus HCL. No Terraform infrastructure applied."
+  },
+  {
+    "id": "08",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Requires tillsammans med After, separat readiness via notifiering eller blockerande startkontroll."
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Samma korrekta beroenden och separation av processstart/readiness."
+    },
+    "winner": "tie",
+    "rationale": "Likvärdiga lösningar som skiljer beroendeordning från faktisk beredskap.",
+    "verification": "Manual review against supplied rules. Type=notify/ExecStartPost examples are valid alternatives, although not defined in the abbreviated prompt."
+  },
+  {
+    "id": "09",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 1,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "Begärd kort uträkning blir 248 whitespace-ord med upprepningar."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 1,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "Begärd kort uträkning blir 264 whitespace-ord med upprepningar."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "winner": "tie",
+    "rationale": "Alla fem resultat och uträkningar rätt; båda onödigt långa i förhållande till instruktionen.",
+    "verification": "gold-verification.json 09: 60 s, 1.6667x, 40%, 45 s, 2.2222x."
+  },
+  {
+    "id": "10",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Rätt omräkning 240/min till 4/s och alla efterfrågade medelvärden; p95 kan inte härledas."
+    },
+    "B": {
+      "scores": {
+        "correctness": 0,
+        "instruction_following": 1,
+        "reasoning_consistency": 0,
+        "code_quality": null,
+        "no_hallucinations": 0,
+        "usefulness": 0
+      },
+      "objective_errors": [
+        "Anger 18/240 som 0,075 sekunder i stället för minuter (=4,5 s).",
+        "Beräknar medelantal aktiva jobb till 144 i stället för 2,4 genom att blanda minut- och sekundenheter.",
+        "Ger negativ medelkötid i stället för 3,9 s.",
+        "Påstår att de konsekventa givna data är motsägelsefulla."
+      ],
+      "instruction_errors": [
+        "157 whitespace-ord, över gränsen 150."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": false,
+      "notes": "60% beläggning och invändningen mot p95 är rätt, men motiveringens enheter och flera huvudvärden är fel."
+    },
+    "winner": "A",
+    "rationale": "A ger korrekt användbar kapacitetsanalys; B blandar enheter och anklagar underlaget för ett påhittat problem.",
+    "verification": "gold-verification.json 10, dimensional check with lambda=4/s."
+  },
+  {
+    "id": "11",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "winner": "tie",
+    "rationale": "Identiska och korrekta sju uppgifter.",
+    "verification": "ipaddress reference in gold-verification.json 11."
+  },
+  {
+    "id": "12",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "CAS med förväntad version 7, ny version 8 och konkret omräkning efter konflikt."
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Ny version är underförstådd i uttrycket uppdaterade versionen, inte explicit version 8. Läsa om och återberäkna beskrivs rätt."
+    },
+    "winner": "tie",
+    "rationale": "Båda anger 120/70 kontra 90 och en fungerande CAS/retry-princip. A gör versionssteget tydligare, men ingen materiell lösningsskillnad.",
+    "verification": "gold-verification.json 12 and manual interleaving check; CAS interpreted as atomic per-version update."
+  },
+  {
+    "id": "13",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 1,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 1,
+        "usefulness": 1
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "273 whitespace-ord, över gränsen 160."
+      ],
+      "corrected_errors": [
+        "Kallar först ett 12-minuters sekventiellt schema optimalt, men återtar det och avslutar med korrekt 8-minuters schema och undre gräns."
+      ],
+      "final_conclusion_correct": true,
+      "notes": "Slutschemat och beviset är rätt; kvarlämnad felstart gör svaret motsägelsefullt."
+    },
+    "B": {
+      "scores": {
+        "correctness": 0,
+        "instruction_following": 0,
+        "reasoning_consistency": 0,
+        "code_quality": null,
+        "no_hallucinations": 0,
+        "usefulness": 0
+      },
+      "objective_errors": [
+        "Ger inledningsvis 12 minuter som optimum utan att nå en slutlig rättelse av optimum i det sparade svaret.",
+        "Hittar på beroendet C före D och kritiska vägen A-C-D-E (10 minuter)."
+      ],
+      "instruction_errors": [
+        "375 whitespace-ord, över gränsen 160.",
+        "Svaret slutar mitt i en mening före E:s sluttid och ett färdigt optimalitetsbevis."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": false,
+      "notes": "Börjar senare komma fram till parallell C/D, men lämnar inte ett färdigt korrekt svar."
+    },
+    "winner": "A",
+    "rationale": "A når ett verifierat optimalt schema och bevis; B lämnar ett ofärdigt svar med felaktiga påståenden.",
+    "verification": "Exhaustive schedule search in gold-verification.json 13 proves optimum 8. Truncation inferred from text here, finish_reason checked only after review lock."
+  },
+  {
+    "id": "14",
+    "A": {
+      "scores": {
+        "correctness": 1,
+        "instruction_following": 1,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 1
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "Avslutar inte förklaringen av skillnaden mellan P(markerad|defekt) och P(defekt|markerad)."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": null,
+      "notes": "Båda efterfrågade procenttal samt täljare och nämnare är rätt; slutet ofärdigt."
+    },
+    "B": {
+      "scores": {
+        "correctness": 1,
+        "instruction_following": 1,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 1
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "Avslutar inte förklaringen av varför 90% inte är det efterfrågade måttet."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": null,
+      "notes": "Båda procenttal och bråk rätt; börjar beskriva 90/100 men meningen är ofärdig."
+    },
+    "winner": "tie",
+    "rationale": "Likvärdigt korrekta tal men båda saknar färdig förklaring. Ingen vinst för marginellt olika avklippningspunkt.",
+    "verification": "gold-verification.json 14; 90/585=15.38%,10/9415=0.11%."
+  },
+  {
+    "id": "15",
+    "A": {
+      "scores": {
+        "correctness": 1,
+        "instruction_following": 0,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 0
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "Saknar torsdagens och fredagens saldon.",
+        "Den begärda tabellen saknas."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": null,
+      "notes": "Relation och saldon till och med onsdag rätt; svaret slutar i torsdagens händelsebeskrivning."
+    },
+    "B": {
+      "scores": {
+        "correctness": 1,
+        "instruction_following": 1,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 1
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "Saknar fredagens saldon.",
+        "Den begärda tabellen saknas."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": null,
+      "notes": "Relation och saldon måndag–torsdag rätt; fredag påbörjas utan uträkning."
+    },
+    "winner": "B",
+    "rationale": "B levererar fyra korrekta dagars saldon mot A:s tre. Begränsad vinst: inget av svaren är komplett eller ger den begärda tabellen.",
+    "verification": "gold-verification.json 15. Missing results are omissions, not invented numerical errors."
+  },
+  {
+    "id": "16",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "winner": "tie",
+    "rationale": "Båda kontrollerar alla tre fall rätt och finner Ada, med 1/2/2 sanna påståenden.",
+    "verification": "Truth-table enumeration, gold-verification.json 16."
+  },
+  {
+    "id": "17",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "66 ord, alla huvudfakta, före 22.00 och exakt avslutning. Ingen påhittad orsak eller tillgänglighetsgaranti."
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 1,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 1,
+        "usefulness": 1
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "Byter spara före 22.00 till senast 22.00."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "71 ord och alla huvuduppgifter. Formuleringen om att inte garantera tillgänglighet utöver tidsramen tillför osäkerhet efter underhållet som underlaget inte behandlar; detta är en obestyrkt utvidgning, inte ett verifierat driftfel."
+    },
+    "winner": "A",
+    "rationale": "A behåller den uttryckliga tidsgränsen före 22.00 och håller tillgänglighetsbudskapet inom underhållsperioden.",
+    "verification": "automatic-checks.json 17; manual fact/deadline and ending check."
+  },
+  {
+    "id": "18",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "winner": "tie",
+    "rationale": "Identiska sex korrekt ifyllda meningar.",
+    "verification": "Exact sentence comparison, automatic-checks.json 18."
+  },
+  {
+    "id": "19",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 1,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 1
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "Utelämnar nästa möte 4 november som ingår i facit."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Tre numrerade punkter accepteras som tre punkter. Automatens three_bullets_ok=false är en för snäv regex, inte ett formatfel."
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 1,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 1
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "Utelämnar nästa möte 4 november som ingår i facit."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Samma text som A; besluts-/förslagsstatus och öppna frågor återges rätt. Numrerade punkter accepteras."
+    },
+    "winner": "tie",
+    "rationale": "Identiska 33-ords sammanfattningar med samma utelämnade mötesdatum.",
+    "verification": "Manual override of bullet-only automated check; compare all reference facts in suite.json."
+  },
+  {
+    "id": "20",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 1,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "74 ord. Alla beställda datum/nummer, vänlig ton och Sam. Lägger till enligt avtal trots att avtal inte nämns i underlaget; obestyrkt formulering, inte verifierad falsk sakuppgift."
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "70 ord. Alla beställda uppgifter. Formen mottat bör vara mottagit i vårdad svenska. Den lilla språkbristen påverkar inte instruktionen eller användbarheten väsentligt."
+    },
+    "winner": "tie",
+    "rationale": "Båda mejlen går att använda med en liten redigering; ingen materiell vinst för stilskillnad.",
+    "verification": "automatic-checks.json 20 and manual check of all dates, order number, no compensation/threat and no exact-three-days assertion."
+  },
+  {
+    "id": "21",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "winner": "tie",
+    "rationale": "Båda är giltig JSON med rätt nyckelordning, värden och typer.",
+    "verification": "Exact/structured checks in automatic-checks.json 21."
+  },
+  {
+    "id": "22",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "winner": "tie",
+    "rationale": "Identiskt korrekt filtrerad och sorterad CSV.",
+    "verification": "Exact/structured checks in automatic-checks.json 22."
+  },
+  {
+    "id": "23",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "winner": "tie",
+    "rationale": "Identiska två rader, alla fem ordningsvillkor uppfyllda.",
+    "verification": "Exact/structured checks in automatic-checks.json 23."
+  },
+  {
+    "id": "24",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "winner": "tie",
+    "rationale": "Identisk korrekt metadata; båda ignorerar instruktionen i kundtexten.",
+    "verification": "Exact/structured checks in automatic-checks.json 24."
+  },
+  {
+    "id": "25",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 1,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "JSON är omsluten av Markdown-kodstaket trots begäran om bara JSON."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Alla fyra värden rätt efter borttagning av kodstaket."
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 1,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "JSON är omsluten av Markdown-kodstaket trots begäran om bara JSON."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "Identiskt innehåll och samma formatavvikelse."
+    },
+    "winner": "tie",
+    "rationale": "Båda hittar och kombinerar början och godkänd ändring korrekt, men använder kodstaket.",
+    "verification": "Manual JSON parse after fence removal plus frozen reference; strict raw JSON check intentionally fails both."
+  },
+  {
+    "id": "26",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "R1=1250,R2=-150,R6=300,total1400; korrekt deduplicering och exkludering. 72 ord."
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 1,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 1,
+        "usefulness": 1
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "154 whitespace-ord, över gränsen 100."
+      ],
+      "corrected_errors": [
+        "Påstår först att inga transaktioner ingår och hittar på implicita kreditvillkor, men återtar det och ger till sist rätt urval och 1400 SEK."
+      ],
+      "final_conclusion_correct": true,
+      "notes": "Slutresultat rätt men felaktig inledning och påhittad regel lämnas kvar."
+    },
+    "winner": "A",
+    "rationale": "A är direkt korrekt och följer längdgränsen; B:s rättelse räddar slutsvaret men lämnar en motsägelsefull och för lång förklaring.",
+    "verification": "gold-verification.json 26 and manual rule/word-count check."
+  },
+  {
+    "id": "27",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "winner": "tie",
+    "rationale": "Båda ger 180/45 dagar, Inez och ett korrekt kort policycitat.",
+    "verification": "Compare with explicit exception rule in frozen prompt, no external facts needed."
+  },
+  {
+    "id": "28",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "winner": "tie",
+    "rationale": "Båda räknar 1,5%, kontrollerar båda villkoren och väljer isolera N3 med rätt kod.",
+    "verification": "gold-verification.json 28 and exact reference fields."
+  },
+  {
+    "id": "29",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "winner": "tie",
+    "rationale": "Båda avvisar den odokumenterade funktionen och begär verifierat underlag utan att hitta på ett anrop.",
+    "verification": "Compare exhaustive API excerpt in frozen prompt; no request executed."
+  },
+  {
+    "id": "30",
+    "A": {
+      "scores": {
+        "correctness": 1,
+        "instruction_following": 1,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 1,
+        "usefulness": 1
+      },
+      "objective_errors": [
+        "Förklarar överlapp 19 som att X svarat rätt på alla frågor Y svarat rätt på, trots att X har 19 och Y 21. Det är Y som innehåller samtliga X-rätt."
+      ],
+      "instruction_errors": [
+        "Den begärda korta motiveringen blir 385 whitespace-ord och slutar i ett ofärdigt uttryck."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "2–6 och nej till att bestämma oavgjorda/exakt parat test är rätt."
+    },
+    "B": {
+      "scores": {
+        "correctness": 1,
+        "instruction_following": 1,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 1,
+        "usefulness": 1
+      },
+      "objective_errors": [
+        "Förklarar överlapp 19 som att X svarat rätt på alla Y-rätt plus två till; det strider mot 19 respektive 21 och är omvänd mängdinklusion."
+      ],
+      "instruction_errors": [
+        "Den begärda korta motiveringen blir 382 whitespace-ord och slutar mitt i förklaringen."
+      ],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": "2–6 och nej till exakt parat test från marginalerna är rätt."
+    },
+    "winner": "tie",
+    "rationale": "Båda når rätt huvudresultat men har samma typ av omvänd förklaring och ofärdig lång text.",
+    "verification": "Enumerated feasible contingency tables in gold-verification.json 30."
+  },
+  {
+    "id": "31",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 2,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 2
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [],
+      "final_conclusion_correct": true,
+      "notes": ""
+    },
+    "winner": "tie",
+    "rationale": "Båda anger True/False, representerbarhetsgränsen och int som exakt lösning.",
+    "verification": "Actual Python results in gold-verification.json 31. Optional decimal mention is not treated as claiming infinite precision."
+  },
+  {
+    "id": "32",
+    "A": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 2,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 1
+      },
+      "objective_errors": [],
+      "instruction_errors": [],
+      "corrected_errors": [
+        "Säger först A bättre på svåra jobb, rättar direkt till B (20% mot 30%)."
+      ],
+      "final_conclusion_correct": true,
+      "notes": "Alla slutliga procenttal och Simpson-förklaring rätt. 146 whitespace-ord. Gemensam likaviktning är en möjlig rättvis mix."
+    },
+    "B": {
+      "scores": {
+        "correctness": 2,
+        "instruction_following": 1,
+        "reasoning_consistency": 1,
+        "code_quality": null,
+        "no_hallucinations": 2,
+        "usefulness": 1
+      },
+      "objective_errors": [],
+      "instruction_errors": [
+        "160 whitespace-ord, över gränsen 150."
+      ],
+      "corrected_errors": [
+        "Säger först A bättre på svåra jobb, rättar därefter till B."
+      ],
+      "final_conclusion_correct": true,
+      "notes": "Alla slutliga värden rätt och bra förslag om gemensam trafikmix; upprepad omräkning gör svaret för långt."
+    },
+    "winner": "A",
+    "rationale": "Samma slutliga korrekta analys, men endast A håller den uttryckliga 150-ordsgränsen. Detta är en begränsad instruktionsvinst, inte bättre statistikförståelse.",
+    "verification": "gold-verification.json 32; deterministic whitespace word count as used elsewhere."
+  }
+]

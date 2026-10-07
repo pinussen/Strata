@@ -1,0 +1,169 @@
+{
+  "05": {
+    "link_counts": [
+      2,
+      1,
+      0
+    ],
+    "readable_after_unlink": "test fixture"
+  },
+  "09": {
+    "new_seconds": 60.0,
+    "speedup": 1.6666666666666667,
+    "percent_reduction": 40,
+    "minimum_seconds": 45,
+    "maximum_speedup": 2.2222222222222223
+  },
+  "10": {
+    "lambda_per_second": 4.0,
+    "system_seconds": 4.5,
+    "queue_seconds": 3.9,
+    "active_jobs": 2.4,
+    "utilization": 0.6
+  },
+  "11": {
+    "mask": "255.255.240.0",
+    "broadcast": "10.42.31.255",
+    "first": "10.42.16.1",
+    "last": "10.42.31.254",
+    "usable": 4094,
+    "membership": {
+      "10.42.31.254": true,
+      "10.42.32.1": false
+    }
+  },
+  "12": {
+    "last_A": 120,
+    "last_B": 70,
+    "serial": 90
+  },
+  "13": {
+    "optimum": 8,
+    "schedule": [
+      [
+        "A",
+        0,
+        3
+      ],
+      [
+        "B",
+        0,
+        2
+      ],
+      [
+        "C",
+        3,
+        7
+      ],
+      [
+        "D",
+        3,
+        5
+      ],
+      [
+        "E",
+        7,
+        8
+      ]
+    ],
+    "critical_path": 8
+  },
+  "14": {
+    "marked_fraction": "2/13",
+    "marked_percent": 15.384615384615385,
+    "unmarked_fraction": "2/1883",
+    "unmarked_percent": 0.10621348911311737
+  },
+  "15": [
+    [
+      "mån",
+      23,
+      7,
+      16
+    ],
+    [
+      "tis",
+      28,
+      7,
+      21
+    ],
+    [
+      "ons",
+      24,
+      3,
+      21
+    ],
+    [
+      "tor",
+      24,
+      1,
+      23
+    ],
+    [
+      "fre",
+      18,
+      1,
+      17
+    ]
+  ],
+  "16": {
+    "Ada": 1,
+    "Bo": 2,
+    "Cia": 2
+  },
+  "26": {
+    "R1": 1250,
+    "R2": -150,
+    "R6": 300,
+    "total": 1400
+  },
+  "28": {
+    "error_percent": 1.5,
+    "enough_calls": true,
+    "over_threshold": false
+  },
+  "30": [
+    {
+      "both": 15,
+      "x_only": 4,
+      "y_only": 6,
+      "ties": 15
+    },
+    {
+      "both": 16,
+      "x_only": 3,
+      "y_only": 5,
+      "ties": 17
+    },
+    {
+      "both": 17,
+      "x_only": 2,
+      "y_only": 4,
+      "ties": 19
+    },
+    {
+      "both": 18,
+      "x_only": 1,
+      "y_only": 3,
+      "ties": 21
+    },
+    {
+      "both": 19,
+      "x_only": 0,
+      "y_only": 2,
+      "ties": 23
+    }
+  ],
+  "31": [
+    true,
+    false
+  ],
+  "32": {
+    "A_total": 0.83,
+    "B_total": 0.43,
+    "A_easy": 0.9,
+    "B_easy": 0.95,
+    "A_hard": 0.2,
+    "B_hard": 0.3
+  }
+}

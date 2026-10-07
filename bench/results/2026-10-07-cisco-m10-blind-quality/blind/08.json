@@ -1,0 +1,13 @@
+{
+  "id": "08",
+  "category": "systemadministration",
+  "prompt": "Ett systemd-test har dessa givna regler: After= anger bara ordning om båda enheterna startas; Requires= drar in den andra enheten men anger inte ordning; ExecStartPre måste lyckas före ExecStart. app.service har After=db.service, men db.service är inte enabled och ingen annan enhet startar db. Appen gör dessutom endast ett anslutningsförsök; db:s process kan starta innan databasen tar emot anslutningar. Räcker After=? Föreslå en minimal rättning av beroenden och förklara separat hur readiness måste hanteras. Svara på svenska med högst 130 ord. Utgå bara från givna regler.",
+  "A": {
+    "content": "Nej, `After=` räcker inte. Enligt reglerna krävs att båda enheterna startas för att ordningen ska gälla. Eftersom `db.service` inte är enabled och ingen annan drar in den, startas den aldrig, vilket gör `After=` verkningslös.\n\nMinimal rättning: Lägg till `Requires=db.service` i `app.service`. Detta drar in `db.service` vid start av appen. Tillsammans med befintlig `After=` garanteras nu att `db.service` startas före `app.service`.\n\nReadiness hanteras separat: `After=` garanterar bara att processen startat, inte att tjänsten är redo. Eftersom appen bara gör ett försök, måste `db.service` definiera en readiness-check (t.ex. via `ExecStartPost` eller `Type=notify`) som blockerar tills databasen lyssnar. Utan detta kan appen misslyckas även om ordningen är korrekt.",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "Nej, `After=` räcker inte. Enligt reglerna krävs att båda enheterna startas för att ordningen ska gälla. Eftersom `db.service` inte är enabled och ingen annan drar in den, startas den aldrig, vilket gör `After=` verkningslös.\n\nMinimal rättning: Lägg till `Requires=db.service` i `app.service`. Detta drar in `db.service` vid start av appen. Tillsammans med befintlig `After=` garanteras att `db.service` startas före `app.service`.\n\nReadiness hanteras separat: `After=` garanterar bara att processen startat, inte att tjänsten är redo. Eftersom appen bara gör ett försök, måste `db.service` definiera en readiness-check (t.ex. via `Type=notify` eller `ExecStartPost` som väntar på port) så att systemd markerar den som aktiv först när databasen faktiskt accepterar anslutningar.",
+    "reasoning": ""
+  }
+}

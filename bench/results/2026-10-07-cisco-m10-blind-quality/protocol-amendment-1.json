@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-07T06:57:20.074864+00:00",
+  "stage": "first model still loading; no scored responses available",
+  "change": "Validator tolerates a JSON value of wrong type and extra stdout from generated code; no gold or scoring rule changed.",
+  "sha256": {
+    "validate.py": "907dcaf89ad7fe8b3c8d078fa60a6272116c393539b096afd070c5e749318240"
+  }
+}

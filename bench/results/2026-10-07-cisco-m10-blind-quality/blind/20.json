@@ -1,0 +1,13 @@
+{
+  "id": "20",
+  "category": "svenska",
+  "prompt": "Skriv ett vänligt men tydligt mejl på svenska till en leverantör. 70–100 ord, inklusive hälsning och avslutning. Leveransen skulle ha kommit 3 oktober men hade inte kommit 6 oktober. Be om bekräftat nytt leveransdatum senast 8 oktober kl. 12.00. Ordernumret är AX-204. Nämn att montaget är planerat till 10 oktober. Begär inte ersättning och hota inte med hävning. Skriv inte att förseningen är exakt tre dygn: klockslagen är okända. Signera med Sam. Ingen ämnesrad.",
+  "A": {
+    "content": "Hej,\n\nJag skriver angående order AX-204, som enligt avtal skulle ha levererats den 3 oktober. Vid kontroll den 6 oktober hade vi dock inte mottagit varorna.\n\nEftersom vårt montage är planerat till den 10 oktober är det viktigt att vi får en uppdaterad status. Vänligen bekräfta ett nytt leveransdatum senast den 8 oktober klockan 12.00.\n\nVi ser fram emot att få detta löst så att vi kan hålla vår tidplan.\n\nMed vänliga hälsningar,\nSam",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "Hej,\n\nJag skriver angående order AX-204, som skulle ha levererats den 3 oktober. Vid kontroll den 6 oktober hade vi inte mottat varorna.\n\nEftersom montaget är planerat till den 10 oktober är det viktigt att vi får en uppdaterad status. Vänligen bekräfta ett nytt leveransdatum senast den 8 oktober klockan 12.00.\n\nVi ser fram emot att få detta löst så att vi kan hålla vår tidplan.\n\nMed vänliga hälsningar,\nSam",
+    "reasoning": ""
+  }
+}

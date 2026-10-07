@@ -1,0 +1,151 @@
+{
+  "id": "23",
+  "request": {
+    "model": "blind-model",
+    "temperature": 0,
+    "seed": 20261007,
+    "reasoning_effort": "none",
+    "max_tokens": 768,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Prov 23. Följ användarens instruktioner. Ange osäkerhet när underlag saknas."
+      },
+      {
+        "role": "user",
+        "content": "Planera fem steg A,B,C,D,E. Varje steg ska förekomma exakt en gång. B måste ske före D, A direkt före C, E sist, D före A. Svara först med bara bokstäverna separerade av \" -> \". På nästa rad skriver du exakt \"Kontrollerat: 5 steg\". Inget annat."
+      }
+    ]
+  },
+  "started_unix": 1791357931.8331397,
+  "wall_s": 16.70686956400459,
+  "first_token_s": 13.956531468000321,
+  "content": "B -> D -> A -> C -> E\nKontrollerat: 5 steg",
+  "reasoning": "",
+  "final": {
+    "id": "chatcmpl-2578d00e69a1444186bea4a4",
+    "object": "chat.completion.chunk",
+    "created": 1791357931,
+    "model": "blind-model",
+    "choices": [
+      {
+        "index": 0,
+        "delta": {},
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 122,
+      "completion_tokens": 20,
+      "total_tokens": 142,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 122,
+      "prompt_ms": 13770.4,
+      "prompt_per_token_ms": 112.872,
+      "prompt_per_second": 8.9,
+      "predicted_n": 20,
+      "predicted_ms": 2929.4,
+      "predicted_per_token_ms": 146.47,
+      "predicted_per_second": 6.8,
+      "draft_n": 10,
+      "draft_n_accepted": 10
+    }
+  },
+  "events": [
+    {
+      "elapsed_s": 13.956531468000321,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 14.2246885200002,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 14.225772726000287,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 14.490900734999741,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 14.491993936004292,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 14.780195341001672,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 14.781276349000109,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.053535146005743,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.054633751002257,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.327145097005996,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.603463776002172,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.604546342001413,
+      "content_chars": 6,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.88805289400625,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 15.889116335005383,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.161576092999894,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.162650379003026,
+      "content_chars": 1,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.431538280005043,
+      "content_chars": 3,
+      "reasoning_chars": 0
+    },
+    {
+      "elapsed_s": 16.43260573700536,
+      "content_chars": 2,
+      "reasoning_chars": 0
+    }
+  ]
+}

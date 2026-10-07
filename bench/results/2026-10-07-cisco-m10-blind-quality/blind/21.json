@@ -1,0 +1,13 @@
+{
+  "id": "21",
+  "category": "detaljinstruktioner",
+  "prompt": "Returnera endast giltig JSON utan kodstaket med exakt nycklarna \"owner\", \"ports\", \"tls\", \"note\" i den ordningen. owner ska vara \"Åsa\", ports en stigande lista med de unika talen ur 443, 80, 443, 8080. tls ska vara boolean true. note ska vara JSON null, inte strängen \"null\". Ingen annan text.",
+  "A": {
+    "content": "{\"owner\":\"Åsa\",\"ports\":[80,443,8080],\"tls\":true,\"note\":null}",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "{\"owner\": \"Åsa\", \"ports\": [80, 443, 8080], \"tls\": true, \"note\": null}",
+    "reasoning": ""
+  }
+}

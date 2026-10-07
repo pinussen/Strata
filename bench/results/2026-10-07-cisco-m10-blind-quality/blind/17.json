@@ -1,0 +1,13 @@
+{
+  "id": "17",
+  "category": "svenska",
+  "prompt": "Skriv ett sakligt driftmeddelande på svenska, 60–85 ord, utan rubrik eller punktlista. Underhåll sker den 12 november kl. 22.00–22.30 svensk tid. Inloggningen kan avbrytas; redan sparade filer påverkas inte. Användaren ska spara pågående arbete före 22.00. Nästa uppdatering kommer senast 22.45 på statussidan. Orsaken utreds fortfarande: hitta inte på någon orsak eller garanti om tillgänglighet. Tilltala läsaren med du och avsluta exakt med \"Tack för ditt tålamod.\"",
+  "A": {
+    "content": "Den 12 november mellan klockan 22.00 och 22.30 svensk tid genomförs underhåll som kan avbryta inloggningen. Redan sparade filer påverkas inte, men du bör spara ditt pågående arbete innan 22.00 för att undvika dataförlust. Orsaken till driftstoppet utreds fortfarande, och vi kan inte garantera full tillgänglighet under perioden. Nästa uppdatering publiceras senast klockan 22.45 på statussidan. Vi ber om ursäkt för besväret. Tack för ditt tålamod.",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "Vi genomför ett planerat underhåll den 12 november mellan klockan 22.00 och 22.30 svensk tid. Under denna period kan inloggningen avbrytas, men redan sparade filer påverkas inte. Vi rekommenderar att du sparar ditt pågående arbete senast klockan 22.00 för att undvika dataförlust. Orsaken till underhållet utreds fortfarande, så vi kan inte garantera full tillgänglighet utöver den angivna tidsramen. Nästa statusuppdatering publiceras senast klockan 22.45 på vår statussida. Tack för ditt tålamod.",
+    "reasoning": ""
+  }
+}

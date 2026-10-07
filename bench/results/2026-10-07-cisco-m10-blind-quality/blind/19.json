@@ -1,0 +1,13 @@
+{
+  "id": "19",
+  "category": "svenska",
+  "prompt": "Sammanfatta följande protokoll på svenska i exakt tre punkter, högst 65 ord totalt. Skilj beslut från förslag och öppna frågor. \"Mötet beslutade att behålla Q4 som standard under oktober. Eva föreslog Q8 för felsökning; ingen röstning skedde om detta. Två testkörningar rapporterades, men loggarna har ännu inte kontrollerats. Budget för november är inte fastställd. Nästa möte är 4 november.\" Hitta inte på någon ansvarig.",
+  "A": {
+    "content": "1. Beslut: Q4 behålls som standard under oktober.\n2. Förslag: Eva föreslog Q8 för felsökning, men ingen röstning skedde.\n3. Öppna frågor: Loggarna från två testkörningar är okontrollerade och novemberbudgeten är inte fastställd.",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "1. Beslut: Q4 behålls som standard under oktober.\n2. Förslag: Eva föreslog Q8 för felsökning, men ingen röstning skedde.\n3. Öppna frågor: Loggarna från två testkörningar är okontrollerade och novemberbudgeten är inte fastställd.",
+    "reasoning": ""
+  }
+}

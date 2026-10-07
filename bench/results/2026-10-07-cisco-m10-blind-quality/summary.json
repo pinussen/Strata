@@ -1,0 +1,130 @@
+{
+  "Q4": {
+    "wins": 6,
+    "ties": 24,
+    "objective_error_answers": 4,
+    "objective_errors": 7,
+    "corrected_error_answers": 3,
+    "instruction_error_answers": 10,
+    "truncated_answers": 3,
+    "mean_decode_tps": 6.103125,
+    "mean_prompt_tps": 14.450000000000001,
+    "weighted_prompt_tps": 20.863449762814483,
+    "mean_ttft_s": 20.8992793451564,
+    "mean_wall_s": 67.42080196506231,
+    "mean_completion_tokens": 281.65625,
+    "max_engine_rss_gib": 101.50060272216797,
+    "min_guest_available_gib": 147.79375076293945,
+    "max_swap_bytes": 0,
+    "max_vram_mib": [
+      7073.0,
+      6964.0,
+      6958.0,
+      6964.0,
+      6958.0,
+      6961.0,
+      6958.0,
+      7103.0
+    ],
+    "weighted_engine_decode_tps": 6.028655444929949
+  },
+  "Q8": {
+    "wins": 2,
+    "ties": 24,
+    "objective_error_answers": 5,
+    "objective_errors": 7,
+    "corrected_error_answers": 1,
+    "instruction_error_answers": 9,
+    "truncated_answers": 4,
+    "mean_decode_tps": 5.44375,
+    "mean_prompt_tps": 15.121875,
+    "weighted_prompt_tps": 21.784239885742277,
+    "mean_ttft_s": 20.074169875969574,
+    "mean_wall_s": 70.16267834306291,
+    "mean_completion_tokens": 268.25,
+    "max_engine_rss_gib": 173.28709030151367,
+    "min_guest_available_gib": 73.65909576416016,
+    "max_swap_bytes": 5017600,
+    "max_vram_mib": [
+      7184.0,
+      7068.0,
+      7063.0,
+      7068.0,
+      7063.0,
+      7068.0,
+      7063.0,
+      7210.0
+    ],
+    "weighted_engine_decode_tps": 5.328588996193413
+  },
+  "paired_performance": {
+    "decode_tps": {
+      "mean_q8_q4_ratio": 0.8924169482828159,
+      "median_q8_q4_ratio": 0.8888888888888888,
+      "mean_percent_change": -10.758305171718408
+    },
+    "prompt_tps": {
+      "mean_q8_q4_ratio": 1.0960630825544415,
+      "median_q8_q4_ratio": 1.1206151947823022,
+      "mean_percent_change": 9.606308255444151
+    },
+    "ttft_s": {
+      "mean_q8_q4_ratio": 0.9211378361830022,
+      "median_q8_q4_ratio": 0.8986542515461144,
+      "mean_percent_change": -7.886216381699784
+    },
+    "wall_s": {
+      "mean_q8_q4_ratio": 1.023826880245089,
+      "median_q8_q4_ratio": 1.0435688570235508,
+      "mean_percent_change": 2.3826880245088944
+    }
+  },
+  "categories": {
+    "kodning": {
+      "Q4_wins": 0,
+      "Q8_wins": 0,
+      "ties": 4
+    },
+    "systemadministration": {
+      "Q4_wins": 2,
+      "Q8_wins": 0,
+      "ties": 2
+    },
+    "teknisk problemlösning": {
+      "Q4_wins": 0,
+      "Q8_wins": 1,
+      "ties": 3
+    },
+    "flerstegsresonemang": {
+      "Q4_wins": 2,
+      "Q8_wins": 0,
+      "ties": 2
+    },
+    "svenska": {
+      "Q4_wins": 1,
+      "Q8_wins": 0,
+      "ties": 3
+    },
+    "detaljinstruktioner": {
+      "Q4_wins": 0,
+      "Q8_wins": 0,
+      "ties": 4
+    },
+    "lång kontext": {
+      "Q4_wins": 0,
+      "Q8_wins": 1,
+      "ties": 3
+    },
+    "fallgropar": {
+      "Q4_wins": 1,
+      "Q8_wins": 0,
+      "ties": 3
+    }
+  },
+  "sensitivity_without_truncated_pairs": {
+    "pairs": 28,
+    "Q4_wins": 4,
+    "Q8_wins": 2,
+    "ties": 22
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "01",
+  "category": "kodning",
+  "prompt": "Skriv endast Python-kod för merge_intervals(xs). xs är en lista av par (start, end), start <= end. Returnera sorterade, sammanslagna slutna intervall som lista av tupler. Intervall som överlappar eller delar ändpunkt slås ihop; (1,2) och (3,4) slås inte ihop. Ändra inte indata. Hantera tom lista, dubbletter och nollängdsintervall. Använd bara standardbiblioteket.",
+  "A": {
+    "content": "```python\ndef merge_intervals(xs):\n    if not xs:\n        return []\n    \n    # Sort by start, then by end\n    sorted_xs = sorted(xs, key=lambda x: (x[0], x[1]))\n    \n    merged = []\n    current_start, current_end = sorted_xs[0]\n    \n    for start, end in sorted_xs[1:]:\n        # If the current interval overlaps or touches the previous one\n        if start <= current_end:\n            # Merge by extending the end if necessary\n            if end > current_end:\n                current_end = end\n        else:\n            # No overlap, add the previous interval and start a new one\n            merged.append((current_start, current_end))\n            current_start, current_end = start, end\n    \n    # Add the last interval\n    merged.append((current_start, current_end))\n    \n    return merged\n```",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "```python\ndef merge_intervals(xs):\n    if not xs:\n        return []\n    \n    # Sort by start, then by end\n    sorted_xs = sorted(xs, key=lambda x: (x[0], x[1]))\n    \n    merged = []\n    current_start, current_end = sorted_xs[0]\n    \n    for start, end in sorted_xs[1:]:\n        if start <= current_end:\n            # Overlapping or touching (sharing endpoint)\n            current_end = max(current_end, end)\n        else:\n            merged.append((current_start, current_end))\n            current_start, current_end = start, end\n    \n    merged.append((current_start, current_end))\n    \n    return merged\n```",
+    "reasoning": ""
+  }
+}

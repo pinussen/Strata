@@ -1,0 +1,13 @@
+{
+  "id": "11",
+  "category": "teknisk problemlösning",
+  "prompt": "IPv4-subnätet är 10.42.16.0/20. Vanliga nät- och broadcastadresser får inte användas av värdar. Ange nätmask, broadcastadress, första och sista användbara värdadress samt antal användbara adresser. Ange om 10.42.31.254 respektive 10.42.32.1 ingår. Svara kort med exakta värden.",
+  "A": {
+    "content": "**Nätmask:** 255.255.240.0\n**Broadcastadress:** 10.42.31.255\n**Första användbara värdadress:** 10.42.16.1\n**Sista användbara värdadress:** 10.42.31.254\n**Antal användbara adresser:** 4094\n\n**Ingår 10.42.31.254?** Ja (det är den sista användbara värdadressen).\n**Ingår 10.42.32.1?** Nej (det ligger utanför subnätet).",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "**Nätmask:** 255.255.240.0\n**Broadcastadress:** 10.42.31.255\n**Första användbara värdadress:** 10.42.16.1\n**Sista användbara värdadress:** 10.42.31.254\n**Antal användbara adresser:** 4094\n\n**Ingår 10.42.31.254?** Ja (det är den sista användbara värdadressen).\n**Ingår 10.42.32.1?** Nej (det ligger utanför subnätet).",
+    "reasoning": ""
+  }
+}

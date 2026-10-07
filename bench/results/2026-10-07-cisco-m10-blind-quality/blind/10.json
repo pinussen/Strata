@@ -1,0 +1,13 @@
+{
+  "id": "10",
+  "category": "teknisk problemlösning",
+  "prompt": "En stabil tjänst mäter i samma tidsfönster 240 avslutade jobb per minut och medelantalet jobb i systemet (kö + arbete) är 18. Fyra arbetare finns. Medelaktiv arbetstid per jobb är 0,6 s. Använd Little: L=lambda*W. Beräkna medeltid i systemet, medelkötid, medelantal aktiva jobb och arbetarnas genomsnittliga beläggning. Säg om dessa medelvärden ensamma avgör p95-latens. Högst 150 ord.",
+  "A": {
+    "content": "Med Little’s lag ($L = \\lambda W$) beräknas medeltid i systemet $W = L / \\lambda$. Med $\\lambda = 240$ jobb/min (4 jobb/s) och $L = 18$ blir $W = 18 / 4 = 4,5$ sekunder.\n\nMedelkötid är total tid minus aktiv tid: $4,5 - 0,6 = 3,9$ sekunder.\n\nMedelantal aktiva jobb ($L_a$) ges av $\\lambda \\times \\text{aktiv tid} = 4 \\times 0,6 = 2,4$ jobb.\n\nBeläggningen är andelen aktiva arbetare: $2,4 / 4 = 0,6$ (60 %).\n\nNej, dessa medelvärden avgör inte p95-latens. Medelvärden döljer varians och köbildningens svansar. P95 kräver kunskap om fördelningens form (t.ex. exponentiell eller tung svans), vilket inte framgår av Little’s lag eller medelvärdena.",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "Med Little’s lag: $W = L/\\lambda = 18/240 = 0,075$ s (medeltid i systemet).\n\nMedelantal aktiva jobb ($L_a$) beräknas som $\\lambda \\times \\text{aktiv tid} = 240 \\times 0,6 = 144$. Detta är dock omöjligt med endast 4 arbetare (max 4 aktiva jobb). Uppgiften innehåller motsägelser; antingen är aktiv tid felaktig eller så är \"240 jobb/min\" inte genomförbart med 4 arbetare vid 0,6 s jobb. Om vi antar att 4 arbetare är fullt belagda, är max throughput $4/0,6 \\approx 6,67$ jobb/s ($400$ jobb/min), vilket är högre än 240, så systemet är stabilt men $L_a$ kan inte vara 144. Med korrekt $L_a \\le 4$, blir beläggningen $\\rho = \\lambda \\times \\text{aktiv tid} / 4 = 240 \\times 0,6 / 240 = 0,6$ (60 %).\n\nMedelkötid $W_q = W - \\text{aktiv tid} = 0,075 - 0,6$ ger negativ tid, vilket bekräftar inkonsekvens i data.\n\nNej, medelvärden avgör inte p95-latens. P95 kräver kunskap om fördelningens varians och svansar, inte bara medel.",
+    "reasoning": ""
+  }
+}

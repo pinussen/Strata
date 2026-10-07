@@ -1,0 +1,13 @@
+{
+  "id": "22",
+  "category": "detaljinstruktioner",
+  "prompt": "Transformera CSV nedan. Behåll endast enabled=yes OCH region=eu. Sortera numeriskt på priority stigande, vid lika priority på name alfabetiskt. Svara endast CSV med rubrik name;port och semikolon som avgränsare. Inga kodstaket, inga extra kolumner. Indata:\nname,enabled,region,priority,port\nzeta,yes,eu,2,443\nalfa,no,eu,1,80\nbeta,yes,us,1,8080\ngamma,yes,eu,10,8443\ndelta,yes,eu,2,9090\nepsilon,yes,eu,1,8000",
+  "A": {
+    "content": "name;port\nepsilon;8000\ndelta;9090\nzeta;443\ngamma;8443",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "name;port\nepsilon;8000\ndelta;9090\nzeta;443\ngamma;8443",
+    "reasoning": ""
+  }
+}

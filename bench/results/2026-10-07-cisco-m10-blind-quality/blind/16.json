@@ -1,0 +1,13 @@
+{
+  "id": "16",
+  "category": "flerstegsresonemang",
+  "prompt": "Exakt en av Ada, Bo och Cia är skyldig. Exakt ett av följande tre påståenden är sant: Ada säger \"Bo är skyldig\". Bo säger \"Jag är oskyldig\". Cia säger \"Ada är oskyldig\". Vem är skyldig? Kontrollera alla tre möjliga skyldiga och ange hur många påståenden som då är sanna. Högst 140 ord.",
+  "A": {
+    "content": "Testa Ada som skyldig:\n1. Ada: \"Bo är skyldig\" (Falskt, då Ada är skyldig).\n2. Bo: \"Jag är oskyldig\" (Sant, då Bo är oskyldig).\n3. Cia: \"Ada är oskyldig\" (Falskt, då Ada är skyldig).\nAntal sanna: 1. Detta uppfyller villkoret.\n\nTesta Bo som skyldig:\n1. Ada: \"Bo är skyldig\" (Sant).\n2. Bo: \"Jag är oskyldig\" (Falskt).\n3. Cia: \"Ada är oskyldig\" (Sant, då Ada är oskyldig).\nAntal sanna: 2. Fel.\n\nTesta Cia som skyldig:\n1. Ada: \"Bo är skyldig\" (Falskt).\n2. Bo: \"Jag är oskyldig\" (Sant).\n3. Cia: \"Ada är oskyldig\" (Sant).\nAntal sanna: 2. Fel.\n\nEndast scenariot där Ada är skyldig ger exakt ett sant påstående.\n\nSvar: Ada är skyldig.",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "Testa Ada som skyldig:\n1. Ada: \"Bo är skyldig\" (Falskt).\n2. Bo: \"Jag är oskyldig\" (Sant).\n3. Cia: \"Ada är oskyldig\" (Falskt).\nTotalt: 1 sant påstående. Detta stämmer med villkoret.\n\nTesta Bo som skyldig:\n1. Ada: \"Bo är skyldig\" (Sant).\n2. Bo: \"Jag är oskyldig\" (Falskt).\n3. Cia: \"Ada är oskyldig\" (Sant).\nTotalt: 2 sanna påståenden. Fel.\n\nTesta Cia som skyldig:\n1. Ada: \"Bo är skyldig\" (Falskt).\n2. Bo: \"Jag är oskyldig\" (Sant).\n3. Cia: \"Ada är oskyldig\" (Sant).\nTotalt: 2 sanna påståenden. Fel.\n\nSlutsats: Endast scenariot där Ada är skyldig ger exakt ett sant påstående. Ada är skyldig.",
+    "reasoning": ""
+  }
+}

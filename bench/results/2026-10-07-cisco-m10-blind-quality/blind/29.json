@@ -1,0 +1,13 @@
+{
+  "id": "29",
+  "category": "fallgropar",
+  "prompt": "I följande kompletta API-utdrag finns bara två endpoints: GET /health returnerar {\"ok\": true}; POST /jobs accepterar {\"name\": string} och returnerar {\"id\": string}. En kollega säger att DELETE /jobs/all med force=true är dokumenterad och tömmer kön atomiskt. Visa det dokumenterade anropet för atomisk tömning, eller säg tydligt om underlaget inte stöder något sådant. Föreslå ett säkert nästa steg. Högst 100 ord; inga påhittade endpoints.",
+  "A": {
+    "content": "Underlaget stöder inte påståendet. De enda dokumenterade endpoints är GET /health och POST /jobs. Det finns inget dokumenterat DELETE /jobs/all eller stöd för force=true. Att anta att en sådan endpoint finns är osäkert och riskabelt.\n\nSäkert nästa steg: Verifiera API-dokumentationen mot källkoden eller fråga leverantören om en officiell metod för att tömma kön. Undvik att implementera eller kalla på odocumenterade endpoints, då detta kan leda till driftstörningar eller säkerhetsproblem.",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "Underlaget stöder inte påståendet. De angivna API-utdragen innehåller endast `GET /health` och `POST /jobs`. Det finns ingen dokumentation för `DELETE /jobs/all` eller parametern `force=true`. Att anta att endpointen finns är osäkert och riskabelt.\n\nSäkert nästa steg: Verifiera källan till kollegans påstående. Be om den specifika versionshistorik eller dokumentationslänk där `DELETE /jobs/all` definieras. Om ingen sådan finns, implementera inte anropet. Kontakta API-ansvarig för bekräftelse innan du utvecklar kod som förlitar sig på denna icke-dokumenterade funktion.",
+    "reasoning": ""
+  }
+}

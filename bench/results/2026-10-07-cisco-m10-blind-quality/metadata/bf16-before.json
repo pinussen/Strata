@@ -1,0 +1,82 @@
+{
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00001-of-00008.gguf": {
+    "size": 10946368,
+    "mtime_ns": 1791315483817925013,
+    "sha256": null
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00001-of-00008.gguf.sha256": {
+    "size": 65,
+    "mtime_ns": 1791315483825924135,
+    "sha256": "348986b2568af284eb16a0be0ccd17aa4cf0bc823de4a1c9da8e5a24365e3fd9"
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00002-of-00008.gguf": {
+    "size": 10447201664,
+    "mtime_ns": 1791315777141647117,
+    "sha256": null
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00002-of-00008.gguf.sha256": {
+    "size": 65,
+    "mtime_ns": 1791315777153647821,
+    "sha256": "905f21f256847501da84872c526791539a660328b85b701049d859a1c3dfa1cd"
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00003-of-00008.gguf": {
+    "size": 102400491712,
+    "mtime_ns": 1791324611150460091,
+    "sha256": null
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00003-of-00008.gguf.sha256": {
+    "size": 65,
+    "mtime_ns": 1791324611162460171,
+    "sha256": "fd6926a9142df95273cb92623b151f09d260f85b7c02e9469a1b610b552c6d0e"
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00004-of-00008.gguf": {
+    "size": 48394236672,
+    "mtime_ns": 1791325418429158342,
+    "sha256": null
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00004-of-00008.gguf.sha256": {
+    "size": 65,
+    "mtime_ns": 1791325418433158378,
+    "sha256": "e4ca944e85c400a5fecb6fd7b0ae0358b67e9bb39ded38a9a8596f8850e7e6dc"
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00005-of-00008.gguf": {
+    "size": 48367899040,
+    "mtime_ns": 1791325396236953550,
+    "sha256": null
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00005-of-00008.gguf.sha256": {
+    "size": 65,
+    "mtime_ns": 1791325396240953587,
+    "sha256": "c110361d1bbe8064e15c58c456cc35f0fe3d1b1329869e51b067909f83b95e6e"
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00006-of-00008.gguf": {
+    "size": 48615233984,
+    "mtime_ns": 1791325359132612638,
+    "sha256": null
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00006-of-00008.gguf.sha256": {
+    "size": 65,
+    "mtime_ns": 1791325359132612638,
+    "sha256": "cbce912e81f2d983e0a302ceb48554a45ecade9b083f4827d53fc8191af3aeb6"
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00007-of-00008.gguf": {
+    "size": 48367899040,
+    "mtime_ns": 1791326702071108531,
+    "sha256": null
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00007-of-00008.gguf.sha256": {
+    "size": 65,
+    "mtime_ns": 1791326702075108567,
+    "sha256": "23fbbbef0920c451c2fa4d9cf96d3dd167ed38c1cead608457464812d8930bc8"
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00008-of-00008.gguf": {
+    "size": 47426022016,
+    "mtime_ns": 1791326254339294800,
+    "sha256": null
+  },
+  "/mnt/strata-large/models/unsloth-bf16/Qwen3.8-Flash-Next-BF16-00008-of-00008.gguf.sha256": {
+    "size": 65,
+    "mtime_ns": 1791326254355294930,
+    "sha256": "b6e4e5c646f8f708bd471e922004aa752acbcdac1d3abb27c9d42037630916f7"
+  }
+}

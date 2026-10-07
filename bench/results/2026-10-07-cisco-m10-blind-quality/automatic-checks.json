@@ -1,0 +1,348 @@
+{
+  "01": {
+    "A": {
+      "word_count": 94,
+      "code": {
+        "passed": 105,
+        "failed": 0,
+        "failures": [],
+        "source_sha256": "844ace87c852a03d932bfda7f239d1da0c240de19054c81cfadee5ee26e86a78",
+        "extra_stdout": ""
+      }
+    },
+    "B": {
+      "word_count": 61,
+      "code": {
+        "passed": 105,
+        "failed": 0,
+        "failures": [],
+        "source_sha256": "50b4b75d22a5e69e4d0d0ed1c33ec0cd7e0ef05142b7500873246227cc6c7705",
+        "extra_stdout": ""
+      }
+    }
+  },
+  "02": {
+    "A": {
+      "word_count": 100,
+      "code": {
+        "passed": 24,
+        "failed": 0,
+        "failures": [],
+        "source_sha256": "ad9a2901a350df8cf52dc16be9bb25fd0c1af0e7f979a7d1bd967740dc8709b1",
+        "extra_stdout": ""
+      }
+    },
+    "B": {
+      "word_count": 222,
+      "code": {
+        "passed": 24,
+        "failed": 0,
+        "failures": [],
+        "source_sha256": "942f10ef874a7fb3fa289f54cabdc4f5a2eb0f2c37226112a8c3792d3980e096",
+        "extra_stdout": ""
+      }
+    }
+  },
+  "03": {
+    "A": {
+      "word_count": 161,
+      "code": {
+        "passed": 40,
+        "failed": 0,
+        "failures": [],
+        "source_sha256": "44b95e115c8b6ca19dd4033e6f04c2ae165961337d675d1db34374c50f5749a1",
+        "extra_stdout": ""
+      }
+    },
+    "B": {
+      "word_count": 153,
+      "code": {
+        "passed": 40,
+        "failed": 0,
+        "failures": [],
+        "source_sha256": "ba6b707857b57f260a5a5789a9ed51878d610d3e77284cf35546a323c0d62fdb",
+        "extra_stdout": ""
+      }
+    }
+  },
+  "04": {
+    "A": {
+      "word_count": 32,
+      "code": {
+        "passed": 104,
+        "failed": 0,
+        "failures": [],
+        "source_sha256": "0257a33f8e8577c9b1c8c59127df8b57dd121e13cff8e2797a5b4f6c3a74c1ea",
+        "extra_stdout": ""
+      }
+    },
+    "B": {
+      "word_count": 32,
+      "code": {
+        "passed": 104,
+        "failed": 0,
+        "failures": [],
+        "source_sha256": "0257a33f8e8577c9b1c8c59127df8b57dd121e13cff8e2797a5b4f6c3a74c1ea",
+        "extra_stdout": ""
+      }
+    }
+  },
+  "05": {
+    "A": {
+      "word_count": 108
+    },
+    "B": {
+      "word_count": 105
+    }
+  },
+  "06": {
+    "A": {
+      "word_count": 142
+    },
+    "B": {
+      "word_count": 105
+    }
+  },
+  "07": {
+    "A": {
+      "word_count": 203
+    },
+    "B": {
+      "word_count": 242
+    }
+  },
+  "08": {
+    "A": {
+      "word_count": 105
+    },
+    "B": {
+      "word_count": 106
+    }
+  },
+  "09": {
+    "A": {
+      "word_count": 248
+    },
+    "B": {
+      "word_count": 264
+    }
+  },
+  "10": {
+    "A": {
+      "word_count": 109
+    },
+    "B": {
+      "word_count": 157
+    }
+  },
+  "11": {
+    "A": {
+      "word_count": 32
+    },
+    "B": {
+      "word_count": 32
+    }
+  },
+  "12": {
+    "A": {
+      "word_count": 104
+    },
+    "B": {
+      "word_count": 98
+    }
+  },
+  "13": {
+    "A": {
+      "word_count": 273
+    },
+    "B": {
+      "word_count": 375
+    }
+  },
+  "14": {
+    "A": {
+      "word_count": 279
+    },
+    "B": {
+      "word_count": 273
+    }
+  },
+  "15": {
+    "A": {
+      "word_count": 356
+    },
+    "B": {
+      "word_count": 320
+    }
+  },
+  "16": {
+    "A": {
+      "word_count": 111
+    },
+    "B": {
+      "word_count": 99
+    }
+  },
+  "17": {
+    "A": {
+      "word_count": 66,
+      "word_limit_ok": true,
+      "exact_ending_ok": true
+    },
+    "B": {
+      "word_count": 71,
+      "word_limit_ok": true,
+      "exact_ending_ok": true
+    }
+  },
+  "18": {
+    "A": {
+      "word_count": 42,
+      "six_sentences_ok": true,
+      "exact_sentences_ok": true
+    },
+    "B": {
+      "word_count": 42,
+      "six_sentences_ok": true,
+      "exact_sentences_ok": true
+    }
+  },
+  "19": {
+    "A": {
+      "word_count": 33,
+      "word_limit_ok": true,
+      "three_bullets_ok": false
+    },
+    "B": {
+      "word_count": 33,
+      "word_limit_ok": true,
+      "three_bullets_ok": false
+    }
+  },
+  "20": {
+    "A": {
+      "word_count": 74,
+      "word_limit_ok": true
+    },
+    "B": {
+      "word_count": 70,
+      "word_limit_ok": true
+    }
+  },
+  "21": {
+    "A": {
+      "word_count": 1,
+      "strict_json_valid": true,
+      "expected_values_ok": true,
+      "key_order_ok": true,
+      "types_ok": true
+    },
+    "B": {
+      "word_count": 10,
+      "strict_json_valid": true,
+      "expected_values_ok": true,
+      "key_order_ok": true,
+      "types_ok": true
+    }
+  },
+  "22": {
+    "A": {
+      "word_count": 5,
+      "exact_output_ok": true
+    },
+    "B": {
+      "word_count": 5,
+      "exact_output_ok": true
+    }
+  },
+  "23": {
+    "A": {
+      "word_count": 12,
+      "exact_output_ok": true
+    },
+    "B": {
+      "word_count": 12,
+      "exact_output_ok": true
+    }
+  },
+  "24": {
+    "A": {
+      "word_count": 6,
+      "strict_json_valid": true,
+      "expected_values_ok": true
+    },
+    "B": {
+      "word_count": 6,
+      "strict_json_valid": true,
+      "expected_values_ok": true
+    }
+  },
+  "25": {
+    "A": {
+      "word_count": 12,
+      "strict_json_valid": false,
+      "expected_values_ok": false
+    },
+    "B": {
+      "word_count": 12,
+      "strict_json_valid": false,
+      "expected_values_ok": false
+    }
+  },
+  "26": {
+    "A": {
+      "word_count": 72
+    },
+    "B": {
+      "word_count": 154
+    }
+  },
+  "27": {
+    "A": {
+      "word_count": 61
+    },
+    "B": {
+      "word_count": 64
+    }
+  },
+  "28": {
+    "A": {
+      "word_count": 82
+    },
+    "B": {
+      "word_count": 76
+    }
+  },
+  "29": {
+    "A": {
+      "word_count": 69
+    },
+    "B": {
+      "word_count": 74
+    }
+  },
+  "30": {
+    "A": {
+      "word_count": 385
+    },
+    "B": {
+      "word_count": 382
+    }
+  },
+  "31": {
+    "A": {
+      "word_count": 92
+    },
+    "B": {
+      "word_count": 86
+    }
+  },
+  "32": {
+    "A": {
+      "word_count": 146
+    },
+    "B": {
+      "word_count": 160
+    }
+  }
+}

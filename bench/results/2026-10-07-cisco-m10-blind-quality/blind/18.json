@@ -1,0 +1,13 @@
+{
+  "id": "18",
+  "category": "svenska",
+  "prompt": "Fyll i de eller dem enligt formell skriftsvenska. Återge bara de sex numrerade meningarna med luckan ifylld. 1. ___ som arbetar natt får rapporten först. 2. Vi skickade rapporten till ___. 3. Teknikern bad ___ att vänta. 4. ___ hade redan startat om tjänsten. 5. Mellan dig och ___ finns ett avtal. 6. Jag tror att ___ har rätt.",
+  "A": {
+    "content": "1. De som arbetar natt får rapporten först.\n2. Vi skickade rapporten till dem.\n3. Teknikern bad dem att vänta.\n4. De hade redan startat om tjänsten.\n5. Mellan dig och dem finns ett avtal.\n6. Jag tror att de har rätt.",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "1. De som arbetar natt får rapporten först.\n2. Vi skickade rapporten till dem.\n3. Teknikern bad dem att vänta.\n4. De hade redan startat om tjänsten.\n5. Mellan dig och dem finns ett avtal.\n6. Jag tror att de har rätt.",
+    "reasoning": ""
+  }
+}

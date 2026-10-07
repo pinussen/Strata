@@ -1,0 +1,144 @@
+{
+  "checked_unix": 1791363700.1817265,
+  "health_status": 200,
+  "health": {
+    "status": "ok",
+    "max_context": 4096,
+    "model": "strata-m10-unsloth-ud-q4_k_xl",
+    "images": false,
+    "api_key": true,
+    "loaded": true,
+    "service": "strata"
+  },
+  "authenticated_models_status": 200,
+  "models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "strata-m10-unsloth-ud-q4_k_xl",
+        "object": "model",
+        "status": {
+          "value": "loaded"
+        },
+        "meta": {
+          "n_ctx": 4096
+        },
+        "architecture": {
+          "input_modalities": [
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ]
+        }
+      }
+    ]
+  },
+  "unauthenticated_models_status": 401,
+  "original_private_config_unchanged": true,
+  "benchmark_port_closed": true,
+  "bf16_inventory_unchanged": true,
+  "smoke_request": {
+    "model": "strata-m10-unsloth-ud-q4_k_xl",
+    "temperature": 0,
+    "seed": 20261007,
+    "reasoning_effort": "none",
+    "max_tokens": 16,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Svara endast med ordet återställd."
+      }
+    ]
+  },
+  "smoke_response": {
+    "started_unix": 1791363696.3408246,
+    "wall_s": 3.839912707997428,
+    "first_token_s": 3.0119266670008074,
+    "content": "återställd",
+    "reasoning": "",
+    "final": {
+      "id": "chatcmpl-a87105e5276e48f2ab422643",
+      "object": "chat.completion.chunk",
+      "created": 1791363696,
+      "model": "strata-m10-unsloth-ud-q4_k_xl",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {},
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 6,
+        "total_tokens": 29,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 23,
+        "prompt_ms": 2799.0,
+        "prompt_per_token_ms": 121.696,
+        "prompt_per_second": 8.2,
+        "predicted_n": 6,
+        "predicted_ms": 1033.9,
+        "predicted_per_token_ms": 172.317,
+        "predicted_per_second": 5.8,
+        "draft_n": 3,
+        "draft_n_accepted": 3
+      }
+    },
+    "events": [
+      {
+        "elapsed_s": 3.0119266670008074,
+        "content_chars": 1,
+        "reasoning_chars": 0
+      },
+      {
+        "elapsed_s": 3.288511255996127,
+        "content_chars": 3,
+        "reasoning_chars": 0
+      },
+      {
+        "elapsed_s": 3.289757730999554,
+        "content_chars": 2,
+        "reasoning_chars": 0
+      },
+      {
+        "elapsed_s": 3.5570630809961585,
+        "content_chars": 2,
+        "reasoning_chars": 0
+      },
+      {
+        "elapsed_s": 3.558170821997919,
+        "content_chars": 2,
+        "reasoning_chars": 0
+      }
+    ]
+  },
+  "memory": {
+    "total": 633650192384,
+    "available": 76185841664,
+    "percent": 88.0,
+    "used": 557464350720,
+    "free": 77874016256,
+    "active": 438746357760,
+    "inactive": 81646612480,
+    "buffers": 62873600,
+    "cached": 471941152768,
+    "shared": 469008568320,
+    "slab": 2267885568
+  },
+  "swap": {
+    "total": 5523894272,
+    "used": 3969024,
+    "free": 5519925248,
+    "percent": 0.1,
+    "sin": 3075637248,
+    "sout": 3176140800
+  },
+  "server_pid": 63444
+}

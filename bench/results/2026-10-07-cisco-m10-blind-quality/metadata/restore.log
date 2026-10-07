@@ -1,0 +1,12 @@
+Anonymous pairs exported, without timings or model identifiers.
+Copying /models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf (0.01 GiB)
+Copied in 0.2 s
+Copying /models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf (46.44 GiB)
+Copied in 426.0 s
+Copying /models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf (45.99 GiB)
+Copied in 421.3 s
+Copying /models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf (11.26 GiB)
+Copied in 103.4 s
+Released source file cache where the OS permits; files are unchanged
+Staged config: /home/bjwl/strata-dev/blind-quality-20261007/restaged.json
+Original Q4 restarted; BF16 inventory unchanged.

@@ -1,0 +1,13 @@
+{
+  "id": "32",
+  "category": "fallgropar",
+  "prompt": "Två versioner testas med olika trafikmix. På lätta jobb lyckas A 81/90 och B 19/20. På svåra jobb lyckas A 2/10 och B 24/80. Vilken har högst total framgångsandel? Vilken är bättre inom respektive jobbtyp? Förklarar totalen ensam en kausal fördel? Räkna procent och föreslå hur en rättvis jämförelse kan utformas. Högst 150 ord.",
+  "A": {
+    "content": "Totalt lyckas A med 83/100 (83 %) och B med 43/100 (43 %). A har alltså högst total andel.\n\nInom lätta jobb är B bättre (95 % mot A:s 90 %). Inom svåra jobb är A bättre (20 % mot B:s 30 %? Nej, vänta: A är 2/10 = 20 %, B är 24/80 = 30 %. B är bättre även här).\n\nKorrigering:\nLätta: A 90 %, B 95 %. B bättre.\nSvåra: A 20 %, B 30 %. B bättre.\n\nB är bättre i *båda* delgrupperna, men A vinner totalt. Detta är Simpson’s paradox. Totalen ensam förklarar inte kausal fördel eftersom trafikmixen (confounder) snedvrider bilden. A testades mest på lätta jobb där alla presterar bra, medan B testades mest på svåra jobb.\n\nEn rättvis jämförelse kräver stratifiering: jämför andelarna inom varje jobbtyp separat, eller använd viktad medelvärdesbildning där varje jobbtyp väger lika mycket oavsett volym.",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "Totalt lyckas A med 83/100 (83 %) och B med 43/100 (43 %). A har alltså högst total andel.\n\nInom lätta jobb är B bättre (95 % mot A:s 90 %). Inom svåra jobb är A bättre (20 % mot B:s 30 %? Nej, vänta: A 2/10=20%, B 24/80=30%. B är bättre även här? Låt mig räkna om. A: 2/10 = 20%. B: 24/80 = 30%. B är bättre i båda grupperna.\n\nKontroll:\nLätta: A 81/90 = 90%. B 19/20 = 95%. B bättre.\nSvåra: A 2/10 = 20%. B 24/80 = 30%. B bättre.\n\nTotalt: A 83/100 = 83%. B 43/100 = 43%. A bättre totalt.\n\nDetta är Simpson’s paradox. Totalen ensam förklarar inte kausal fördel; den är vilseledande p.g.a. obalanserad trafikmix (A fick nästan bara lätta jobb, B fick många svåra).\n\nRättvis jämförelse kräver stratifiering eller viktning. Man bör jämföra andelarna inom varje jobbtyp separat, eller använda standardiserade andelar där båda modeller testas på samma fördelning av jobbtyper.",
+    "reasoning": ""
+  }
+}

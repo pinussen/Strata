@@ -1,0 +1,13 @@
+{
+  "id": "06",
+  "category": "systemadministration",
+  "prompt": "Ansible: En play mot web kör i ordning: template /etc/acme.conf (notify: restart acme), command: /usr/bin/acme-healthcheck, och därefter playens slut. Handlern restart acme startar om tjänsten. Template ändrar filen och hälsokontrollen måste kontrollera den nya konfigurationen, men körs nu före omstarten. Visa en minimal task-sekvens i YAML som behåller handlern och dess idempotenta beteende, men säkrar rätt ordning. Ange också vad flush_handlers gör med andra redan notifierade handlers. Högst 160 ord; inga påhittade modulparametrar.",
+  "A": {
+    "content": "```yaml\n- hosts: web\n  tasks:\n    - name: Deploy config\n      ansible.builtin.template:\n        src: acme.conf.j2\n        dest: /etc/acme.conf\n      notify: restart acme\n\n    - name: Flush handlers\n      ansible.builtin.meta: flush_handlers\n\n    - name: Healthcheck\n      ansible.builtin.command: /usr/bin/acme-healthcheck\n```\n\n`flush_handlers` tvingar fram körning av alla notifierade handlers omedelbart, innan nästa task. I detta fall startas `restart acme` direkt efter template-uppdateringen, vilket säkerställer att hälsokontrollen körs mot den aktiva, uppdaterade konfigurationen.\n\nOm andra handlers har notifierats tidigare i playen (men ännu inte körts), kommer `flush_handlers` att exekvera dem också i den ordning de notifierades. Detta kan leda till oönskade sidoeffekter om dessa handlers inte är redo att köras vid denna tidpunkt, eller om deras körning påverkar systemets tillstånd på ett sätt som bryter mot antagandena för efterföljande tasks. Det är därför viktigt att bara använda `flush_handlers` när man är säker på att alla väntande handlers är säkra och lämpliga att exekvera just då.",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "```yaml\n- name: Deploy config\n  template:\n    src: acme.conf.j2\n    dest: /etc/acme.conf\n  notify: restart acme\n\n- name: Flush handlers\n  meta: flush_handlers\n\n- name: Healthcheck\n  command: /usr/bin/acme-healthcheck\n```\n\n`meta: flush_handlers` tvingar fram körning av alla notifierade handlers omedelbart, innan nästa task. Detta säkerställer att `restart acme` körs före hälsokontrollen.\n\nAngående andra notifierade handlers: `flush_handlers` kör *alla* väntande handlers som har notifierats hittills i playen, inte bara den specifika som nämns. De körs i den ordning de notifierades. Om en handler redan har körts tidigare i playen (och inte notifierats igen) körs den inte igen. Detta bevarar idempotensen eftersom handlers bara körs om deras notifierade task faktiskt ändrade systemet.",
+    "reasoning": ""
+  }
+}

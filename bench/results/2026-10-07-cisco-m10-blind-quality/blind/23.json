@@ -1,0 +1,13 @@
+{
+  "id": "23",
+  "category": "detaljinstruktioner",
+  "prompt": "Planera fem steg A,B,C,D,E. Varje steg ska förekomma exakt en gång. B måste ske före D, A direkt före C, E sist, D före A. Svara först med bara bokstäverna separerade av \" -> \". På nästa rad skriver du exakt \"Kontrollerat: 5 steg\". Inget annat.",
+  "A": {
+    "content": "B -> D -> A -> C -> E\nKontrollerat: 5 steg",
+    "reasoning": ""
+  },
+  "B": {
+    "content": "B -> D -> A -> C -> E\nKontrollerat: 5 steg",
+    "reasoning": ""
+  }
+}
