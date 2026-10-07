@@ -1,0 +1,67 @@
+{
+  "state": "complete",
+  "functional_pass": true,
+  "startup_s": 72.13029693799035,
+  "cases": {
+    "warmup": {
+      "prompt_tokens": 36,
+      "new_prompt_tokens": 36,
+      "cached_tokens": 0,
+      "first_token_s": 4.325226246990496,
+      "wall_s": 4.845790170002147,
+      "prompt_tps": 8.7,
+      "completion_tokens": 4,
+      "decode_tps": 5.8,
+      "finish_reason": "stop",
+      "correct": null,
+      "token_count_matches": true
+    },
+    "cold_retrieval": {
+      "prompt_tokens": 14812,
+      "new_prompt_tokens": 14812,
+      "cached_tokens": 0,
+      "first_token_s": 333.8152678839979,
+      "wall_s": 338.9289099699963,
+      "prompt_tps": 44.4,
+      "completion_tokens": 35,
+      "decode_tps": 6.6,
+      "finish_reason": "stop",
+      "correct": true,
+      "token_count_matches": true
+    },
+    "cached_inventory": {
+      "prompt_tokens": 14901,
+      "new_prompt_tokens": 55,
+      "cached_tokens": 14846,
+      "first_token_s": 7.418552653005463,
+      "wall_s": 13.889215597999282,
+      "prompt_tps": 7.7,
+      "completion_tokens": 44,
+      "decode_tps": 6.6,
+      "finish_reason": "stop",
+      "correct": true,
+      "token_count_matches": true
+    },
+    "cached_swedish": {
+      "prompt_tokens": 15038,
+      "new_prompt_tokens": 94,
+      "cached_tokens": 14944,
+      "first_token_s": 13.016004514996894,
+      "wall_s": 65.55546436199802,
+      "prompt_tps": 7.4,
+      "completion_tokens": 282,
+      "decode_tps": 5.3,
+      "finish_reason": "stop",
+      "correct": null,
+      "token_count_matches": true
+    }
+  },
+  "max_engine_rss_gib": 101.72772216796875,
+  "min_available_ram_gib": 70.63455963134766,
+  "min_swap_bytes": 3969024,
+  "max_swap_bytes": 3969024,
+  "max_gpu_used_mib": 7104.0,
+  "max_gpu_temperature_c": 64.0,
+  "engine_read_bytes_inference_delta": 0,
+  "telemetry_samples": 241
+}

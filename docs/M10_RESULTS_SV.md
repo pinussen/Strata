@@ -8,6 +8,13 @@ Snabblänkar: [testade kombinationer](#testade-kombinationer) · [Strata](#gener
 [referensmotor](#generering-i-referensmotorn) · [väntetider](#väntetid-till-första-text) ·
 [Coder och övriga körningar](#coder-korttester-och-avbruten-körning).
 
+## Pågående test med längre kontext
+
+Q4 har klarat ett första 16K-test med 14 812 token i underlaget: första text efter
+333,8 sekunder, följdfråga efter 7,4 sekunder med återanvänd historik och rätt svar.
+En svensk sammanfattning gav 5,3 token/s men innehöll ett sakfel. Huvudjämförelsen
+Q4/Q8 vid större kontext pågår; [metod, rådata och aktuella resultat](../bench/results/2026-10-07-cisco-m10-long-context/README.md).
+
 ## Maskinen och modellerna
 
 Cisco UCSC-C240-M5SX, två Xeon Gold 6248R, 692 GiB totalt användbart system-RAM enligt värdens

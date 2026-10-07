@@ -1,0 +1,18 @@
+{
+  "method": "Manual reading of saved responses; arithmetic and JSON retrieval checked against fixture.",
+  "warmup_correct": true,
+  "retrieval_all_three_positions_correct": true,
+  "inventory_and_sum_correct": true,
+  "swedish": {
+    "inventory_values_correct": true,
+    "station_range_correct": false,
+    "station_range_claim": "000 to 333",
+    "actual_station_range": "000 to 136; record numbers go to 333",
+    "word_count_whitespace": 130,
+    "requested_words": [
+      100,
+      130
+    ],
+    "notes": "Confuses record numbers with station identifiers; adds an unsupported statement about routine planning. Normal stream completion is not a semantic-quality pass."
+  }
+}
