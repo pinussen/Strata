@@ -8,12 +8,20 @@ Snabblänkar: [testade kombinationer](#testade-kombinationer) · [Strata](#gener
 [referensmotor](#generering-i-referensmotorn) · [väntetider](#väntetid-till-första-text) ·
 [Coder och övriga körningar](#coder-korttester-och-avbruten-körning).
 
-## Pågående test med längre kontext
+## Längre kontext: Q4 klar, Q8 pågår
 
-Q4 har klarat ett första 16K-test med 14 812 token i underlaget: första text efter
-333,8 sekunder, följdfråga efter 7,4 sekunder med återanvänd historik och rätt svar.
-En svensk sammanfattning gav 5,3 token/s men innehöll ett sakfel. Huvudjämförelsen
-Q4/Q8 vid större kontext pågår; [metod, rådata och aktuella resultat](../bench/results/2026-10-07-cisco-m10-long-context/README.md).
+Q4 klarar faktakontroller och följdfrågor vid 16K, 32K och 64K, med 65 536 som gemensam
+kontextgräns. Svenska svar ger 5,2–5,5 token/s. Ett svenskt 16K-svar blandar ihop postnummer
+med stationsnummer; det är ett avgränsat funktionstest, ingen garanti för felfria sammanfattningar.
+
+| Underlag | Första text | Följdfråga med återanvänd historik |
+| --- | ---: | ---: |
+| 14 812 token | 5 min 35 s | 7,4 s |
+| 31 224 token | 11 min 32 s | 7,7 s |
+| 63 960 token | 23 min 45 s | 8,3 s |
+
+Q8 kör samma serie. [Metod, rådata och aktuella resultat](../bench/results/2026-10-07-cisco-m10-long-context/README.md).
+Tabellerna längre ned gäller de tidigare kortkontextmätningarna.
 
 ## Maskinen och modellerna
 

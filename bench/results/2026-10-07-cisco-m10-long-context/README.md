@@ -1,8 +1,34 @@
 # Q4 and Q8 with larger contexts on Cisco M10
 
-**Measurement in progress, 2026-10-07.** The 16K Q4 smoke test below is complete.
-The main comparison is running with a 65,536-token capacity and approximately 15K,
-31K and 64K input tokens on both Q4 and Q8. Unfinished cases have no reported result.
+**Q4 complete; Q8 running, 2026-10-07.** Q4 passes all six exact retrieval checks
+at approximately 15K, 31K and 64K input tokens with a 65,536-token capacity. A new
+64K input waits almost 24 minutes; a follow-up using that history starts in 8.3 seconds.
+Q8 results will be added after its matching sequence finishes.
+
+## Main comparison: capacity 65,536
+
+Seconds to first streamed text. Each row is one sequence; model files are loaded before timing.
+
+| Model | Size tested | Actual initial input | Initial reply, s | Inventory follow-up, s | Swedish follow-up, s | Swedish decode, tok/s |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Q4 | 16K | 14,812 | 335.12 | 7.44 | 13.08 | 5.3 |
+| Q4 | 32K | 31,224 | 691.76 | 7.67 | 13.11 | 5.5 |
+| Q4 | 64K | 63,960 | 1,424.93 | 8.29 | 13.32 | 5.2 |
+| Q8 | 16K / 32K / 64K | Pending | — | — | — | — |
+
+Q4's initial inputs have zero reused tokens. The inventory follow-ups reuse 14,846,
+31,258 and 63,994 tokens respectively and read only 55 new tokens. All three access-word
+objects and all three inventory/sum objects match exactly. All replies finish normally.
+The three Swedish replies have 127, 105 and 120 whitespace-separated words (requested:
+100–130). At 16K, the summary confuses record and station numbers; the 32K and 64K
+range claims match the ledger. See [manual review](q4-64k/manual-review.json).
+
+The engine's sampled `read_bytes` counter is unchanged during Q4 inference. Swap allocation
+stays at 3,969,024 bytes; this is not a swap-I/O-counter measurement. Maximum sampled engine
+RSS is 102.08 GiB, minimum available RAM 70.25 GiB, maximum GPU usage 7,118 MiB on any one
+GPU and maximum GPU temperature 67°C. [Per-case summary](q4-64k/summary.json) includes
+individual GPU peaks. [Requests and responses](q4-64k/requests.jsonl) and
+[telemetry](q4-64k/telemetry.jsonl) retain the full evidence.
 
 ## Completed 16K Q4 smoke test
 
@@ -41,7 +67,8 @@ input before inference; reported inference counts are checked against it. The fi
 request asks for three access words. The second asks for inventory values not present in
 the previous reply and their sum. The third asks for a Swedish handover note.
 
-Each size has one sequence, not a statistical latency distribution or a broad quality
+Each size has one sequence, in ascending order within one loaded model. Expert caches can
+adapt across requests. This is not a statistical latency distribution or a broad quality
 benchmark. "Cold" means no reused conversation tokens, not cold model files. Cache reuse
 is checked using the actual assistant replies as conversation history. Raw answers are
 saved for manual review. The harness's `functional_pass` covers exact JSON retrieval,
@@ -60,3 +87,13 @@ python bench/m10/summarize_context.py /path/to/new-output-directory
 The runner owns a localhost-only server on port 8096 and refuses an occupied port. Stop
 other GPU inference engines before running. Public/LAN service credentials are never
 copied into benchmark artifacts.
+
+## Storage preparation
+
+Q4 is measured from tmpfs. Before loading Q8, two disposable Q4 staged shards (57.24 GiB)
+are replaced with links to their unchanged NAS originals; source size and modification
+time must match the staging manifest. The staging entries are invalidated so the final
+standard launcher will recreate real RAM copies. Original Q4/Q8 files and all BF16 files
+are preserved. [Preparation record](q8-memory-preparation.json) records the released copies.
+Q8 uses NAS sources with a RAM-resident expert arena and locked PLE mapping. Its PLE shard
+is scanned before startup; loading/staging time is separate from request latency.

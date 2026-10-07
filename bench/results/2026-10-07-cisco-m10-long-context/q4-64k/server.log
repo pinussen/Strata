@@ -1,0 +1,1062 @@
+loading the model (the first start takes a minute or two) ...
+[strata] layer split across GPUs [0, 1, 2, 3, 4, 5, 6, 7] (6,12,18,24,30,36,42)
+[strata] starting the engine: reading the model's weights ...
+[strata] loading the experts into RAM (tens of GB) and locking part of them for the GPU.
+         YOUR PC CAN BE SLOW OR STOP RESPONDING FOR 1-3 MINUTES NOW - this is normal.
+         Please wait and don't close this window; the browser opens when it is ready.
+[strata] still starting (31 s) - please wait ...
+[strata] still starting (51 s) - please wait ...
+[strata] experts loaded: 71.73 GiB at 9.87 GiB/s (58 s so far)
+[strata] filling the GPU's expert cache (1796 experts, 5.55 GiB of VRAM) ...
+[strata] almost ready ...
+ready: http://127.0.0.1:8096/v1  (OpenAI: /v1/chat/completions, Anthropic: /v1/messages, context 65536 tokens)
+       open http://127.0.0.1:8096/ in a browser to chat; close this window to stop the model
+[strata] reading the prompt: 29 of 36 tokens, 3 s so far
+[strata] answering: 2 of max 16 tokens, 8.0 tok/s, 5 s
+[strata] done: 4 tokens in 5 s (7.8 tok/s) (stop, cancel=False), expert cache 69.2% hit (+2.4% of the routed experts over PCIe)
+[strata] reading the prompt: 14,812 tokens, 10 s so far
+[strata] reading the prompt: 128 of 14,812 tokens, 16 s so far
+[strata] reading the prompt: 256 of 14,812 tokens, 18 s so far
+[strata] reading the prompt: 384 of 14,812 tokens, 21 s so far
+[strata] reading the prompt: 512 of 14,812 tokens, 23 s so far
+[strata] reading the prompt: 640 of 14,812 tokens, 26 s so far
+[strata] reading the prompt: 768 of 14,812 tokens, 28 s so far
+[strata] reading the prompt: 896 of 14,812 tokens, 31 s so far
+[strata] reading the prompt: 1,024 of 14,812 tokens, 33 s so far
+[strata] reading the prompt: 1,152 of 14,812 tokens, 36 s so far
+[strata] reading the prompt: 1,280 of 14,812 tokens, 39 s so far
+[strata] reading the prompt: 1,408 of 14,812 tokens, 41 s so far
+[strata] reading the prompt: 1,536 of 14,812 tokens, 44 s so far
+[strata] reading the prompt: 1,664 of 14,812 tokens, 46 s so far
+[strata] reading the prompt: 1,792 of 14,812 tokens, 49 s so far
+[strata] reading the prompt: 1,920 of 14,812 tokens, 51 s so far
+[strata] reading the prompt: 2,048 of 14,812 tokens, 55 s so far
+[strata] reading the prompt: 2,176 of 14,812 tokens, 57 s so far
+[strata] reading the prompt: 2,304 of 14,812 tokens, 60 s so far
+[strata] reading the prompt: 2,432 of 14,812 tokens, 63 s so far
+[strata] reading the prompt: 2,560 of 14,812 tokens, 65 s so far
+[strata] reading the prompt: 2,688 of 14,812 tokens, 67 s so far
+[strata] reading the prompt: 2,816 of 14,812 tokens, 70 s so far
+[strata] reading the prompt: 2,944 of 14,812 tokens, 72 s so far
+[strata] reading the prompt: 3,072 of 14,812 tokens, 76 s so far
+[strata] reading the prompt: 3,200 of 14,812 tokens, 78 s so far
+[strata] reading the prompt: 3,328 of 14,812 tokens, 82 s so far
+[strata] reading the prompt: 3,456 of 14,812 tokens, 84 s so far
+[strata] reading the prompt: 3,584 of 14,812 tokens, 88 s so far
+[strata] reading the prompt: 3,712 of 14,812 tokens, 90 s so far
+[strata] reading the prompt: 3,840 of 14,812 tokens, 93 s so far
+[strata] reading the prompt: 3,968 of 14,812 tokens, 95 s so far
+[strata] reading the prompt: 4,096 of 14,812 tokens, 98 s so far
+[strata] reading the prompt: 4,224 of 14,812 tokens, 101 s so far
+[strata] reading the prompt: 4,352 of 14,812 tokens, 103 s so far
+[strata] reading the prompt: 4,480 of 14,812 tokens, 107 s so far
+[strata] reading the prompt: 4,608 of 14,812 tokens, 109 s so far
+[strata] reading the prompt: 4,736 of 14,812 tokens, 112 s so far
+[strata] reading the prompt: 4,864 of 14,812 tokens, 115 s so far
+[strata] reading the prompt: 4,992 of 14,812 tokens, 118 s so far
+[strata] reading the prompt: 5,120 of 14,812 tokens, 120 s so far
+[strata] reading the prompt: 5,248 of 14,812 tokens, 123 s so far
+[strata] reading the prompt: 5,376 of 14,812 tokens, 126 s so far
+[strata] reading the prompt: 5,504 of 14,812 tokens, 129 s so far
+[strata] reading the prompt: 5,632 of 14,812 tokens, 131 s so far
+[strata] reading the prompt: 5,760 of 14,812 tokens, 134 s so far
+[strata] reading the prompt: 5,888 of 14,812 tokens, 137 s so far
+[strata] reading the prompt: 6,016 of 14,812 tokens, 140 s so far
+[strata] reading the prompt: 6,144 of 14,812 tokens, 143 s so far
+[strata] reading the prompt: 6,272 of 14,812 tokens, 146 s so far
+[strata] reading the prompt: 6,400 of 14,812 tokens, 148 s so far
+[strata] reading the prompt: 6,528 of 14,812 tokens, 151 s so far
+[strata] reading the prompt: 6,656 of 14,812 tokens, 154 s so far
+[strata] reading the prompt: 6,784 of 14,812 tokens, 156 s so far
+[strata] reading the prompt: 6,912 of 14,812 tokens, 160 s so far
+[strata] reading the prompt: 7,040 of 14,812 tokens, 162 s so far
+[strata] reading the prompt: 7,168 of 14,812 tokens, 165 s so far
+[strata] reading the prompt: 7,296 of 14,812 tokens, 168 s so far
+[strata] reading the prompt: 7,424 of 14,812 tokens, 172 s so far
+[strata] reading the prompt: 7,552 of 14,812 tokens, 174 s so far
+[strata] reading the prompt: 7,680 of 14,812 tokens, 176 s so far
+[strata] reading the prompt: 7,808 of 14,812 tokens, 179 s so far
+[strata] reading the prompt: 7,936 of 14,812 tokens, 182 s so far
+[strata] reading the prompt: 8,064 of 14,812 tokens, 185 s so far
+[strata] reading the prompt: 8,192 of 14,812 tokens, 187 s so far
+[strata] reading the prompt: 8,320 of 14,812 tokens, 190 s so far
+[strata] reading the prompt: 8,448 of 14,812 tokens, 193 s so far
+[strata] reading the prompt: 8,576 of 14,812 tokens, 197 s so far
+[strata] reading the prompt: 8,704 of 14,812 tokens, 200 s so far
+[strata] reading the prompt: 8,832 of 14,812 tokens, 203 s so far
+[strata] reading the prompt: 8,960 of 14,812 tokens, 205 s so far
+[strata] reading the prompt: 9,088 of 14,812 tokens, 208 s so far
+[strata] reading the prompt: 9,216 of 14,812 tokens, 211 s so far
+[strata] reading the prompt: 9,344 of 14,812 tokens, 213 s so far
+[strata] reading the prompt: 9,472 of 14,812 tokens, 217 s so far
+[strata] reading the prompt: 9,600 of 14,812 tokens, 220 s so far
+[strata] reading the prompt: 9,728 of 14,812 tokens, 223 s so far
+[strata] reading the prompt: 9,856 of 14,812 tokens, 225 s so far
+[strata] reading the prompt: 9,984 of 14,812 tokens, 228 s so far
+[strata] reading the prompt: 10,112 of 14,812 tokens, 231 s so far
+[strata] reading the prompt: 10,240 of 14,812 tokens, 234 s so far
+[strata] reading the prompt: 10,368 of 14,812 tokens, 237 s so far
+[strata] reading the prompt: 10,496 of 14,812 tokens, 240 s so far
+[strata] reading the prompt: 10,624 of 14,812 tokens, 242 s so far
+[strata] reading the prompt: 10,752 of 14,812 tokens, 245 s so far
+[strata] reading the prompt: 10,880 of 14,812 tokens, 247 s so far
+[strata] reading the prompt: 11,008 of 14,812 tokens, 250 s so far
+[strata] reading the prompt: 11,136 of 14,812 tokens, 253 s so far
+[strata] reading the prompt: 11,264 of 14,812 tokens, 256 s so far
+[strata] reading the prompt: 11,392 of 14,812 tokens, 259 s so far
+[strata] reading the prompt: 11,520 of 14,812 tokens, 262 s so far
+[strata] reading the prompt: 11,648 of 14,812 tokens, 265 s so far
+[strata] reading the prompt: 11,776 of 14,812 tokens, 267 s so far
+[strata] reading the prompt: 11,904 of 14,812 tokens, 270 s so far
+[strata] reading the prompt: 12,032 of 14,812 tokens, 273 s so far
+[strata] reading the prompt: 12,160 of 14,812 tokens, 276 s so far
+[strata] reading the prompt: 12,288 of 14,812 tokens, 278 s so far
+[strata] reading the prompt: 12,416 of 14,812 tokens, 281 s so far
+[strata] reading the prompt: 12,544 of 14,812 tokens, 285 s so far
+[strata] reading the prompt: 12,672 of 14,812 tokens, 287 s so far
+[strata] reading the prompt: 12,800 of 14,812 tokens, 290 s so far
+[strata] reading the prompt: 12,928 of 14,812 tokens, 293 s so far
+[strata] reading the prompt: 13,056 of 14,812 tokens, 296 s so far
+[strata] reading the prompt: 13,184 of 14,812 tokens, 299 s so far
+[strata] reading the prompt: 13,312 of 14,812 tokens, 301 s so far
+[strata] reading the prompt: 13,440 of 14,812 tokens, 304 s so far
+[strata] reading the prompt: 13,568 of 14,812 tokens, 306 s so far
+[strata] reading the prompt: 13,696 of 14,812 tokens, 309 s so far
+[strata] reading the prompt: 13,824 of 14,812 tokens, 313 s so far
+[strata] reading the prompt: 13,952 of 14,812 tokens, 316 s so far
+[strata] reading the prompt: 14,080 of 14,812 tokens, 319 s so far
+[strata] reading the prompt: 14,208 of 14,812 tokens, 322 s so far
+[strata] reading the prompt: 14,336 of 14,812 tokens, 324 s so far
+[strata] reading the prompt: 14,464 of 14,812 tokens, 327 s so far
+[strata] reading the prompt: 14,592 of 14,812 tokens, 330 s so far
+[strata] reading the prompt: 14,720 of 14,812 tokens, 332 s so far
+[strata] reading the prompt: 14,805 of 14,812 tokens, 334 s so far
+[strata] answering: 1 of max 128 tokens, 209715.2 tok/s, 335 s
+[strata] answering: 8 of max 128 tokens, 6.8 tok/s, 336 s
+[strata] answering: 16 of max 128 tokens, 6.7 tok/s, 337 s
+[strata] answering: 24 of max 128 tokens, 6.7 tok/s, 339 s
+[strata] answering: 32 of max 128 tokens, 6.7 tok/s, 340 s
+[strata] done: 35 tokens in 340 s (6.9 tok/s) (stop, cancel=False), expert cache 76.2% hit (+1.5% of the routed experts over PCIe)
+[strata] reading the prompt: 14,894 of 14,901 tokens, 6 s so far
+[strata] answering: 1 of max 192 tokens, 144631.2 tok/s, 7 s
+[strata] answering: 9 of max 192 tokens, 7.1 tok/s, 9 s
+[strata] answering: 17 of max 192 tokens, 6.8 tok/s, 10 s
+[strata] answering: 25 of max 192 tokens, 6.7 tok/s, 11 s
+[strata] answering: 33 of max 192 tokens, 6.7 tok/s, 12 s
+[strata] answering: 41 of max 192 tokens, 6.6 tok/s, 14 s
+[strata] done: 44 tokens in 14 s (6.8 tok/s) (stop, cancel=False), expert cache 85.3% hit (+0.7% of the routed experts over PCIe)
+[strata] reading the prompt: 15,038 tokens, 10 s so far
+[strata] reading the prompt: 15,031 of 15,038 tokens, 12 s so far
+[strata] answering: 1 of max 384 tokens, 233016.9 tok/s, 13 s
+[strata] answering: 8 of max 384 tokens, 7.0 tok/s, 14 s
+[strata] answering: 14 of max 384 tokens, 6.4 tok/s, 15 s
+[strata] answering: 19 of max 384 tokens, 5.9 tok/s, 16 s
+[strata] answering: 24 of max 384 tokens, 5.6 tok/s, 17 s
+[strata] answering: 31 of max 384 tokens, 5.8 tok/s, 18 s
+[strata] answering: 36 of max 384 tokens, 5.6 tok/s, 19 s
+[strata] answering: 42 of max 384 tokens, 5.5 tok/s, 21 s
+[strata] answering: 49 of max 384 tokens, 5.6 tok/s, 22 s
+[strata] answering: 57 of max 384 tokens, 5.7 tok/s, 23 s
+[strata] answering: 65 of max 384 tokens, 5.8 tok/s, 24 s
+[strata] answering: 72 of max 384 tokens, 5.8 tok/s, 25 s
+[strata] answering: 78 of max 384 tokens, 5.7 tok/s, 27 s
+[strata] answering: 85 of max 384 tokens, 5.7 tok/s, 28 s
+[strata] answering: 93 of max 384 tokens, 5.8 tok/s, 29 s
+[strata] answering: 99 of max 384 tokens, 5.8 tok/s, 30 s
+[strata] answering: 105 of max 384 tokens, 5.7 tok/s, 31 s
+[strata] answering: 111 of max 384 tokens, 5.7 tok/s, 33 s
+[strata] answering: 117 of max 384 tokens, 5.6 tok/s, 34 s
+[strata] answering: 124 of max 384 tokens, 5.6 tok/s, 35 s
+[strata] answering: 130 of max 384 tokens, 5.6 tok/s, 36 s
+[strata] answering: 135 of max 384 tokens, 5.6 tok/s, 37 s
+[strata] answering: 142 of max 384 tokens, 5.6 tok/s, 38 s
+[strata] answering: 149 of max 384 tokens, 5.6 tok/s, 40 s
+[strata] answering: 155 of max 384 tokens, 5.6 tok/s, 41 s
+[strata] answering: 162 of max 384 tokens, 5.6 tok/s, 42 s
+[strata] answering: 170 of max 384 tokens, 5.6 tok/s, 43 s
+[strata] answering: 174 of max 384 tokens, 5.6 tok/s, 44 s
+[strata] answering: 178 of max 384 tokens, 5.5 tok/s, 45 s
+[strata] answering: 185 of max 384 tokens, 5.5 tok/s, 46 s
+[strata] answering: 190 of max 384 tokens, 5.5 tok/s, 48 s
+[strata] answering: 195 of max 384 tokens, 5.5 tok/s, 49 s
+[strata] answering: 201 of max 384 tokens, 5.5 tok/s, 50 s
+[strata] answering: 206 of max 384 tokens, 5.4 tok/s, 51 s
+[strata] answering: 212 of max 384 tokens, 5.4 tok/s, 52 s
+[strata] answering: 218 of max 384 tokens, 5.4 tok/s, 53 s
+[strata] answering: 222 of max 384 tokens, 5.4 tok/s, 54 s
+[strata] answering: 229 of max 384 tokens, 5.4 tok/s, 55 s
+[strata] answering: 234 of max 384 tokens, 5.4 tok/s, 57 s
+[strata] answering: 241 of max 384 tokens, 5.4 tok/s, 58 s
+[strata] answering: 248 of max 384 tokens, 5.4 tok/s, 59 s
+[strata] answering: 254 of max 384 tokens, 5.4 tok/s, 60 s
+[strata] answering: 259 of max 384 tokens, 5.3 tok/s, 62 s
+[strata] answering: 265 of max 384 tokens, 5.3 tok/s, 63 s
+[strata] answering: 271 of max 384 tokens, 5.3 tok/s, 64 s
+[strata] done: 276 tokens in 64 s (5.4 tok/s) (stop, cancel=False), expert cache 94.1% hit (+0.1% of the routed experts over PCIe)
+[strata] reading the prompt: 31,224 tokens, 10 s so far
+[strata] reading the prompt: 128 of 31,224 tokens, 16 s so far
+[strata] reading the prompt: 256 of 31,224 tokens, 18 s so far
+[strata] reading the prompt: 384 of 31,224 tokens, 20 s so far
+[strata] reading the prompt: 512 of 31,224 tokens, 23 s so far
+[strata] reading the prompt: 640 of 31,224 tokens, 26 s so far
+[strata] reading the prompt: 768 of 31,224 tokens, 28 s so far
+[strata] reading the prompt: 896 of 31,224 tokens, 30 s so far
+[strata] reading the prompt: 1,024 of 31,224 tokens, 32 s so far
+[strata] reading the prompt: 1,152 of 31,224 tokens, 35 s so far
+[strata] reading the prompt: 1,280 of 31,224 tokens, 37 s so far
+[strata] reading the prompt: 1,408 of 31,224 tokens, 39 s so far
+[strata] reading the prompt: 1,536 of 31,224 tokens, 42 s so far
+[strata] reading the prompt: 1,664 of 31,224 tokens, 45 s so far
+[strata] reading the prompt: 1,792 of 31,224 tokens, 47 s so far
+[strata] reading the prompt: 1,920 of 31,224 tokens, 50 s so far
+[strata] reading the prompt: 2,048 of 31,224 tokens, 53 s so far
+[strata] reading the prompt: 2,176 of 31,224 tokens, 56 s so far
+[strata] reading the prompt: 2,304 of 31,224 tokens, 58 s so far
+[strata] reading the prompt: 2,432 of 31,224 tokens, 61 s so far
+[strata] reading the prompt: 2,560 of 31,224 tokens, 63 s so far
+[strata] reading the prompt: 2,688 of 31,224 tokens, 66 s so far
+[strata] reading the prompt: 2,816 of 31,224 tokens, 67 s so far
+[strata] reading the prompt: 2,944 of 31,224 tokens, 70 s so far
+[strata] reading the prompt: 3,072 of 31,224 tokens, 73 s so far
+[strata] reading the prompt: 3,200 of 31,224 tokens, 76 s so far
+[strata] reading the prompt: 3,328 of 31,224 tokens, 79 s so far
+[strata] reading the prompt: 3,456 of 31,224 tokens, 82 s so far
+[strata] reading the prompt: 3,584 of 31,224 tokens, 85 s so far
+[strata] reading the prompt: 3,712 of 31,224 tokens, 88 s so far
+[strata] reading the prompt: 3,840 of 31,224 tokens, 91 s so far
+[strata] reading the prompt: 3,968 of 31,224 tokens, 93 s so far
+[strata] reading the prompt: 4,096 of 31,224 tokens, 95 s so far
+[strata] reading the prompt: 4,224 of 31,224 tokens, 98 s so far
+[strata] reading the prompt: 4,352 of 31,224 tokens, 101 s so far
+[strata] reading the prompt: 4,480 of 31,224 tokens, 104 s so far
+[strata] reading the prompt: 4,608 of 31,224 tokens, 106 s so far
+[strata] reading the prompt: 4,736 of 31,224 tokens, 109 s so far
+[strata] reading the prompt: 4,864 of 31,224 tokens, 112 s so far
+[strata] reading the prompt: 4,992 of 31,224 tokens, 115 s so far
+[strata] reading the prompt: 5,120 of 31,224 tokens, 117 s so far
+[strata] reading the prompt: 5,248 of 31,224 tokens, 120 s so far
+[strata] reading the prompt: 5,376 of 31,224 tokens, 123 s so far
+[strata] reading the prompt: 5,504 of 31,224 tokens, 125 s so far
+[strata] reading the prompt: 5,632 of 31,224 tokens, 128 s so far
+[strata] reading the prompt: 5,760 of 31,224 tokens, 131 s so far
+[strata] reading the prompt: 5,888 of 31,224 tokens, 134 s so far
+[strata] reading the prompt: 6,016 of 31,224 tokens, 136 s so far
+[strata] reading the prompt: 6,144 of 31,224 tokens, 140 s so far
+[strata] reading the prompt: 6,272 of 31,224 tokens, 142 s so far
+[strata] reading the prompt: 6,400 of 31,224 tokens, 144 s so far
+[strata] reading the prompt: 6,528 of 31,224 tokens, 147 s so far
+[strata] reading the prompt: 6,656 of 31,224 tokens, 150 s so far
+[strata] reading the prompt: 6,784 of 31,224 tokens, 152 s so far
+[strata] reading the prompt: 6,912 of 31,224 tokens, 156 s so far
+[strata] reading the prompt: 7,040 of 31,224 tokens, 159 s so far
+[strata] reading the prompt: 7,168 of 31,224 tokens, 162 s so far
+[strata] reading the prompt: 7,296 of 31,224 tokens, 165 s so far
+[strata] reading the prompt: 7,424 of 31,224 tokens, 167 s so far
+[strata] reading the prompt: 7,552 of 31,224 tokens, 170 s so far
+[strata] reading the prompt: 7,680 of 31,224 tokens, 172 s so far
+[strata] reading the prompt: 7,808 of 31,224 tokens, 176 s so far
+[strata] reading the prompt: 7,936 of 31,224 tokens, 178 s so far
+[strata] reading the prompt: 8,064 of 31,224 tokens, 181 s so far
+[strata] reading the prompt: 8,192 of 31,224 tokens, 183 s so far
+[strata] reading the prompt: 8,320 of 31,224 tokens, 186 s so far
+[strata] reading the prompt: 8,448 of 31,224 tokens, 189 s so far
+[strata] reading the prompt: 8,576 of 31,224 tokens, 192 s so far
+[strata] reading the prompt: 8,704 of 31,224 tokens, 195 s so far
+[strata] reading the prompt: 8,832 of 31,224 tokens, 198 s so far
+[strata] reading the prompt: 8,960 of 31,224 tokens, 201 s so far
+[strata] reading the prompt: 9,088 of 31,224 tokens, 203 s so far
+[strata] reading the prompt: 9,216 of 31,224 tokens, 206 s so far
+[strata] reading the prompt: 9,344 of 31,224 tokens, 209 s so far
+[strata] reading the prompt: 9,472 of 31,224 tokens, 212 s so far
+[strata] reading the prompt: 9,600 of 31,224 tokens, 215 s so far
+[strata] reading the prompt: 9,728 of 31,224 tokens, 218 s so far
+[strata] reading the prompt: 9,856 of 31,224 tokens, 221 s so far
+[strata] reading the prompt: 9,984 of 31,224 tokens, 223 s so far
+[strata] reading the prompt: 10,112 of 31,224 tokens, 226 s so far
+[strata] reading the prompt: 10,240 of 31,224 tokens, 229 s so far
+[strata] reading the prompt: 10,368 of 31,224 tokens, 231 s so far
+[strata] reading the prompt: 10,496 of 31,224 tokens, 234 s so far
+[strata] reading the prompt: 10,624 of 31,224 tokens, 237 s so far
+[strata] reading the prompt: 10,752 of 31,224 tokens, 240 s so far
+[strata] reading the prompt: 10,880 of 31,224 tokens, 242 s so far
+[strata] reading the prompt: 11,008 of 31,224 tokens, 244 s so far
+[strata] reading the prompt: 11,136 of 31,224 tokens, 248 s so far
+[strata] reading the prompt: 11,264 of 31,224 tokens, 251 s so far
+[strata] reading the prompt: 11,392 of 31,224 tokens, 254 s so far
+[strata] reading the prompt: 11,520 of 31,224 tokens, 256 s so far
+[strata] reading the prompt: 11,648 of 31,224 tokens, 259 s so far
+[strata] reading the prompt: 11,776 of 31,224 tokens, 261 s so far
+[strata] reading the prompt: 11,904 of 31,224 tokens, 264 s so far
+[strata] reading the prompt: 12,032 of 31,224 tokens, 267 s so far
+[strata] reading the prompt: 12,160 of 31,224 tokens, 270 s so far
+[strata] reading the prompt: 12,288 of 31,224 tokens, 272 s so far
+[strata] reading the prompt: 12,416 of 31,224 tokens, 275 s so far
+[strata] reading the prompt: 12,544 of 31,224 tokens, 278 s so far
+[strata] reading the prompt: 12,672 of 31,224 tokens, 280 s so far
+[strata] reading the prompt: 12,800 of 31,224 tokens, 284 s so far
+[strata] reading the prompt: 12,928 of 31,224 tokens, 287 s so far
+[strata] reading the prompt: 13,056 of 31,224 tokens, 290 s so far
+[strata] reading the prompt: 13,184 of 31,224 tokens, 293 s so far
+[strata] reading the prompt: 13,312 of 31,224 tokens, 295 s so far
+[strata] reading the prompt: 13,440 of 31,224 tokens, 298 s so far
+[strata] reading the prompt: 13,568 of 31,224 tokens, 300 s so far
+[strata] reading the prompt: 13,696 of 31,224 tokens, 303 s so far
+[strata] reading the prompt: 13,824 of 31,224 tokens, 306 s so far
+[strata] reading the prompt: 13,952 of 31,224 tokens, 309 s so far
+[strata] reading the prompt: 14,080 of 31,224 tokens, 312 s so far
+[strata] reading the prompt: 14,208 of 31,224 tokens, 315 s so far
+[strata] reading the prompt: 14,336 of 31,224 tokens, 317 s so far
+[strata] reading the prompt: 14,464 of 31,224 tokens, 320 s so far
+[strata] reading the prompt: 14,592 of 31,224 tokens, 323 s so far
+[strata] reading the prompt: 14,720 of 31,224 tokens, 326 s so far
+[strata] reading the prompt: 14,848 of 31,224 tokens, 329 s so far
+[strata] reading the prompt: 14,976 of 31,224 tokens, 332 s so far
+[strata] reading the prompt: 15,104 of 31,224 tokens, 334 s so far
+[strata] reading the prompt: 15,232 of 31,224 tokens, 337 s so far
+[strata] reading the prompt: 15,360 of 31,224 tokens, 340 s so far
+[strata] reading the prompt: 15,488 of 31,224 tokens, 343 s so far
+[strata] reading the prompt: 15,616 of 31,224 tokens, 346 s so far
+[strata] reading the prompt: 15,744 of 31,224 tokens, 349 s so far
+[strata] reading the prompt: 15,872 of 31,224 tokens, 351 s so far
+[strata] reading the prompt: 16,000 of 31,224 tokens, 353 s so far
+[strata] reading the prompt: 16,128 of 31,224 tokens, 357 s so far
+[strata] reading the prompt: 16,256 of 31,224 tokens, 359 s so far
+[strata] reading the prompt: 16,384 of 31,224 tokens, 363 s so far
+[strata] reading the prompt: 16,512 of 31,224 tokens, 366 s so far
+[strata] reading the prompt: 16,640 of 31,224 tokens, 368 s so far
+[strata] reading the prompt: 16,768 of 31,224 tokens, 371 s so far
+[strata] reading the prompt: 16,896 of 31,224 tokens, 374 s so far
+[strata] reading the prompt: 17,024 of 31,224 tokens, 377 s so far
+[strata] reading the prompt: 17,152 of 31,224 tokens, 380 s so far
+[strata] reading the prompt: 17,280 of 31,224 tokens, 383 s so far
+[strata] reading the prompt: 17,408 of 31,224 tokens, 386 s so far
+[strata] reading the prompt: 17,536 of 31,224 tokens, 389 s so far
+[strata] reading the prompt: 17,664 of 31,224 tokens, 391 s so far
+[strata] reading the prompt: 17,792 of 31,224 tokens, 395 s so far
+[strata] reading the prompt: 17,920 of 31,224 tokens, 397 s so far
+[strata] reading the prompt: 18,048 of 31,224 tokens, 400 s so far
+[strata] reading the prompt: 18,176 of 31,224 tokens, 403 s so far
+[strata] reading the prompt: 18,304 of 31,224 tokens, 405 s so far
+[strata] reading the prompt: 18,432 of 31,224 tokens, 407 s so far
+[strata] reading the prompt: 18,560 of 31,224 tokens, 411 s so far
+[strata] reading the prompt: 18,688 of 31,224 tokens, 414 s so far
+[strata] reading the prompt: 18,816 of 31,224 tokens, 417 s so far
+[strata] reading the prompt: 18,944 of 31,224 tokens, 419 s so far
+[strata] reading the prompt: 19,072 of 31,224 tokens, 422 s so far
+[strata] reading the prompt: 19,200 of 31,224 tokens, 425 s so far
+[strata] reading the prompt: 19,328 of 31,224 tokens, 428 s so far
+[strata] reading the prompt: 19,456 of 31,224 tokens, 431 s so far
+[strata] reading the prompt: 19,584 of 31,224 tokens, 434 s so far
+[strata] reading the prompt: 19,712 of 31,224 tokens, 437 s so far
+[strata] reading the prompt: 19,840 of 31,224 tokens, 440 s so far
+[strata] reading the prompt: 19,968 of 31,224 tokens, 443 s so far
+[strata] reading the prompt: 20,096 of 31,224 tokens, 445 s so far
+[strata] reading the prompt: 20,224 of 31,224 tokens, 448 s so far
+[strata] reading the prompt: 20,352 of 31,224 tokens, 451 s so far
+[strata] reading the prompt: 20,480 of 31,224 tokens, 454 s so far
+[strata] reading the prompt: 20,608 of 31,224 tokens, 456 s so far
+[strata] reading the prompt: 20,736 of 31,224 tokens, 459 s so far
+[strata] reading the prompt: 20,864 of 31,224 tokens, 462 s so far
+[strata] reading the prompt: 20,992 of 31,224 tokens, 465 s so far
+[strata] reading the prompt: 21,120 of 31,224 tokens, 468 s so far
+[strata] reading the prompt: 21,248 of 31,224 tokens, 471 s so far
+[strata] reading the prompt: 21,376 of 31,224 tokens, 474 s so far
+[strata] reading the prompt: 21,504 of 31,224 tokens, 476 s so far
+[strata] reading the prompt: 21,632 of 31,224 tokens, 478 s so far
+[strata] reading the prompt: 21,760 of 31,224 tokens, 482 s so far
+[strata] reading the prompt: 21,888 of 31,224 tokens, 485 s so far
+[strata] reading the prompt: 22,016 of 31,224 tokens, 488 s so far
+[strata] reading the prompt: 22,144 of 31,224 tokens, 490 s so far
+[strata] reading the prompt: 22,272 of 31,224 tokens, 494 s so far
+[strata] reading the prompt: 22,400 of 31,224 tokens, 496 s so far
+[strata] reading the prompt: 22,528 of 31,224 tokens, 499 s so far
+[strata] reading the prompt: 22,656 of 31,224 tokens, 502 s so far
+[strata] reading the prompt: 22,784 of 31,224 tokens, 505 s so far
+[strata] reading the prompt: 22,912 of 31,224 tokens, 508 s so far
+[strata] reading the prompt: 23,040 of 31,224 tokens, 511 s so far
+[strata] reading the prompt: 23,168 of 31,224 tokens, 514 s so far
+[strata] reading the prompt: 23,296 of 31,224 tokens, 516 s so far
+[strata] reading the prompt: 23,424 of 31,224 tokens, 519 s so far
+[strata] reading the prompt: 23,552 of 31,224 tokens, 521 s so far
+[strata] reading the prompt: 23,680 of 31,224 tokens, 525 s so far
+[strata] reading the prompt: 23,808 of 31,224 tokens, 527 s so far
+[strata] reading the prompt: 23,936 of 31,224 tokens, 530 s so far
+[strata] reading the prompt: 24,064 of 31,224 tokens, 533 s so far
+[strata] reading the prompt: 24,192 of 31,224 tokens, 536 s so far
+[strata] reading the prompt: 24,320 of 31,224 tokens, 538 s so far
+[strata] reading the prompt: 24,448 of 31,224 tokens, 540 s so far
+[strata] reading the prompt: 24,576 of 31,224 tokens, 544 s so far
+[strata] reading the prompt: 24,704 of 31,224 tokens, 547 s so far
+[strata] reading the prompt: 24,832 of 31,224 tokens, 550 s so far
+[strata] reading the prompt: 24,960 of 31,224 tokens, 552 s so far
+[strata] reading the prompt: 25,088 of 31,224 tokens, 555 s so far
+[strata] reading the prompt: 25,216 of 31,224 tokens, 558 s so far
+[strata] reading the prompt: 25,344 of 31,224 tokens, 561 s so far
+[strata] reading the prompt: 25,472 of 31,224 tokens, 564 s so far
+[strata] reading the prompt: 25,600 of 31,224 tokens, 567 s so far
+[strata] reading the prompt: 25,728 of 31,224 tokens, 570 s so far
+[strata] reading the prompt: 25,856 of 31,224 tokens, 572 s so far
+[strata] reading the prompt: 25,984 of 31,224 tokens, 575 s so far
+[strata] reading the prompt: 26,112 of 31,224 tokens, 578 s so far
+[strata] reading the prompt: 26,240 of 31,224 tokens, 581 s so far
+[strata] reading the prompt: 26,368 of 31,224 tokens, 584 s so far
+[strata] reading the prompt: 26,496 of 31,224 tokens, 586 s so far
+[strata] reading the prompt: 26,624 of 31,224 tokens, 590 s so far
+[strata] reading the prompt: 26,752 of 31,224 tokens, 592 s so far
+[strata] reading the prompt: 26,880 of 31,224 tokens, 595 s so far
+[strata] reading the prompt: 27,008 of 31,224 tokens, 597 s so far
+[strata] reading the prompt: 27,136 of 31,224 tokens, 601 s so far
+[strata] reading the prompt: 27,264 of 31,224 tokens, 603 s so far
+[strata] reading the prompt: 27,392 of 31,224 tokens, 606 s so far
+[strata] reading the prompt: 27,520 of 31,224 tokens, 609 s so far
+[strata] reading the prompt: 27,648 of 31,224 tokens, 612 s so far
+[strata] reading the prompt: 27,776 of 31,224 tokens, 614 s so far
+[strata] reading the prompt: 27,904 of 31,224 tokens, 618 s so far
+[strata] reading the prompt: 28,032 of 31,224 tokens, 621 s so far
+[strata] reading the prompt: 28,160 of 31,224 tokens, 623 s so far
+[strata] reading the prompt: 28,288 of 31,224 tokens, 627 s so far
+[strata] reading the prompt: 28,416 of 31,224 tokens, 629 s so far
+[strata] reading the prompt: 28,544 of 31,224 tokens, 632 s so far
+[strata] reading the prompt: 28,672 of 31,224 tokens, 635 s so far
+[strata] reading the prompt: 28,800 of 31,224 tokens, 638 s so far
+[strata] reading the prompt: 28,928 of 31,224 tokens, 641 s so far
+[strata] reading the prompt: 29,056 of 31,224 tokens, 643 s so far
+[strata] reading the prompt: 29,184 of 31,224 tokens, 646 s so far
+[strata] reading the prompt: 29,312 of 31,224 tokens, 649 s so far
+[strata] reading the prompt: 29,440 of 31,224 tokens, 652 s so far
+[strata] reading the prompt: 29,568 of 31,224 tokens, 655 s so far
+[strata] reading the prompt: 29,696 of 31,224 tokens, 657 s so far
+[strata] reading the prompt: 29,824 of 31,224 tokens, 661 s so far
+[strata] reading the prompt: 29,952 of 31,224 tokens, 664 s so far
+[strata] reading the prompt: 30,080 of 31,224 tokens, 666 s so far
+[strata] reading the prompt: 30,208 of 31,224 tokens, 669 s so far
+[strata] reading the prompt: 30,336 of 31,224 tokens, 671 s so far
+[strata] reading the prompt: 30,464 of 31,224 tokens, 675 s so far
+[strata] reading the prompt: 30,592 of 31,224 tokens, 678 s so far
+[strata] reading the prompt: 30,720 of 31,224 tokens, 681 s so far
+[strata] reading the prompt: 30,848 of 31,224 tokens, 684 s so far
+[strata] reading the prompt: 30,976 of 31,224 tokens, 686 s so far
+[strata] reading the prompt: 31,104 of 31,224 tokens, 688 s so far
+[strata] reading the prompt: 31,217 of 31,224 tokens, 691 s so far
+[strata] answering: 1 of max 128 tokens, 299593.1 tok/s, 692 s
+[strata] answering: 8 of max 128 tokens, 6.5 tok/s, 693 s
+[strata] answering: 16 of max 128 tokens, 6.5 tok/s, 694 s
+[strata] answering: 24 of max 128 tokens, 6.5 tok/s, 695 s
+[strata] answering: 32 of max 128 tokens, 6.5 tok/s, 697 s
+[strata] done: 35 tokens in 697 s (6.7 tok/s) (stop, cancel=False), expert cache 91.8% hit (+0.1% of the routed experts over PCIe)
+[strata] reading the prompt: 31,306 of 31,313 tokens, 6 s so far
+[strata] answering: 1 of max 192 tokens, 279620.3 tok/s, 7 s
+[strata] answering: 8 of max 192 tokens, 6.9 tok/s, 9 s
+[strata] answering: 16 of max 192 tokens, 6.6 tok/s, 10 s
+[strata] answering: 24 of max 192 tokens, 6.5 tok/s, 11 s
+[strata] answering: 32 of max 192 tokens, 6.5 tok/s, 12 s
+[strata] answering: 39 of max 192 tokens, 6.3 tok/s, 14 s
+[strata] done: 44 tokens in 14 s (6.5 tok/s) (stop, cancel=False), expert cache 93.8% hit
+[strata] reading the prompt: 31,450 tokens, 10 s so far
+[strata] reading the prompt: 31,443 of 31,450 tokens, 12 s so far
+[strata] answering: 1 of max 384 tokens, 299593.1 tok/s, 13 s
+[strata] answering: 8 of max 384 tokens, 6.7 tok/s, 14 s
+[strata] answering: 14 of max 384 tokens, 6.2 tok/s, 15 s
+[strata] answering: 20 of max 384 tokens, 6.1 tok/s, 16 s
+[strata] answering: 26 of max 384 tokens, 5.8 tok/s, 17 s
+[strata] answering: 33 of max 384 tokens, 5.9 tok/s, 19 s
+[strata] answering: 39 of max 384 tokens, 5.9 tok/s, 20 s
+[strata] answering: 45 of max 384 tokens, 5.8 tok/s, 21 s
+[strata] answering: 53 of max 384 tokens, 5.9 tok/s, 22 s
+[strata] answering: 60 of max 384 tokens, 5.9 tok/s, 23 s
+[strata] answering: 68 of max 384 tokens, 6.0 tok/s, 24 s
+[strata] answering: 75 of max 384 tokens, 6.0 tok/s, 25 s
+[strata] answering: 83 of max 384 tokens, 6.1 tok/s, 27 s
+[strata] answering: 90 of max 384 tokens, 6.0 tok/s, 28 s
+[strata] answering: 98 of max 384 tokens, 6.1 tok/s, 29 s
+[strata] answering: 106 of max 384 tokens, 6.1 tok/s, 30 s
+[strata] answering: 112 of max 384 tokens, 6.1 tok/s, 31 s
+[strata] answering: 119 of max 384 tokens, 6.1 tok/s, 33 s
+[strata] answering: 125 of max 384 tokens, 6.0 tok/s, 34 s
+[strata] answering: 133 of max 384 tokens, 6.1 tok/s, 35 s
+[strata] answering: 139 of max 384 tokens, 6.0 tok/s, 36 s
+[strata] answering: 144 of max 384 tokens, 5.9 tok/s, 37 s
+[strata] answering: 151 of max 384 tokens, 5.9 tok/s, 39 s
+[strata] answering: 156 of max 384 tokens, 5.9 tok/s, 40 s
+[strata] answering: 162 of max 384 tokens, 5.8 tok/s, 41 s
+[strata] answering: 170 of max 384 tokens, 5.9 tok/s, 42 s
+[strata] answering: 176 of max 384 tokens, 5.8 tok/s, 43 s
+[strata] answering: 181 of max 384 tokens, 5.8 tok/s, 44 s
+[strata] answering: 185 of max 384 tokens, 5.7 tok/s, 45 s
+[strata] answering: 191 of max 384 tokens, 5.7 tok/s, 46 s
+[strata] answering: 199 of max 384 tokens, 5.7 tok/s, 48 s
+[strata] answering: 207 of max 384 tokens, 5.7 tok/s, 49 s
+[strata] answering: 214 of max 384 tokens, 5.8 tok/s, 50 s
+[strata] answering: 218 of max 384 tokens, 5.7 tok/s, 51 s
+[strata] answering: 225 of max 384 tokens, 5.7 tok/s, 53 s
+[strata] answering: 231 of max 384 tokens, 5.7 tok/s, 54 s
+[strata] answering: 237 of max 384 tokens, 5.7 tok/s, 55 s
+[strata] answering: 241 of max 384 tokens, 5.6 tok/s, 56 s
+[strata] answering: 247 of max 384 tokens, 5.6 tok/s, 57 s
+[strata] answering: 253 of max 384 tokens, 5.6 tok/s, 58 s
+[strata] done: 256 tokens in 59 s (5.6 tok/s) (stop, cancel=False), expert cache 97.1% hit
+[strata] reading the prompt: 63,960 tokens, 10 s so far
+[strata] reading the prompt: 128 of 63,960 tokens, 16 s so far
+[strata] reading the prompt: 256 of 63,960 tokens, 18 s so far
+[strata] reading the prompt: 384 of 63,960 tokens, 20 s so far
+[strata] reading the prompt: 512 of 63,960 tokens, 23 s so far
+[strata] reading the prompt: 640 of 63,960 tokens, 25 s so far
+[strata] reading the prompt: 768 of 63,960 tokens, 27 s so far
+[strata] reading the prompt: 896 of 63,960 tokens, 30 s so far
+[strata] reading the prompt: 1,024 of 63,960 tokens, 32 s so far
+[strata] reading the prompt: 1,152 of 63,960 tokens, 34 s so far
+[strata] reading the prompt: 1,280 of 63,960 tokens, 37 s so far
+[strata] reading the prompt: 1,408 of 63,960 tokens, 39 s so far
+[strata] reading the prompt: 1,536 of 63,960 tokens, 42 s so far
+[strata] reading the prompt: 1,664 of 63,960 tokens, 44 s so far
+[strata] reading the prompt: 1,792 of 63,960 tokens, 46 s so far
+[strata] reading the prompt: 1,920 of 63,960 tokens, 49 s so far
+[strata] reading the prompt: 2,048 of 63,960 tokens, 52 s so far
+[strata] reading the prompt: 2,176 of 63,960 tokens, 55 s so far
+[strata] reading the prompt: 2,304 of 63,960 tokens, 57 s so far
+[strata] reading the prompt: 2,432 of 63,960 tokens, 60 s so far
+[strata] reading the prompt: 2,560 of 63,960 tokens, 62 s so far
+[strata] reading the prompt: 2,688 of 63,960 tokens, 65 s so far
+[strata] reading the prompt: 2,816 of 63,960 tokens, 66 s so far
+[strata] reading the prompt: 2,944 of 63,960 tokens, 69 s so far
+[strata] reading the prompt: 3,072 of 63,960 tokens, 72 s so far
+[strata] reading the prompt: 3,200 of 63,960 tokens, 75 s so far
+[strata] reading the prompt: 3,328 of 63,960 tokens, 78 s so far
+[strata] reading the prompt: 3,456 of 63,960 tokens, 81 s so far
+[strata] reading the prompt: 3,584 of 63,960 tokens, 84 s so far
+[strata] reading the prompt: 3,712 of 63,960 tokens, 86 s so far
+[strata] reading the prompt: 3,840 of 63,960 tokens, 89 s so far
+[strata] reading the prompt: 3,968 of 63,960 tokens, 92 s so far
+[strata] reading the prompt: 4,096 of 63,960 tokens, 94 s so far
+[strata] reading the prompt: 4,224 of 63,960 tokens, 97 s so far
+[strata] reading the prompt: 4,352 of 63,960 tokens, 99 s so far
+[strata] reading the prompt: 4,480 of 63,960 tokens, 102 s so far
+[strata] reading the prompt: 4,608 of 63,960 tokens, 105 s so far
+[strata] reading the prompt: 4,736 of 63,960 tokens, 107 s so far
+[strata] reading the prompt: 4,864 of 63,960 tokens, 111 s so far
+[strata] reading the prompt: 4,992 of 63,960 tokens, 113 s so far
+[strata] reading the prompt: 5,120 of 63,960 tokens, 116 s so far
+[strata] reading the prompt: 5,248 of 63,960 tokens, 119 s so far
+[strata] reading the prompt: 5,376 of 63,960 tokens, 122 s so far
+[strata] reading the prompt: 5,504 of 63,960 tokens, 124 s so far
+[strata] reading the prompt: 5,632 of 63,960 tokens, 126 s so far
+[strata] reading the prompt: 5,760 of 63,960 tokens, 129 s so far
+[strata] reading the prompt: 5,888 of 63,960 tokens, 132 s so far
+[strata] reading the prompt: 6,016 of 63,960 tokens, 135 s so far
+[strata] reading the prompt: 6,144 of 63,960 tokens, 138 s so far
+[strata] reading the prompt: 6,272 of 63,960 tokens, 140 s so far
+[strata] reading the prompt: 6,400 of 63,960 tokens, 142 s so far
+[strata] reading the prompt: 6,528 of 63,960 tokens, 145 s so far
+[strata] reading the prompt: 6,656 of 63,960 tokens, 148 s so far
+[strata] reading the prompt: 6,784 of 63,960 tokens, 150 s so far
+[strata] reading the prompt: 6,912 of 63,960 tokens, 154 s so far
+[strata] reading the prompt: 7,040 of 63,960 tokens, 157 s so far
+[strata] reading the prompt: 7,168 of 63,960 tokens, 160 s so far
+[strata] reading the prompt: 7,296 of 63,960 tokens, 163 s so far
+[strata] reading the prompt: 7,424 of 63,960 tokens, 165 s so far
+[strata] reading the prompt: 7,552 of 63,960 tokens, 168 s so far
+[strata] reading the prompt: 7,680 of 63,960 tokens, 170 s so far
+[strata] reading the prompt: 7,808 of 63,960 tokens, 174 s so far
+[strata] reading the prompt: 7,936 of 63,960 tokens, 176 s so far
+[strata] reading the prompt: 8,064 of 63,960 tokens, 179 s so far
+[strata] reading the prompt: 8,192 of 63,960 tokens, 181 s so far
+[strata] reading the prompt: 8,320 of 63,960 tokens, 183 s so far
+[strata] reading the prompt: 8,448 of 63,960 tokens, 186 s so far
+[strata] reading the prompt: 8,576 of 63,960 tokens, 190 s so far
+[strata] reading the prompt: 8,704 of 63,960 tokens, 193 s so far
+[strata] reading the prompt: 8,832 of 63,960 tokens, 196 s so far
+[strata] reading the prompt: 8,960 of 63,960 tokens, 198 s so far
+[strata] reading the prompt: 9,088 of 63,960 tokens, 201 s so far
+[strata] reading the prompt: 9,216 of 63,960 tokens, 204 s so far
+[strata] reading the prompt: 9,344 of 63,960 tokens, 206 s so far
+[strata] reading the prompt: 9,472 of 63,960 tokens, 210 s so far
+[strata] reading the prompt: 9,600 of 63,960 tokens, 212 s so far
+[strata] reading the prompt: 9,728 of 63,960 tokens, 216 s so far
+[strata] reading the prompt: 9,856 of 63,960 tokens, 218 s so far
+[strata] reading the prompt: 9,984 of 63,960 tokens, 220 s so far
+[strata] reading the prompt: 10,112 of 63,960 tokens, 223 s so far
+[strata] reading the prompt: 10,240 of 63,960 tokens, 226 s so far
+[strata] reading the prompt: 10,368 of 63,960 tokens, 229 s so far
+[strata] reading the prompt: 10,496 of 63,960 tokens, 231 s so far
+[strata] reading the prompt: 10,624 of 63,960 tokens, 234 s so far
+[strata] reading the prompt: 10,752 of 63,960 tokens, 237 s so far
+[strata] reading the prompt: 10,880 of 63,960 tokens, 239 s so far
+[strata] reading the prompt: 11,008 of 63,960 tokens, 241 s so far
+[strata] reading the prompt: 11,136 of 63,960 tokens, 245 s so far
+[strata] reading the prompt: 11,264 of 63,960 tokens, 248 s so far
+[strata] reading the prompt: 11,392 of 63,960 tokens, 251 s so far
+[strata] reading the prompt: 11,520 of 63,960 tokens, 253 s so far
+[strata] reading the prompt: 11,648 of 63,960 tokens, 256 s so far
+[strata] reading the prompt: 11,776 of 63,960 tokens, 258 s so far
+[strata] reading the prompt: 11,904 of 63,960 tokens, 261 s so far
+[strata] reading the prompt: 12,032 of 63,960 tokens, 264 s so far
+[strata] reading the prompt: 12,160 of 63,960 tokens, 267 s so far
+[strata] reading the prompt: 12,288 of 63,960 tokens, 269 s so far
+[strata] reading the prompt: 12,416 of 63,960 tokens, 272 s so far
+[strata] reading the prompt: 12,544 of 63,960 tokens, 275 s so far
+[strata] reading the prompt: 12,672 of 63,960 tokens, 277 s so far
+[strata] reading the prompt: 12,800 of 63,960 tokens, 281 s so far
+[strata] reading the prompt: 12,928 of 63,960 tokens, 284 s so far
+[strata] reading the prompt: 13,056 of 63,960 tokens, 286 s so far
+[strata] reading the prompt: 13,184 of 63,960 tokens, 289 s so far
+[strata] reading the prompt: 13,312 of 63,960 tokens, 292 s so far
+[strata] reading the prompt: 13,440 of 63,960 tokens, 294 s so far
+[strata] reading the prompt: 13,568 of 63,960 tokens, 296 s so far
+[strata] reading the prompt: 13,696 of 63,960 tokens, 300 s so far
+[strata] reading the prompt: 13,824 of 63,960 tokens, 303 s so far
+[strata] reading the prompt: 13,952 of 63,960 tokens, 306 s so far
+[strata] reading the prompt: 14,080 of 63,960 tokens, 308 s so far
+[strata] reading the prompt: 14,208 of 63,960 tokens, 311 s so far
+[strata] reading the prompt: 14,336 of 63,960 tokens, 314 s so far
+[strata] reading the prompt: 14,464 of 63,960 tokens, 317 s so far
+[strata] reading the prompt: 14,592 of 63,960 tokens, 320 s so far
+[strata] reading the prompt: 14,720 of 63,960 tokens, 322 s so far
+[strata] reading the prompt: 14,848 of 63,960 tokens, 325 s so far
+[strata] reading the prompt: 14,976 of 63,960 tokens, 328 s so far
+[strata] reading the prompt: 15,104 of 63,960 tokens, 331 s so far
+[strata] reading the prompt: 15,232 of 63,960 tokens, 334 s so far
+[strata] reading the prompt: 15,360 of 63,960 tokens, 336 s so far
+[strata] reading the prompt: 15,488 of 63,960 tokens, 339 s so far
+[strata] reading the prompt: 15,616 of 63,960 tokens, 342 s so far
+[strata] reading the prompt: 15,744 of 63,960 tokens, 345 s so far
+[strata] reading the prompt: 15,872 of 63,960 tokens, 348 s so far
+[strata] reading the prompt: 16,000 of 63,960 tokens, 350 s so far
+[strata] reading the prompt: 16,128 of 63,960 tokens, 353 s so far
+[strata] reading the prompt: 16,256 of 63,960 tokens, 355 s so far
+[strata] reading the prompt: 16,384 of 63,960 tokens, 359 s so far
+[strata] reading the prompt: 16,512 of 63,960 tokens, 362 s so far
+[strata] reading the prompt: 16,640 of 63,960 tokens, 364 s so far
+[strata] reading the prompt: 16,768 of 63,960 tokens, 367 s so far
+[strata] reading the prompt: 16,896 of 63,960 tokens, 370 s so far
+[strata] reading the prompt: 17,024 of 63,960 tokens, 373 s so far
+[strata] reading the prompt: 17,152 of 63,960 tokens, 376 s so far
+[strata] reading the prompt: 17,280 of 63,960 tokens, 379 s so far
+[strata] reading the prompt: 17,408 of 63,960 tokens, 381 s so far
+[strata] reading the prompt: 17,536 of 63,960 tokens, 384 s so far
+[strata] reading the prompt: 17,664 of 63,960 tokens, 386 s so far
+[strata] reading the prompt: 17,792 of 63,960 tokens, 390 s so far
+[strata] reading the prompt: 17,920 of 63,960 tokens, 392 s so far
+[strata] reading the prompt: 18,048 of 63,960 tokens, 395 s so far
+[strata] reading the prompt: 18,176 of 63,960 tokens, 398 s so far
+[strata] reading the prompt: 18,304 of 63,960 tokens, 400 s so far
+[strata] reading the prompt: 18,432 of 63,960 tokens, 403 s so far
+[strata] reading the prompt: 18,560 of 63,960 tokens, 406 s so far
+[strata] reading the prompt: 18,688 of 63,960 tokens, 409 s so far
+[strata] reading the prompt: 18,816 of 63,960 tokens, 411 s so far
+[strata] reading the prompt: 18,944 of 63,960 tokens, 413 s so far
+[strata] reading the prompt: 19,072 of 63,960 tokens, 417 s so far
+[strata] reading the prompt: 19,200 of 63,960 tokens, 420 s so far
+[strata] reading the prompt: 19,328 of 63,960 tokens, 423 s so far
+[strata] reading the prompt: 19,456 of 63,960 tokens, 426 s so far
+[strata] reading the prompt: 19,584 of 63,960 tokens, 429 s so far
+[strata] reading the prompt: 19,712 of 63,960 tokens, 431 s so far
+[strata] reading the prompt: 19,840 of 63,960 tokens, 434 s so far
+[strata] reading the prompt: 19,968 of 63,960 tokens, 437 s so far
+[strata] reading the prompt: 20,096 of 63,960 tokens, 440 s so far
+[strata] reading the prompt: 20,224 of 63,960 tokens, 443 s so far
+[strata] reading the prompt: 20,352 of 63,960 tokens, 446 s so far
+[strata] reading the prompt: 20,480 of 63,960 tokens, 449 s so far
+[strata] reading the prompt: 20,608 of 63,960 tokens, 451 s so far
+[strata] reading the prompt: 20,736 of 63,960 tokens, 454 s so far
+[strata] reading the prompt: 20,864 of 63,960 tokens, 457 s so far
+[strata] reading the prompt: 20,992 of 63,960 tokens, 460 s so far
+[strata] reading the prompt: 21,120 of 63,960 tokens, 463 s so far
+[strata] reading the prompt: 21,248 of 63,960 tokens, 466 s so far
+[strata] reading the prompt: 21,376 of 63,960 tokens, 469 s so far
+[strata] reading the prompt: 21,504 of 63,960 tokens, 471 s so far
+[strata] reading the prompt: 21,632 of 63,960 tokens, 473 s so far
+[strata] reading the prompt: 21,760 of 63,960 tokens, 477 s so far
+[strata] reading the prompt: 21,888 of 63,960 tokens, 479 s so far
+[strata] reading the prompt: 22,016 of 63,960 tokens, 482 s so far
+[strata] reading the prompt: 22,144 of 63,960 tokens, 485 s so far
+[strata] reading the prompt: 22,272 of 63,960 tokens, 488 s so far
+[strata] reading the prompt: 22,400 of 63,960 tokens, 491 s so far
+[strata] reading the prompt: 22,528 of 63,960 tokens, 494 s so far
+[strata] reading the prompt: 22,656 of 63,960 tokens, 496 s so far
+[strata] reading the prompt: 22,784 of 63,960 tokens, 499 s so far
+[strata] reading the prompt: 22,912 of 63,960 tokens, 502 s so far
+[strata] reading the prompt: 23,040 of 63,960 tokens, 505 s so far
+[strata] reading the prompt: 23,168 of 63,960 tokens, 508 s so far
+[strata] reading the prompt: 23,296 of 63,960 tokens, 510 s so far
+[strata] reading the prompt: 23,424 of 63,960 tokens, 513 s so far
+[strata] reading the prompt: 23,552 of 63,960 tokens, 516 s so far
+[strata] reading the prompt: 23,680 of 63,960 tokens, 519 s so far
+[strata] reading the prompt: 23,808 of 63,960 tokens, 521 s so far
+[strata] reading the prompt: 23,936 of 63,960 tokens, 524 s so far
+[strata] reading the prompt: 24,064 of 63,960 tokens, 527 s so far
+[strata] reading the prompt: 24,192 of 63,960 tokens, 530 s so far
+[strata] reading the prompt: 24,320 of 63,960 tokens, 532 s so far
+[strata] reading the prompt: 24,448 of 63,960 tokens, 534 s so far
+[strata] reading the prompt: 24,576 of 63,960 tokens, 538 s so far
+[strata] reading the prompt: 24,704 of 63,960 tokens, 541 s so far
+[strata] reading the prompt: 24,832 of 63,960 tokens, 544 s so far
+[strata] reading the prompt: 24,960 of 63,960 tokens, 546 s so far
+[strata] reading the prompt: 25,088 of 63,960 tokens, 549 s so far
+[strata] reading the prompt: 25,216 of 63,960 tokens, 552 s so far
+[strata] reading the prompt: 25,344 of 63,960 tokens, 555 s so far
+[strata] reading the prompt: 25,472 of 63,960 tokens, 557 s so far
+[strata] reading the prompt: 25,600 of 63,960 tokens, 561 s so far
+[strata] reading the prompt: 25,728 of 63,960 tokens, 563 s so far
+[strata] reading the prompt: 25,856 of 63,960 tokens, 566 s so far
+[strata] reading the prompt: 25,984 of 63,960 tokens, 569 s so far
+[strata] reading the prompt: 26,112 of 63,960 tokens, 572 s so far
+[strata] reading the prompt: 26,240 of 63,960 tokens, 575 s so far
+[strata] reading the prompt: 26,368 of 63,960 tokens, 577 s so far
+[strata] reading the prompt: 26,496 of 63,960 tokens, 580 s so far
+[strata] reading the prompt: 26,624 of 63,960 tokens, 583 s so far
+[strata] reading the prompt: 26,752 of 63,960 tokens, 586 s so far
+[strata] reading the prompt: 26,880 of 63,960 tokens, 588 s so far
+[strata] reading the prompt: 27,008 of 63,960 tokens, 591 s so far
+[strata] reading the prompt: 27,136 of 63,960 tokens, 595 s so far
+[strata] reading the prompt: 27,264 of 63,960 tokens, 597 s so far
+[strata] reading the prompt: 27,392 of 63,960 tokens, 601 s so far
+[strata] reading the prompt: 27,520 of 63,960 tokens, 603 s so far
+[strata] reading the prompt: 27,648 of 63,960 tokens, 606 s so far
+[strata] reading the prompt: 27,776 of 63,960 tokens, 608 s so far
+[strata] reading the prompt: 27,904 of 63,960 tokens, 612 s so far
+[strata] reading the prompt: 28,032 of 63,960 tokens, 614 s so far
+[strata] reading the prompt: 28,160 of 63,960 tokens, 617 s so far
+[strata] reading the prompt: 28,288 of 63,960 tokens, 620 s so far
+[strata] reading the prompt: 28,416 of 63,960 tokens, 623 s so far
+[strata] reading the prompt: 28,544 of 63,960 tokens, 625 s so far
+[strata] reading the prompt: 28,672 of 63,960 tokens, 628 s so far
+[strata] reading the prompt: 28,800 of 63,960 tokens, 631 s so far
+[strata] reading the prompt: 28,928 of 63,960 tokens, 634 s so far
+[strata] reading the prompt: 29,056 of 63,960 tokens, 637 s so far
+[strata] reading the prompt: 29,184 of 63,960 tokens, 640 s so far
+[strata] reading the prompt: 29,312 of 63,960 tokens, 642 s so far
+[strata] reading the prompt: 29,440 of 63,960 tokens, 645 s so far
+[strata] reading the prompt: 29,568 of 63,960 tokens, 648 s so far
+[strata] reading the prompt: 29,696 of 63,960 tokens, 650 s so far
+[strata] reading the prompt: 29,824 of 63,960 tokens, 654 s so far
+[strata] reading the prompt: 29,952 of 63,960 tokens, 657 s so far
+[strata] reading the prompt: 30,080 of 63,960 tokens, 660 s so far
+[strata] reading the prompt: 30,208 of 63,960 tokens, 662 s so far
+[strata] reading the prompt: 30,336 of 63,960 tokens, 664 s so far
+[strata] reading the prompt: 30,464 of 63,960 tokens, 668 s so far
+[strata] reading the prompt: 30,592 of 63,960 tokens, 671 s so far
+[strata] reading the prompt: 30,720 of 63,960 tokens, 673 s so far
+[strata] reading the prompt: 30,848 of 63,960 tokens, 676 s so far
+[strata] reading the prompt: 30,976 of 63,960 tokens, 679 s so far
+[strata] reading the prompt: 31,104 of 63,960 tokens, 682 s so far
+[strata] reading the prompt: 31,232 of 63,960 tokens, 685 s so far
+[strata] reading the prompt: 31,360 of 63,960 tokens, 688 s so far
+[strata] reading the prompt: 31,488 of 63,960 tokens, 690 s so far
+[strata] reading the prompt: 31,616 of 63,960 tokens, 693 s so far
+[strata] reading the prompt: 31,744 of 63,960 tokens, 696 s so far
+[strata] reading the prompt: 31,872 of 63,960 tokens, 698 s so far
+[strata] reading the prompt: 32,000 of 63,960 tokens, 702 s so far
+[strata] reading the prompt: 32,128 of 63,960 tokens, 705 s so far
+[strata] reading the prompt: 32,256 of 63,960 tokens, 707 s so far
+[strata] reading the prompt: 32,384 of 63,960 tokens, 709 s so far
+[strata] reading the prompt: 32,512 of 63,960 tokens, 712 s so far
+[strata] reading the prompt: 32,640 of 63,960 tokens, 716 s so far
+[strata] reading the prompt: 32,768 of 63,960 tokens, 718 s so far
+[strata] reading the prompt: 32,896 of 63,960 tokens, 722 s so far
+[strata] reading the prompt: 33,024 of 63,960 tokens, 725 s so far
+[strata] reading the prompt: 33,152 of 63,960 tokens, 728 s so far
+[strata] reading the prompt: 33,280 of 63,960 tokens, 730 s so far
+[strata] reading the prompt: 33,408 of 63,960 tokens, 734 s so far
+[strata] reading the prompt: 33,536 of 63,960 tokens, 737 s so far
+[strata] reading the prompt: 33,664 of 63,960 tokens, 740 s so far
+[strata] reading the prompt: 33,792 of 63,960 tokens, 742 s so far
+[strata] reading the prompt: 33,920 of 63,960 tokens, 745 s so far
+[strata] reading the prompt: 34,048 of 63,960 tokens, 748 s so far
+[strata] reading the prompt: 34,176 of 63,960 tokens, 751 s so far
+[strata] reading the prompt: 34,304 of 63,960 tokens, 754 s so far
+[strata] reading the prompt: 34,432 of 63,960 tokens, 756 s so far
+[strata] reading the prompt: 34,560 of 63,960 tokens, 760 s so far
+[strata] reading the prompt: 34,688 of 63,960 tokens, 762 s so far
+[strata] reading the prompt: 34,816 of 63,960 tokens, 765 s so far
+[strata] reading the prompt: 34,944 of 63,960 tokens, 768 s so far
+[strata] reading the prompt: 35,072 of 63,960 tokens, 771 s so far
+[strata] reading the prompt: 35,200 of 63,960 tokens, 773 s so far
+[strata] reading the prompt: 35,328 of 63,960 tokens, 776 s so far
+[strata] reading the prompt: 35,456 of 63,960 tokens, 779 s so far
+[strata] reading the prompt: 35,584 of 63,960 tokens, 782 s so far
+[strata] reading the prompt: 35,712 of 63,960 tokens, 785 s so far
+[strata] reading the prompt: 35,840 of 63,960 tokens, 788 s so far
+[strata] reading the prompt: 35,968 of 63,960 tokens, 791 s so far
+[strata] reading the prompt: 36,096 of 63,960 tokens, 794 s so far
+[strata] reading the prompt: 36,224 of 63,960 tokens, 797 s so far
+[strata] reading the prompt: 36,352 of 63,960 tokens, 799 s so far
+[strata] reading the prompt: 36,480 of 63,960 tokens, 802 s so far
+[strata] reading the prompt: 36,608 of 63,960 tokens, 805 s so far
+[strata] reading the prompt: 36,736 of 63,960 tokens, 808 s so far
+[strata] reading the prompt: 36,864 of 63,960 tokens, 811 s so far
+[strata] reading the prompt: 36,992 of 63,960 tokens, 814 s so far
+[strata] reading the prompt: 37,120 of 63,960 tokens, 817 s so far
+[strata] reading the prompt: 37,248 of 63,960 tokens, 819 s so far
+[strata] reading the prompt: 37,376 of 63,960 tokens, 822 s so far
+[strata] reading the prompt: 37,504 of 63,960 tokens, 825 s so far
+[strata] reading the prompt: 37,632 of 63,960 tokens, 828 s so far
+[strata] reading the prompt: 37,760 of 63,960 tokens, 830 s so far
+[strata] reading the prompt: 37,888 of 63,960 tokens, 833 s so far
+[strata] reading the prompt: 38,016 of 63,960 tokens, 836 s so far
+[strata] reading the prompt: 38,144 of 63,960 tokens, 839 s so far
+[strata] reading the prompt: 38,272 of 63,960 tokens, 842 s so far
+[strata] reading the prompt: 38,400 of 63,960 tokens, 845 s so far
+[strata] reading the prompt: 38,528 of 63,960 tokens, 848 s so far
+[strata] reading the prompt: 38,656 of 63,960 tokens, 851 s so far
+[strata] reading the prompt: 38,784 of 63,960 tokens, 854 s so far
+[strata] reading the prompt: 38,912 of 63,960 tokens, 856 s so far
+[strata] reading the prompt: 39,040 of 63,960 tokens, 859 s so far
+[strata] reading the prompt: 39,168 of 63,960 tokens, 862 s so far
+[strata] reading the prompt: 39,296 of 63,960 tokens, 865 s so far
+[strata] reading the prompt: 39,424 of 63,960 tokens, 868 s so far
+[strata] reading the prompt: 39,552 of 63,960 tokens, 871 s so far
+[strata] reading the prompt: 39,680 of 63,960 tokens, 874 s so far
+[strata] reading the prompt: 39,808 of 63,960 tokens, 877 s so far
+[strata] reading the prompt: 39,936 of 63,960 tokens, 879 s so far
+[strata] reading the prompt: 40,064 of 63,960 tokens, 882 s so far
+[strata] reading the prompt: 40,192 of 63,960 tokens, 885 s so far
+[strata] reading the prompt: 40,320 of 63,960 tokens, 888 s so far
+[strata] reading the prompt: 40,448 of 63,960 tokens, 890 s so far
+[strata] reading the prompt: 40,576 of 63,960 tokens, 894 s so far
+[strata] reading the prompt: 40,704 of 63,960 tokens, 897 s so far
+[strata] reading the prompt: 40,832 of 63,960 tokens, 900 s so far
+[strata] reading the prompt: 40,960 of 63,960 tokens, 903 s so far
+[strata] reading the prompt: 41,088 of 63,960 tokens, 905 s so far
+[strata] reading the prompt: 41,216 of 63,960 tokens, 909 s so far
+[strata] reading the prompt: 41,344 of 63,960 tokens, 911 s so far
+[strata] reading the prompt: 41,472 of 63,960 tokens, 914 s so far
+[strata] reading the prompt: 41,600 of 63,960 tokens, 917 s so far
+[strata] reading the prompt: 41,728 of 63,960 tokens, 920 s so far
+[strata] reading the prompt: 41,856 of 63,960 tokens, 923 s so far
+[strata] reading the prompt: 41,984 of 63,960 tokens, 926 s so far
+[strata] reading the prompt: 42,112 of 63,960 tokens, 929 s so far
+[strata] reading the prompt: 42,240 of 63,960 tokens, 931 s so far
+[strata] reading the prompt: 42,368 of 63,960 tokens, 934 s so far
+[strata] reading the prompt: 42,496 of 63,960 tokens, 937 s so far
+[strata] reading the prompt: 42,624 of 63,960 tokens, 940 s so far
+[strata] reading the prompt: 42,752 of 63,960 tokens, 943 s so far
+[strata] reading the prompt: 42,880 of 63,960 tokens, 946 s so far
+[strata] reading the prompt: 43,008 of 63,960 tokens, 948 s so far
+[strata] reading the prompt: 43,136 of 63,960 tokens, 951 s so far
+[strata] reading the prompt: 43,264 of 63,960 tokens, 954 s so far
+[strata] reading the prompt: 43,392 of 63,960 tokens, 957 s so far
+[strata] reading the prompt: 43,520 of 63,960 tokens, 960 s so far
+[strata] reading the prompt: 43,648 of 63,960 tokens, 962 s so far
+[strata] reading the prompt: 43,776 of 63,960 tokens, 966 s so far
+[strata] reading the prompt: 43,904 of 63,960 tokens, 968 s so far
+[strata] reading the prompt: 44,032 of 63,960 tokens, 971 s so far
+[strata] reading the prompt: 44,160 of 63,960 tokens, 973 s so far
+[strata] reading the prompt: 44,288 of 63,960 tokens, 976 s so far
+[strata] reading the prompt: 44,416 of 63,960 tokens, 979 s so far
+[strata] reading the prompt: 44,544 of 63,960 tokens, 982 s so far
+[strata] reading the prompt: 44,672 of 63,960 tokens, 986 s so far
+[strata] reading the prompt: 44,800 of 63,960 tokens, 988 s so far
+[strata] reading the prompt: 44,928 of 63,960 tokens, 991 s so far
+[strata] reading the prompt: 45,056 of 63,960 tokens, 994 s so far
+[strata] reading the prompt: 45,184 of 63,960 tokens, 997 s so far
+[strata] reading the prompt: 45,312 of 63,960 tokens, 1000 s so far
+[strata] reading the prompt: 45,440 of 63,960 tokens, 1003 s so far
+[strata] reading the prompt: 45,568 of 63,960 tokens, 1006 s so far
+[strata] reading the prompt: 45,696 of 63,960 tokens, 1008 s so far
+[strata] reading the prompt: 45,824 of 63,960 tokens, 1011 s so far
+[strata] reading the prompt: 45,952 of 63,960 tokens, 1014 s so far
+[strata] reading the prompt: 46,080 of 63,960 tokens, 1017 s so far
+[strata] reading the prompt: 46,208 of 63,960 tokens, 1020 s so far
+[strata] reading the prompt: 46,336 of 63,960 tokens, 1023 s so far
+[strata] reading the prompt: 46,464 of 63,960 tokens, 1026 s so far
+[strata] reading the prompt: 46,592 of 63,960 tokens, 1029 s so far
+[strata] reading the prompt: 46,720 of 63,960 tokens, 1032 s so far
+[strata] reading the prompt: 46,848 of 63,960 tokens, 1035 s so far
+[strata] reading the prompt: 46,976 of 63,960 tokens, 1037 s so far
+[strata] reading the prompt: 47,104 of 63,960 tokens, 1040 s so far
+[strata] reading the prompt: 47,232 of 63,960 tokens, 1044 s so far
+[strata] reading the prompt: 47,360 of 63,960 tokens, 1046 s so far
+[strata] reading the prompt: 47,488 of 63,960 tokens, 1049 s so far
+[strata] reading the prompt: 47,616 of 63,960 tokens, 1052 s so far
+[strata] reading the prompt: 47,744 of 63,960 tokens, 1055 s so far
+[strata] reading the prompt: 47,872 of 63,960 tokens, 1058 s so far
+[strata] reading the prompt: 48,000 of 63,960 tokens, 1061 s so far
+[strata] reading the prompt: 48,128 of 63,960 tokens, 1063 s so far
+[strata] reading the prompt: 48,256 of 63,960 tokens, 1066 s so far
+[strata] reading the prompt: 48,384 of 63,960 tokens, 1068 s so far
+[strata] reading the prompt: 48,512 of 63,960 tokens, 1071 s so far
+[strata] reading the prompt: 48,640 of 63,960 tokens, 1074 s so far
+[strata] reading the prompt: 48,768 of 63,960 tokens, 1077 s so far
+[strata] reading the prompt: 48,896 of 63,960 tokens, 1080 s so far
+[strata] reading the prompt: 49,024 of 63,960 tokens, 1084 s so far
+[strata] reading the prompt: 49,152 of 63,960 tokens, 1086 s so far
+[strata] reading the prompt: 49,280 of 63,960 tokens, 1089 s so far
+[strata] reading the prompt: 49,408 of 63,960 tokens, 1092 s so far
+[strata] reading the prompt: 49,536 of 63,960 tokens, 1095 s so far
+[strata] reading the prompt: 49,664 of 63,960 tokens, 1098 s so far
+[strata] reading the prompt: 49,792 of 63,960 tokens, 1100 s so far
+[strata] reading the prompt: 49,920 of 63,960 tokens, 1103 s so far
+[strata] reading the prompt: 50,048 of 63,960 tokens, 1106 s so far
+[strata] reading the prompt: 50,176 of 63,960 tokens, 1109 s so far
+[strata] reading the prompt: 50,304 of 63,960 tokens, 1112 s so far
+[strata] reading the prompt: 50,432 of 63,960 tokens, 1115 s so far
+[strata] reading the prompt: 50,560 of 63,960 tokens, 1118 s so far
+[strata] reading the prompt: 50,688 of 63,960 tokens, 1121 s so far
+[strata] reading the prompt: 50,816 of 63,960 tokens, 1124 s so far
+[strata] reading the prompt: 50,944 of 63,960 tokens, 1126 s so far
+[strata] reading the prompt: 51,072 of 63,960 tokens, 1130 s so far
+[strata] reading the prompt: 51,200 of 63,960 tokens, 1132 s so far
+[strata] reading the prompt: 51,328 of 63,960 tokens, 1135 s so far
+[strata] reading the prompt: 51,456 of 63,960 tokens, 1138 s so far
+[strata] reading the prompt: 51,584 of 63,960 tokens, 1141 s so far
+[strata] reading the prompt: 51,712 of 63,960 tokens, 1144 s so far
+[strata] reading the prompt: 51,840 of 63,960 tokens, 1147 s so far
+[strata] reading the prompt: 51,968 of 63,960 tokens, 1150 s so far
+[strata] reading the prompt: 52,096 of 63,960 tokens, 1153 s so far
+[strata] reading the prompt: 52,224 of 63,960 tokens, 1156 s so far
+[strata] reading the prompt: 52,352 of 63,960 tokens, 1159 s so far
+[strata] reading the prompt: 52,480 of 63,960 tokens, 1162 s so far
+[strata] reading the prompt: 52,608 of 63,960 tokens, 1165 s so far
+[strata] reading the prompt: 52,736 of 63,960 tokens, 1168 s so far
+[strata] reading the prompt: 52,864 of 63,960 tokens, 1171 s so far
+[strata] reading the prompt: 52,992 of 63,960 tokens, 1174 s so far
+[strata] reading the prompt: 53,120 of 63,960 tokens, 1176 s so far
+[strata] reading the prompt: 53,248 of 63,960 tokens, 1180 s so far
+[strata] reading the prompt: 53,376 of 63,960 tokens, 1182 s so far
+[strata] reading the prompt: 53,504 of 63,960 tokens, 1185 s so far
+[strata] reading the prompt: 53,632 of 63,960 tokens, 1188 s so far
+[strata] reading the prompt: 53,760 of 63,960 tokens, 1192 s so far
+[strata] reading the prompt: 53,888 of 63,960 tokens, 1194 s so far
+[strata] reading the prompt: 54,016 of 63,960 tokens, 1197 s so far
+[strata] reading the prompt: 54,144 of 63,960 tokens, 1201 s so far
+[strata] reading the prompt: 54,272 of 63,960 tokens, 1203 s so far
+[strata] reading the prompt: 54,400 of 63,960 tokens, 1205 s so far
+[strata] reading the prompt: 54,528 of 63,960 tokens, 1208 s so far
+[strata] reading the prompt: 54,656 of 63,960 tokens, 1212 s so far
+[strata] reading the prompt: 54,784 of 63,960 tokens, 1215 s so far
+[strata] reading the prompt: 54,912 of 63,960 tokens, 1218 s so far
+[strata] reading the prompt: 55,040 of 63,960 tokens, 1220 s so far
+[strata] reading the prompt: 55,168 of 63,960 tokens, 1223 s so far
+[strata] reading the prompt: 55,296 of 63,960 tokens, 1226 s so far
+[strata] reading the prompt: 55,424 of 63,960 tokens, 1229 s so far
+[strata] reading the prompt: 55,552 of 63,960 tokens, 1232 s so far
+[strata] reading the prompt: 55,680 of 63,960 tokens, 1235 s so far
+[strata] reading the prompt: 55,808 of 63,960 tokens, 1237 s so far
+[strata] reading the prompt: 55,936 of 63,960 tokens, 1240 s so far
+[strata] reading the prompt: 56,064 of 63,960 tokens, 1244 s so far
+[strata] reading the prompt: 56,192 of 63,960 tokens, 1246 s so far
+[strata] reading the prompt: 56,320 of 63,960 tokens, 1249 s so far
+[strata] reading the prompt: 56,448 of 63,960 tokens, 1252 s so far
+[strata] reading the prompt: 56,576 of 63,960 tokens, 1255 s so far
+[strata] reading the prompt: 56,704 of 63,960 tokens, 1258 s so far
+[strata] reading the prompt: 56,832 of 63,960 tokens, 1261 s so far
+[strata] reading the prompt: 56,960 of 63,960 tokens, 1264 s so far
+[strata] reading the prompt: 57,088 of 63,960 tokens, 1267 s so far
+[strata] reading the prompt: 57,216 of 63,960 tokens, 1270 s so far
+[strata] reading the prompt: 57,344 of 63,960 tokens, 1273 s so far
+[strata] reading the prompt: 57,472 of 63,960 tokens, 1276 s so far
+[strata] reading the prompt: 57,600 of 63,960 tokens, 1278 s so far
+[strata] reading the prompt: 57,728 of 63,960 tokens, 1282 s so far
+[strata] reading the prompt: 57,856 of 63,960 tokens, 1285 s so far
+[strata] reading the prompt: 57,984 of 63,960 tokens, 1288 s so far
+[strata] reading the prompt: 58,112 of 63,960 tokens, 1290 s so far
+[strata] reading the prompt: 58,240 of 63,960 tokens, 1293 s so far
+[strata] reading the prompt: 58,368 of 63,960 tokens, 1296 s so far
+[strata] reading the prompt: 58,496 of 63,960 tokens, 1299 s so far
+[strata] reading the prompt: 58,624 of 63,960 tokens, 1302 s so far
+[strata] reading the prompt: 58,752 of 63,960 tokens, 1305 s so far
+[strata] reading the prompt: 58,880 of 63,960 tokens, 1308 s so far
+[strata] reading the prompt: 59,008 of 63,960 tokens, 1311 s so far
+[strata] reading the prompt: 59,136 of 63,960 tokens, 1314 s so far
+[strata] reading the prompt: 59,264 of 63,960 tokens, 1316 s so far
+[strata] reading the prompt: 59,392 of 63,960 tokens, 1320 s so far
+[strata] reading the prompt: 59,520 of 63,960 tokens, 1323 s so far
+[strata] reading the prompt: 59,648 of 63,960 tokens, 1326 s so far
+[strata] reading the prompt: 59,776 of 63,960 tokens, 1329 s so far
+[strata] reading the prompt: 59,904 of 63,960 tokens, 1332 s so far
+[strata] reading the prompt: 60,032 of 63,960 tokens, 1335 s so far
+[strata] reading the prompt: 60,160 of 63,960 tokens, 1338 s so far
+[strata] reading the prompt: 60,288 of 63,960 tokens, 1341 s so far
+[strata] reading the prompt: 60,416 of 63,960 tokens, 1343 s so far
+[strata] reading the prompt: 60,544 of 63,960 tokens, 1346 s so far
+[strata] reading the prompt: 60,672 of 63,960 tokens, 1349 s so far
+[strata] reading the prompt: 60,800 of 63,960 tokens, 1352 s so far
+[strata] reading the prompt: 60,928 of 63,960 tokens, 1355 s so far
+[strata] reading the prompt: 61,056 of 63,960 tokens, 1358 s so far
+[strata] reading the prompt: 61,184 of 63,960 tokens, 1361 s so far
+[strata] reading the prompt: 61,312 of 63,960 tokens, 1364 s so far
+[strata] reading the prompt: 61,440 of 63,960 tokens, 1367 s so far
+[strata] reading the prompt: 61,568 of 63,960 tokens, 1370 s so far
+[strata] reading the prompt: 61,696 of 63,960 tokens, 1373 s so far
+[strata] reading the prompt: 61,824 of 63,960 tokens, 1375 s so far
+[strata] reading the prompt: 61,952 of 63,960 tokens, 1378 s so far
+[strata] reading the prompt: 62,080 of 63,960 tokens, 1381 s so far
+[strata] reading the prompt: 62,208 of 63,960 tokens, 1385 s so far
+[strata] reading the prompt: 62,336 of 63,960 tokens, 1387 s so far
+[strata] reading the prompt: 62,464 of 63,960 tokens, 1390 s so far
+[strata] reading the prompt: 62,592 of 63,960 tokens, 1393 s so far
+[strata] reading the prompt: 62,720 of 63,960 tokens, 1396 s so far
+[strata] reading the prompt: 62,848 of 63,960 tokens, 1399 s so far
+[strata] reading the prompt: 62,976 of 63,960 tokens, 1402 s so far
+[strata] reading the prompt: 63,104 of 63,960 tokens, 1405 s so far
+[strata] reading the prompt: 63,232 of 63,960 tokens, 1408 s so far
+[strata] reading the prompt: 63,360 of 63,960 tokens, 1410 s so far
+[strata] reading the prompt: 63,488 of 63,960 tokens, 1414 s so far
+[strata] reading the prompt: 63,616 of 63,960 tokens, 1417 s so far
+[strata] reading the prompt: 63,744 of 63,960 tokens, 1419 s so far
+[strata] reading the prompt: 63,872 of 63,960 tokens, 1422 s so far
+[strata] reading the prompt: 63,953 of 63,960 tokens, 1423 s so far
+[strata] answering: 1 of max 128 tokens, 279620.3 tok/s, 1425 s
+[strata] answering: 8 of max 128 tokens, 6.4 tok/s, 1426 s
+[strata] answering: 16 of max 128 tokens, 6.3 tok/s, 1427 s
+[strata] answering: 24 of max 128 tokens, 6.4 tok/s, 1428 s
+[strata] answering: 32 of max 128 tokens, 6.3 tok/s, 1430 s
+[strata] done: 35 tokens in 1430 s (6.5 tok/s) (stop, cancel=False), expert cache 95.4% hit
+[strata] reading the prompt: 64,042 of 64,049 tokens, 6 s so far
+[strata] reading the prompt: 64,048 of 64,049 tokens, 8 s so far
+[strata] answering: 4 of max 192 tokens, 4.7 tok/s, 9 s
+[strata] answering: 14 of max 192 tokens, 6.5 tok/s, 10 s
+[strata] answering: 22 of max 192 tokens, 6.4 tok/s, 11 s
+[strata] answering: 30 of max 192 tokens, 6.4 tok/s, 13 s
+[strata] answering: 37 of max 192 tokens, 6.3 tok/s, 14 s
+[strata] done: 44 tokens in 15 s (6.4 tok/s) (stop, cancel=False), expert cache 95.7% hit
+[strata] reading the prompt: 64,186 tokens, 10 s so far
+[strata] reading the prompt: 64,179 of 64,186 tokens, 12 s so far
+[strata] answering: 1 of max 384 tokens, 220752.8 tok/s, 13 s
+[strata] answering: 8 of max 384 tokens, 6.6 tok/s, 14 s
+[strata] answering: 14 of max 384 tokens, 6.0 tok/s, 15 s
+[strata] answering: 20 of max 384 tokens, 6.0 tok/s, 16 s
+[strata] answering: 26 of max 384 tokens, 5.7 tok/s, 18 s
+[strata] answering: 33 of max 384 tokens, 5.9 tok/s, 19 s
+[strata] answering: 38 of max 384 tokens, 5.7 tok/s, 20 s
+[strata] answering: 44 of max 384 tokens, 5.5 tok/s, 21 s
+[strata] answering: 51 of max 384 tokens, 5.5 tok/s, 22 s
+[strata] answering: 59 of max 384 tokens, 5.6 tok/s, 23 s
+[strata] answering: 67 of max 384 tokens, 5.8 tok/s, 25 s
+[strata] answering: 73 of max 384 tokens, 5.7 tok/s, 26 s
+[strata] answering: 78 of max 384 tokens, 5.6 tok/s, 27 s
+[strata] answering: 85 of max 384 tokens, 5.6 tok/s, 28 s
+[strata] answering: 93 of max 384 tokens, 5.6 tok/s, 29 s
+[strata] answering: 99 of max 384 tokens, 5.6 tok/s, 31 s
+[strata] answering: 104 of max 384 tokens, 5.5 tok/s, 32 s
+[strata] answering: 110 of max 384 tokens, 5.5 tok/s, 33 s
+[strata] answering: 116 of max 384 tokens, 5.5 tok/s, 34 s
+[strata] answering: 123 of max 384 tokens, 5.5 tok/s, 35 s
+[strata] answering: 130 of max 384 tokens, 5.5 tok/s, 37 s
+[strata] answering: 138 of max 384 tokens, 5.5 tok/s, 38 s
+[strata] answering: 144 of max 384 tokens, 5.5 tok/s, 39 s
+[strata] answering: 151 of max 384 tokens, 5.5 tok/s, 40 s
+[strata] answering: 157 of max 384 tokens, 5.5 tok/s, 42 s
+[strata] answering: 163 of max 384 tokens, 5.5 tok/s, 43 s
+[strata] answering: 168 of max 384 tokens, 5.5 tok/s, 44 s
+[strata] answering: 173 of max 384 tokens, 5.4 tok/s, 45 s
+[strata] answering: 179 of max 384 tokens, 5.4 tok/s, 46 s
+[strata] answering: 186 of max 384 tokens, 5.4 tok/s, 47 s
+[strata] answering: 193 of max 384 tokens, 5.4 tok/s, 49 s
+[strata] answering: 199 of max 384 tokens, 5.4 tok/s, 50 s
+[strata] answering: 204 of max 384 tokens, 5.4 tok/s, 51 s
+[strata] answering: 211 of max 384 tokens, 5.4 tok/s, 52 s
+[strata] answering: 216 of max 384 tokens, 5.4 tok/s, 53 s
+[strata] answering: 223 of max 384 tokens, 5.4 tok/s, 54 s
+[strata] answering: 229 of max 384 tokens, 5.4 tok/s, 55 s
+[strata] answering: 236 of max 384 tokens, 5.4 tok/s, 57 s
+[strata] answering: 242 of max 384 tokens, 5.4 tok/s, 58 s
+[strata] answering: 247 of max 384 tokens, 5.3 tok/s, 59 s
+[strata] answering: 253 of max 384 tokens, 5.3 tok/s, 60 s
+[strata] answering: 258 of max 384 tokens, 5.3 tok/s, 62 s
+[strata] answering: 263 of max 384 tokens, 5.3 tok/s, 63 s
+[strata] answering: 269 of max 384 tokens, 5.3 tok/s, 64 s
+[strata] done: 274 tokens in 65 s (5.3 tok/s) (stop, cancel=False), expert cache 98.1% hit
+
+[strata] stopping (Ctrl+C again to end the engine at once) ...
+[strata] stopped

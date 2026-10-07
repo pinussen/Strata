@@ -1,0 +1,20 @@
+{
+  "reclaimed_q4_duplicates": [
+    {
+      "duplicate": "/mnt/strata-ram/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "preserved_source": "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "source": "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "size": 49376141504,
+      "mtime_ns": 1791239923089488208
+    },
+    {
+      "duplicate": "/mnt/strata-ram/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+      "preserved_source": "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+      "source": "/models/strata-work/data/models/unsloth-ud-q4_k_xl/Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+      "size": 12087983520,
+      "mtime_ns": 1791240081823580866
+    }
+  ],
+  "bf16_unchanged": true,
+  "available_gib_after_reclaim": 206.62502670288086
+}

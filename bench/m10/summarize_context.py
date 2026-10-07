@@ -23,6 +23,20 @@ def summarize(path):
             "finish_reason": row["finish_reason"], "correct": row.get("correct"),
             "token_count_matches": row["token_count_matches"],
         }
+        observed = [s for s in samples if s["phase"] == row["case"]]
+        if observed:
+            device_ids = sorted({g["index"] for s in observed for g in s.get("gpus", [])}, key=int)
+            phases[row["case"]]["telemetry"] = {
+                "samples": len(observed),
+                "min_available_ram_gib": min(s["mem_available_bytes"] for s in observed) / 2**30,
+                "max_engine_rss_gib": max(s.get("engine_rss_bytes", 0) for s in observed) / 2**30,
+                "min_swap_bytes": min(s["swap_used_bytes"] for s in observed),
+                "max_swap_bytes": max(s["swap_used_bytes"] for s in observed),
+                "gpu_max_used_mib": {i: max(float(g["memory.used"]) for s in observed
+                    for g in s.get("gpus", []) if g["index"] == i) for i in device_ids},
+                "gpu_max_temperature_c": {i: max(float(g["temperature.gpu"]) for s in observed
+                    for g in s.get("gpus", []) if g["index"] == i) for i in device_ids},
+            }
     gpus = [g for s in samples for g in s.get("gpus", [])]
     inference = [s for s in samples if s["phase"] not in ("startup", "shutdown")]
     reads = [s["engine_read_bytes"] for s in inference if "engine_read_bytes" in s]

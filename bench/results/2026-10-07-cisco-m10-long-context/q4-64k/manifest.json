@@ -1,0 +1,37 @@
+{
+  "started": "2026-10-07T18:39:06.711668+00:00",
+  "argv": [
+    "/home/bjwl/Strata/bench/m10/run_context_benchmark.py",
+    "--config",
+    "/home/bjwl/strata-dev/q8-bf16/q4-staged.json",
+    "--out",
+    "/home/bjwl/strata-dev/long-context/q4-64k",
+    "--context",
+    "65536",
+    "--prompt-contexts",
+    "16384",
+    "32768",
+    "65536"
+  ],
+  "vm_memory_bytes": 633650192384,
+  "logical_cpus": 24,
+  "context_capacity": 65536,
+  "input_targets": [
+    14848,
+    31232,
+    64000
+  ],
+  "kv_resident": 0,
+  "repetitions": 1,
+  "expected_words": {
+    "ALPHA": "cedar",
+    "BETA": "quartz",
+    "GAMMA": "otter"
+  },
+  "expected_inventory": {
+    "ALPHA": 37,
+    "BETA": 58,
+    "GAMMA": 91,
+    "TOTAL": 186
+  }
+}

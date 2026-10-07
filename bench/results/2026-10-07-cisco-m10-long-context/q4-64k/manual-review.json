@@ -1,0 +1,25 @@
+{
+  "method": "Manual reading of all three Swedish responses; JSON retrieval and arithmetic checked against fixed expected values.",
+  "retrieval_checks_passed": 6,
+  "retrieval_checks_total": 6,
+  "swedish": {
+    "16k": {
+      "word_count_whitespace": 127,
+      "inventory_values_correct": true,
+      "range_claim_correct": false,
+      "notes": "Incorrectly calls 000–333 the station range; actual stations are 000–136. Also claims the routine planning does not cover the projects, which is not stated."
+    },
+    "32k": {
+      "word_count_whitespace": 105,
+      "inventory_values_correct": true,
+      "range_claim_correct": true,
+      "notes": "Range and quantities agree with the ledger. Minor Swedish grammar errors remain; this is not a general quality grade."
+    },
+    "64k": {
+      "word_count_whitespace": 120,
+      "inventory_values_correct": true,
+      "range_claim_correct": true,
+      "notes": "Range and quantities agree with the ledger. Minor Swedish grammar errors remain; this is not a general quality grade."
+    }
+  }
+}
