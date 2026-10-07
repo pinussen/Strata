@@ -1,5 +1,5 @@
 {
-  "method": "Manual, unblinded review of quantities/range claims and whitespace word counts. Partial review: 64K is still running.",
+  "method": "Manual, unblinded review of quantities/range claims and whitespace word counts for all three completed Swedish responses.",
   "swedish": {
     "16k": {
       "word_count_whitespace": 117,
@@ -12,6 +12,14 @@
       "inventory_values_correct": true,
       "range_claim_correct": true,
       "notes": "Correct record range 00000–00706; two words short of requested minimum 100."
+    },
+    "64k": {
+      "word_count_whitespace": 112,
+      "inventory_values_correct": true,
+      "range_claim_correct": null,
+      "notes": "No range claim. Quantities agree with the ledger. The claim that ordinary operations have no inventory withdrawals is not established: the records only say no replacement was requested. Suggestions about handling parts are additions to the source."
     }
-  }
+  },
+  "retrieval_checks_passed": 6,
+  "retrieval_checks_total": 6
 }

@@ -1,0 +1,102 @@
+{
+  "protocol_checks_pass": true,
+  "requests_per_model": 10,
+  "retrieval_checks_passed_per_model": {
+    "q4": 6,
+    "q8": 6
+  },
+  "retrieval_checks_total_per_model": 6,
+  "all_replies_completed_normally": {
+    "q4": true,
+    "q8": true
+  },
+  "all_followups_reused_over_99_percent": {
+    "q4": true,
+    "q8": true
+  },
+  "comparison": {
+    "16k/cached_inventory": {
+      "same_system_and_user_messages": true,
+      "identical_all_messages": true,
+      "same_prompt_token_count": true,
+      "identical_generated_text": true,
+      "system_and_user_sha256": "c52ccc111816d9736facdfe7997aa547cf1d31ef2e85e3b2b08e66d98df547fa"
+    },
+    "16k/cached_swedish": {
+      "same_system_and_user_messages": true,
+      "identical_all_messages": true,
+      "same_prompt_token_count": true,
+      "identical_generated_text": false,
+      "system_and_user_sha256": "0184afc247378d774f18b12e0dcd96ccdc5dee7ffef97542de7e4e25807f4e1c"
+    },
+    "16k/cold_retrieval": {
+      "same_system_and_user_messages": true,
+      "identical_all_messages": true,
+      "same_prompt_token_count": true,
+      "identical_generated_text": true,
+      "system_and_user_sha256": "d97cd635ffb7b28eb8b09f7d31cf995e3abdbf3fa07e591f7696be6351673cc6"
+    },
+    "32k/cached_inventory": {
+      "same_system_and_user_messages": true,
+      "identical_all_messages": true,
+      "same_prompt_token_count": true,
+      "identical_generated_text": true,
+      "system_and_user_sha256": "dec8588038cf903b3f4118f433ff2b06a25ecd960a5dfd744ef8190d5d69d05d"
+    },
+    "32k/cached_swedish": {
+      "same_system_and_user_messages": true,
+      "identical_all_messages": true,
+      "same_prompt_token_count": true,
+      "identical_generated_text": false,
+      "system_and_user_sha256": "cd9e810f6e98fd292a37e5a129e9715767d76a97157da6c9572385eadad9e7a0"
+    },
+    "32k/cold_retrieval": {
+      "same_system_and_user_messages": true,
+      "identical_all_messages": true,
+      "same_prompt_token_count": true,
+      "identical_generated_text": true,
+      "system_and_user_sha256": "ab6457d43ba6cfa28d3d58c458ce844120864f245b6d6a581ffb074162988a3d"
+    },
+    "64k/cached_inventory": {
+      "same_system_and_user_messages": true,
+      "identical_all_messages": true,
+      "same_prompt_token_count": true,
+      "identical_generated_text": true,
+      "system_and_user_sha256": "44ab6bff0466a4e9811485f5e31d92d12e605166e211246328c74840d14c790b"
+    },
+    "64k/cached_swedish": {
+      "same_system_and_user_messages": true,
+      "identical_all_messages": true,
+      "same_prompt_token_count": true,
+      "identical_generated_text": false,
+      "system_and_user_sha256": "32d3f2cd942ca8399d900a2682806465acae46fab5bb2cb29920793293a06a78"
+    },
+    "64k/cold_retrieval": {
+      "same_system_and_user_messages": true,
+      "identical_all_messages": true,
+      "same_prompt_token_count": true,
+      "identical_generated_text": true,
+      "system_and_user_sha256": "c486ffd9f4246074f1c259a1c1237b15062c043cb373f25d7f5112f81cd92317"
+    },
+    "warmup": {
+      "same_system_and_user_messages": true,
+      "identical_all_messages": true,
+      "same_prompt_token_count": true,
+      "identical_generated_text": true,
+      "system_and_user_sha256": "9bb779b3b2527495d56a0ca0b70a4813edac96fc580b7100cd79bb469afd6194"
+    }
+  },
+  "swedish_word_counts_whitespace": {
+    "q4": {
+      "16k/cached_swedish": 127,
+      "32k/cached_swedish": 105,
+      "64k/cached_swedish": 120
+    },
+    "q8": {
+      "16k/cached_swedish": 117,
+      "32k/cached_swedish": 98,
+      "64k/cached_swedish": 112
+    }
+  },
+  "quality_scope": "Exact JSON retrieval and completion are checked automatically. See manual-review.json for semantic errors; word-count misses remain visible."
+}

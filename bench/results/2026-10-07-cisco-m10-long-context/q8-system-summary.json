@@ -1,0 +1,10 @@
+{
+  "sample_interval_s": 5,
+  "monitor_started_during_startup": true,
+  "first_request_sample_time": 1791402867.4202173,
+  "last_request_sample_time": 1791406200.9900346,
+  "timed_swap_in_bytes": 0,
+  "timed_swap_out_bytes": 851968,
+  "timed_min_swap_allocated_bytes": 41664512,
+  "timed_max_swap_allocated_bytes": 42463232
+}

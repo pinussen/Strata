@@ -15,21 +15,29 @@ on one GPU but failed when the first request instantiated the CUDA graph.
 The [full-model report](../bench/results/2026-10-05-cisco-m10-large-models/README.md) records the 83.6 GB IQ3_S
 and 111.3 GB Unsloth Q4 tests. The subsequent [Q8/BF16 experiment](../bench/results/2026-10-06-cisco-m10-q8-bf16/README.md)
 increased VM 104 to 600 GiB configured RAM (~590 GiB usable). The interactive configuration uses Q4,
-eight 8 GiB CUDA devices, a 4,096-token context and speculative window 2. One GPU is a measured alternative
+eight 8 GiB CUDA devices, a **65,536-token context**, int8 KV and speculative window 2. One GPU is a measured alternative
 for faster generation from short questions, at the cost of slower prompt processing.
 
-The Q8/BF16 comparison is complete: Q8 runs in Strata at 4.75–5.60 tok/s across the tested
+In the completed 4K Q8/BF16 comparison, Q8 runs in Strata at 4.75–5.60 tok/s across the tested
 generation cases; full BF16 runs in the separate llama.cpp reference engine at 2.63–2.65 tok/s.
 Native Strata BF16 remains unsupported. Q8 source files and its pack remain on NAS; BF16's
 354 GB of files remain under `/mnt/strata-large/models/unsloth-bf16` in RAM and are lost at
 reboot. Q4 is the restored interactive default. Raw replies, timings, validation and telemetry
-are saved in the comparison report; all timed runs used zero observed guest swap.
+are saved in the comparison report; those October 6 timed runs used zero observed guest swap.
+The newer long-context experiment documents its separate swap observations and temporary preparation settings.
+
+The [long-context report](../bench/results/2026-10-07-cisco-m10-long-context/README.md) verifies both Q4 and Q8
+with 14,812, 31,224 and 63,960 input tokens and continued conversations. At the largest input, Q4/Q8 first
+text takes 23 min 45 s / 29 min 43 s; the inventory follow-up starts after 8.29 / 8.55 s. Q4 remains the
+interactive default. Keep the conversation prefix to reuse history and leave room for further messages:
+the 65,536-token limit includes both input and new output. These are single synthetic-ledger sequences,
+with thinking off; free summaries still have some errors.
 
 Connect to the guest with `ssh bjwl@192.168.3.73`. From `/home/bjwl/Strata`, start the prepared model with:
 
 ```bash
 /home/bjwl/strata-dev/venv/bin/python -u bench/m10/start_server.py \
-  --config /home/bjwl/strata-dev/bench-configs/unsloth-ud-q4_k_xl-8gpu-base.json \
+  --config /home/bjwl/strata-dev/bench-configs/unsloth-ud-q4_k_xl-8gpu-64k.json \
   --data /models/strata-work/data \
   --dest /mnt/strata-ram/data \
   --runtime /home/bjwl/strata-dev/service \
@@ -41,7 +49,8 @@ Connect to the guest with `ssh bjwl@192.168.3.73`. From `/home/bjwl/Strata`, sta
 Check whether port 8080 already has the server before starting another instance. The launcher refuses an
 occupied port. Stop the existing server by its recorded PID in `/home/bjwl/strata-dev/service/server.pid`
 after checking that PID still belongs to `serve.server`. For the one-GPU alternative, use
-`unsloth-ud-q4_k_xl-1gpu-base.json`. Stop the old server and wait for its engine to exit before switching.
+`unsloth-ud-q4_k_xl-1gpu-base.json`; this retains the earlier 4,096-token context. Larger contexts were
+measured on eight GPUs. Stop the old server and wait for its engine to exit before switching.
 
 The dedicated `/mnt/strata-ram` tmpfs (256 GiB cap) survives logout. It is mounted from fstab after boot, but contains no files
 until staging runs again. A cold copy of the model from NAS takes many minutes. The launcher skips already

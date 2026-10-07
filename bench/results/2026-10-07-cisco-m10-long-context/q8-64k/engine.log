@@ -202,3 +202,35 @@ strata serve: stage 5: 454 windows; per window: wait for the GPU 32.810 ms, pool
 strata serve: stage 6: 454 windows; per window: wait for the GPU 32.153 ms, pool + plan 1.765 ms, host staging 0.000 ms, commit 0.563 ms
 strata serve: stage 7: 454 windows; per window: wait for the GPU 29.989 ms, pool + plan 3.682 ms, host staging 0.000 ms, commit 0.467 ms
 strata serve: suffix drafts: 3 windows, 5 of 6 drafts accepted
+strata serve: prompt 63960 tokens = 0 reused + 63960 read in 1782741 ms (35.9 tok/s), 35 generated in 6085 ms (5.8 tok/s), drafts accepted 17 of 17, 4 checkpoints
+strata serve: decode expert cache hit rate: 65.3% (10607 hits / 16255 lookups); 545 more read by the GPU over PCIe or from another GPU (3.2% of all 16800 routed)
+strata serve: stage 0: 474 windows; per window: wait for the GPU 33.738 ms, pool + plan 3.304 ms, host staging 0.068 ms, commit 0.584 ms
+strata serve: stage 1: 474 windows; per window: wait for the GPU 31.905 ms, pool + plan 2.652 ms, host staging 0.001 ms, commit 0.473 ms
+strata serve: stage 2: 474 windows; per window: wait for the GPU 30.290 ms, pool + plan 5.296 ms, host staging 0.001 ms, commit 0.567 ms
+strata serve: stage 3: 474 windows; per window: wait for the GPU 30.584 ms, pool + plan 4.609 ms, host staging 0.001 ms, commit 0.475 ms
+strata serve: stage 4: 474 windows; per window: wait for the GPU 31.179 ms, pool + plan 2.518 ms, host staging 0.001 ms, commit 0.565 ms
+strata serve: stage 5: 474 windows; per window: wait for the GPU 32.807 ms, pool + plan 1.910 ms, host staging 0.001 ms, commit 0.472 ms
+strata serve: stage 6: 474 windows; per window: wait for the GPU 32.080 ms, pool + plan 1.864 ms, host staging 0.000 ms, commit 0.563 ms
+strata serve: stage 7: 474 windows; per window: wait for the GPU 29.904 ms, pool + plan 3.800 ms, host staging 0.000 ms, commit 0.467 ms
+strata serve: prompt 64049 tokens = 63994 reused + 55 read in 7965 ms (6.9 tok/s), 44 generated in 7544 ms (5.8 tok/s), drafts accepted 23 of 23, 5 checkpoints
+strata serve: decode expert cache hit rate: 75.0% (15524 hits / 20698 lookups); 422 more read by the GPU over PCIe or from another GPU (2.0% of all 21120 routed)
+strata serve: stage 0: 509 windows; per window: wait for the GPU 34.442 ms, pool + plan 3.465 ms, host staging 0.070 ms, commit 0.585 ms
+strata serve: stage 1: 509 windows; per window: wait for the GPU 32.582 ms, pool + plan 2.767 ms, host staging 0.001 ms, commit 0.474 ms
+strata serve: stage 2: 509 windows; per window: wait for the GPU 31.015 ms, pool + plan 5.374 ms, host staging 0.001 ms, commit 0.568 ms
+strata serve: stage 3: 509 windows; per window: wait for the GPU 31.204 ms, pool + plan 4.809 ms, host staging 0.001 ms, commit 0.476 ms
+strata serve: stage 4: 509 windows; per window: wait for the GPU 31.844 ms, pool + plan 2.620 ms, host staging 0.001 ms, commit 0.566 ms
+strata serve: stage 5: 509 windows; per window: wait for the GPU 33.564 ms, pool + plan 1.984 ms, host staging 0.001 ms, commit 0.473 ms
+strata serve: stage 6: 509 windows; per window: wait for the GPU 32.707 ms, pool + plan 2.031 ms, host staging 0.000 ms, commit 0.564 ms
+strata serve: stage 7: 509 windows; per window: wait for the GPU 30.286 ms, pool + plan 4.174 ms, host staging 0.000 ms, commit 0.468 ms
+strata serve: suffix drafts: 2 windows, 5 of 5 drafts accepted
+strata serve: prompt 64186 tokens = 64092 reused + 94 read in 10401 ms (9.0 tok/s), 243 generated in 51462 ms (4.7 tok/s), drafts accepted 79 of 111, 6 checkpoints
+strata serve: decode expert cache hit rate: 90.3% (118949 hits / 131762 lookups); 238 more read by the GPU over PCIe or from another GPU (0.2% of all 132000 routed)
+strata serve: stage 0: 675 windows; per window: wait for the GPU 33.457 ms, pool + plan 3.028 ms, host staging 0.071 ms, commit 0.582 ms
+strata serve: stage 1: 675 windows; per window: wait for the GPU 31.947 ms, pool + plan 2.533 ms, host staging 0.001 ms, commit 0.472 ms
+strata serve: stage 2: 675 windows; per window: wait for the GPU 30.528 ms, pool + plan 4.805 ms, host staging 0.001 ms, commit 0.566 ms
+strata serve: stage 3: 675 windows; per window: wait for the GPU 30.881 ms, pool + plan 4.182 ms, host staging 0.001 ms, commit 0.474 ms
+strata serve: stage 4: 675 windows; per window: wait for the GPU 31.247 ms, pool + plan 2.308 ms, host staging 0.001 ms, commit 0.564 ms
+strata serve: stage 5: 675 windows; per window: wait for the GPU 32.915 ms, pool + plan 1.709 ms, host staging 0.001 ms, commit 0.471 ms
+strata serve: stage 6: 675 windows; per window: wait for the GPU 32.120 ms, pool + plan 1.741 ms, host staging 0.000 ms, commit 0.563 ms
+strata serve: stage 7: 675 windows; per window: wait for the GPU 30.262 ms, pool + plan 3.515 ms, host staging 0.000 ms, commit 0.467 ms
+strata serve: suffix drafts: 4 windows, 6 of 9 drafts accepted

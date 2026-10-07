@@ -1,0 +1,96 @@
+{
+  "time": "2026-10-07T21:02:16.687482+00:00",
+  "server_pid": 91717,
+  "engine_pids": [
+    92481
+  ],
+  "host": "192.168.3.73",
+  "port": 8080,
+  "context": 65536,
+  "api_key_enabled": true,
+  "swappiness": 60,
+  "available_ram_gib": 71.47467041015625,
+  "swap_used_bytes": 3141632,
+  "gpus": [
+    {
+      "index": "0",
+      "name": "Tesla M10",
+      "memory.total": "8192",
+      "memory.used": "7038",
+      "driver_version": "535.309.01"
+    },
+    {
+      "index": "1",
+      "name": "Tesla M10",
+      "memory.total": "8192",
+      "memory.used": "6940",
+      "driver_version": "535.309.01"
+    },
+    {
+      "index": "2",
+      "name": "Tesla M10",
+      "memory.total": "8192",
+      "memory.used": "6937",
+      "driver_version": "535.309.01"
+    },
+    {
+      "index": "3",
+      "name": "Tesla M10",
+      "memory.total": "8192",
+      "memory.used": "6940",
+      "driver_version": "535.309.01"
+    },
+    {
+      "index": "4",
+      "name": "Tesla M10",
+      "memory.total": "8192",
+      "memory.used": "6937",
+      "driver_version": "535.309.01"
+    },
+    {
+      "index": "5",
+      "name": "Tesla M10",
+      "memory.total": "8192",
+      "memory.used": "6940",
+      "driver_version": "535.309.01"
+    },
+    {
+      "index": "6",
+      "name": "Tesla M10",
+      "memory.total": "8192",
+      "memory.used": "6937",
+      "driver_version": "535.309.01"
+    },
+    {
+      "index": "7",
+      "name": "Tesla M10",
+      "memory.total": "8192",
+      "memory.used": "7065",
+      "driver_version": "535.309.01"
+    }
+  ],
+  "q4_restaged_files": [
+    {
+      "file": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00004-of-00004.gguf",
+      "bytes": 12087983520,
+      "is_symlink": false
+    },
+    {
+      "file": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00003-of-00004.gguf",
+      "bytes": 49376141504,
+      "is_symlink": false
+    },
+    {
+      "file": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00002-of-00004.gguf",
+      "bytes": 49859583136,
+      "is_symlink": false
+    },
+    {
+      "file": "Qwen3.8-Flash-Next-UD-Q4_K_XL-00001-of-00004.gguf",
+      "bytes": 10946624,
+      "is_symlink": false
+    }
+  ],
+  "bf16_preserved_files": 8,
+  "bf16_bytes": 354029930496
+}

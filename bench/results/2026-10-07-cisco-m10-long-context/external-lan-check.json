@@ -1,0 +1,18 @@
+{
+  "time": "2026-10-07T21:02:16.297358+00:00",
+  "source": "workspace, outside the GPU guest",
+  "base": "http://192.168.3.73:8080",
+  "health": {
+    "status": "ok",
+    "max_context": 65536,
+    "model": "strata-m10-unsloth-ud-q4_k_xl",
+    "images": false,
+    "api_key": true,
+    "loaded": true,
+    "service": "strata"
+  },
+  "unauthenticated_models_status": 401,
+  "authenticated_models_status": 200,
+  "web_ui_status": 200,
+  "pass": true
+}

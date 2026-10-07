@@ -1,5 +1,5 @@
 {
-  "state": "request",
+  "state": "complete",
   "results": [
     {
       "case": "warmup",
@@ -147,10 +147,74 @@
         "draft_n_accepted": 78
       },
       "correct": null
+    },
+    {
+      "case": "64k/cold_retrieval",
+      "first_token_s": 1783.3199418059958,
+      "wall_s": 1789.2004510099941,
+      "finish_reason": "stop",
+      "token_count_matches": true,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 63960,
+        "prompt_ms": 1782741.2,
+        "prompt_per_token_ms": 27.873,
+        "prompt_per_second": 35.9,
+        "predicted_n": 35,
+        "predicted_ms": 6085.1,
+        "predicted_per_token_ms": 173.86,
+        "predicted_per_second": 5.8,
+        "draft_n": 17,
+        "draft_n_accepted": 17
+      },
+      "correct": true
+    },
+    {
+      "case": "64k/cached_inventory",
+      "first_token_s": 8.547596694988897,
+      "wall_s": 15.881782872995245,
+      "finish_reason": "stop",
+      "token_count_matches": true,
+      "timings": {
+        "cache_n": 63994,
+        "prompt_n": 55,
+        "prompt_ms": 7965.2,
+        "prompt_per_token_ms": 144.822,
+        "prompt_per_second": 6.9,
+        "predicted_n": 44,
+        "predicted_ms": 7544.1,
+        "predicted_per_token_ms": 171.457,
+        "predicted_per_second": 5.8,
+        "draft_n": 23,
+        "draft_n_accepted": 23
+      },
+      "correct": true
+    },
+    {
+      "case": "64k/cached_swedish",
+      "first_token_s": 10.978136190999066,
+      "wall_s": 62.236553310009185,
+      "finish_reason": "stop",
+      "token_count_matches": true,
+      "timings": {
+        "cache_n": 64092,
+        "prompt_n": 94,
+        "prompt_ms": 10400.8,
+        "prompt_per_token_ms": 110.647,
+        "prompt_per_second": 9.0,
+        "predicted_n": 243,
+        "predicted_ms": 51462.2,
+        "predicted_per_token_ms": 211.779,
+        "predicted_per_second": 4.7,
+        "draft_n": 111,
+        "draft_n_accepted": 79
+      },
+      "correct": null
     }
   ],
   "startup_s": 1254.2125018700026,
-  "current": "64k/cold_retrieval",
-  "counted_prompt_tokens": 63960,
-  "ledger_lines": 1451
+  "current": null,
+  "counted_prompt_tokens": 64186,
+  "ledger_lines": 1451,
+  "functional_pass": true
 }

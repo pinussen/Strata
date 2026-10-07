@@ -1,0 +1,80 @@
+{
+  "health": {
+    "status": "ok",
+    "max_context": 65536,
+    "model": "strata-m10-unsloth-ud-q4_k_xl",
+    "images": false,
+    "api_key": true,
+    "loaded": true,
+    "service": "strata"
+  },
+  "unauthenticated_models_status": 401,
+  "over_budget": {
+    "status": 400,
+    "body": {
+      "error": {
+        "type": "invalid_request_error",
+        "message": "prompt (63960 tokens) + max tokens (4096) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 1568 here), or add \"fit_max_tokens\": true to the model's strata-<model>.json to shorten it to the room left (#545)"
+      }
+    }
+  },
+  "arithmetic": {
+    "started_unix": 1791406821.2588234,
+    "wall_s": 4.278089979998185,
+    "first_token_s": 3.7151581420039292,
+    "content": "323",
+    "reasoning": "",
+    "final": {
+      "id": "chatcmpl-e86f073c4c7c4665bafb4f15",
+      "object": "chat.completion.chunk",
+      "created": 1791406821,
+      "model": "strata-m10-unsloth-ud-q4_k_xl",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {},
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 28,
+        "completion_tokens": 4,
+        "total_tokens": 32,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 28,
+        "prompt_ms": 3527.7,
+        "prompt_per_token_ms": 125.989,
+        "prompt_per_second": 7.9,
+        "predicted_n": 4,
+        "predicted_ms": 742.5,
+        "predicted_per_token_ms": 185.625,
+        "predicted_per_second": 5.4,
+        "draft_n": 2,
+        "draft_n_accepted": 2
+      }
+    },
+    "events": [
+      {
+        "elapsed_s": 3.7151581420039292,
+        "content_chars": 1,
+        "reasoning_chars": 0
+      },
+      {
+        "elapsed_s": 3.992923117999453,
+        "content_chars": 1,
+        "reasoning_chars": 0
+      },
+      {
+        "elapsed_s": 3.9941840620012954,
+        "content_chars": 1,
+        "reasoning_chars": 0
+      }
+    ]
+  },
+  "complete": true
+}

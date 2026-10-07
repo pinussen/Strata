@@ -1,0 +1,27 @@
+{
+  "files": [
+    "/models/strata-work/data/models/unsloth-q8_0/Qwen3.8-Flash-Next-Q8_0-00005-of-00006.gguf.sha256",
+    "/models/strata-work/data/models/unsloth-q8_0/Qwen3.8-Flash-Next-Q8_0-00003-of-00006.gguf.sha256",
+    "/models/strata-work/data/models/unsloth-q8_0/Qwen3.8-Flash-Next-Q8_0-00002-of-00006.gguf",
+    "/models/strata-work/data/models/unsloth-q8_0/Qwen3.8-Flash-Next-Q8_0-00005-of-00006.gguf",
+    "/models/strata-work/data/models/unsloth-q8_0/Qwen3.8-Flash-Next-Q8_0-00004-of-00006.gguf.sha256",
+    "/models/strata-work/data/models/unsloth-q8_0/Qwen3.8-Flash-Next-Q8_0-00002-of-00006.gguf.sha256",
+    "/models/strata-work/data/models/unsloth-q8_0/Qwen3.8-Flash-Next-Q8_0-00001-of-00006.gguf",
+    "/models/strata-work/data/models/unsloth-q8_0/Qwen3.8-Flash-Next-Q8_0-00001-of-00006.gguf.sha256",
+    "/models/strata-work/data/models/unsloth-q8_0/Qwen3.8-Flash-Next-Q8_0-00004-of-00006.gguf",
+    "/models/strata-work/data/models/unsloth-q8_0/Qwen3.8-Flash-Next-Q8_0-00006-of-00006.gguf.sha256",
+    "/models/strata-work/data/models/unsloth-q8_0/Qwen3.8-Flash-Next-Q8_0-00006-of-00006.gguf",
+    "/models/strata-work/data/models/unsloth-q8_0/Qwen3.8-Flash-Next-Q8_0-00003-of-00006.gguf",
+    "/models/strata-work/data/packs/unsloth-q8_0/conversions.json",
+    "/models/strata-work/data/packs/unsloth-q8_0/compat-bf16.json",
+    "/models/strata-work/data/packs/unsloth-q8_0/index.txt",
+    "/models/strata-work/data/packs/unsloth-q8_0/dense.bin",
+    "/models/strata-work/data/packs/unsloth-q8_0/native_experts.txt",
+    "/models/strata-work/data/packs/unsloth-q8_0/tokenizer/token_type.json",
+    "/models/strata-work/data/packs/unsloth-q8_0/tokenizer/tokenizer.json",
+    "/models/strata-work/data/packs/unsloth-q8_0/tokenizer/chat_template.jinja",
+    "/models/strata-work/data/packs/unsloth-q8_0/tokenizer/merges.txt",
+    "/models/strata-work/data/packs/unsloth-q8_0/tokenizer/vocab.json"
+  ],
+  "available_gib": 207.16320419311523
+}
